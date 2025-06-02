@@ -1,4 +1,41 @@
+@import url("./common.css");
+@import url("./fonts.css");
+
+
 .test-backgroung {
     background-image: url("../imgs/981.jpg");
     background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+/******* Section 1 Baner **********/
+.section1{
+    position:absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 46%;
+    max-width: 100%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+
+.imgBaner{
+    display: flex;
+    width: 100%;
+    height: 40%;
+}
+
+.divImgBaner{
+    display: flex;
+    width: 100%;
+    height: 40%;
 }

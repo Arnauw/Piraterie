@@ -1,6 +1,6 @@
 <h1 align="center">La Piraterie !</h1>
 
-![La Piraterie !](./piraterie.jpg)
+![La Piraterie !](./docs/piraterie.jpg)
 
 Premier project de groupe avec :
 

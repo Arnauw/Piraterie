@@ -2,28 +2,51 @@
 @import url('common.css');
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&family=Rye&family=Shojumaru&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-
+.background-texte{
+  display:flex;
+  align-self: center;
+  position:relative;
+  width: 30%;
+  margin-top: 1%;
+}
 .crew{
+  width:100%;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: #f0e6d2;
-  background-color: var(--color-yellow);
-  gap: 150px;
-  height: 950px;
+  background: url('../imgs/benedict-koh-benedictkoh-191409u-envis-a2.jpg') center no-repeat;
+  background-size: cover;
+  gap: 100px;
 }
 .crew-texte{
 display: flex;
-justify-content: center;
+align-self: center;
+width: 40%;
 font-family: 'Shojumaru', cursive;
-font-size: 2rem;
+font-size: 1.8rem;
+color: #461f02;
+position:absolute;
+top: 27%;
+left: 37.5%;
+
 }
 .wanted{
+  width: 100%;
   display: flex;
   align-items: flex-end;
-  
+  flex-wrap: wrap;
+}
+.wantedJeremie{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
 .poster {
   width: 370px;
@@ -37,7 +60,25 @@ font-size: 2rem;
   padding: 30px 20px;
   box-sizing: border-box;
   position: relative;
+  transform: translateY(50px);
+
 }
+.poster-jeremie{
+  
+  width: 370px;
+  height: 550px;
+  margin: auto;
+  background: url('../imgs/tips-paper.png');
+  background-size: cover;
+  box-shadow: 15px 11px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  color: #461f02;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+
 .poster-arnaud{
   display:flex;
   flex-direction: column;
@@ -65,8 +106,19 @@ font-size: 2rem;
   height: 180px;
   margin: 25px auto 15px auto;
   border: 2px solid #5e3415;
-  background: url('../imgs/istockphoto-1159854564-612x612.jpg')  center;
+  background: url('../imgs/mounirPirate.JPG') center;
   background-size: cover;
+  background-position: center calc(50% - 20px);
+}
+.mugshot-jeremie{
+  width: 220px;
+  height: 180px;
+  margin: 25px auto 15px auto;
+  border: 2px solid #5e3415;
+  background: url('../imgs/jeremiePirate.JPG') center;
+  background-size: cover;
+  background-position:  25% 75%;
+
 }
 .mugshot-arnaud{
   display: flex;
@@ -74,7 +126,7 @@ font-size: 2rem;
   height: 180px;
   margin: 25px auto 15px auto;
   border: 2px solid #5e3415;
-  background: url('../imgs/istockphoto-1159854564-612x612.jpg')  center;
+  background: url('../imgs/arnaudPirate.JPG')  center;
   background-size: cover;
 }
 .mugshot-amine{
@@ -82,7 +134,7 @@ font-size: 2rem;
   height: 180px;
   margin: 25px auto 15px auto;
   border: 2px solid #5e3415;
-  background: url('../imgs/istockphoto-1159854564-612x612.jpg')  center;
+  background: url('../imgs/aminePirate.JPG')  center;
   background-size: cover;
 }
 .subheading {
@@ -96,6 +148,11 @@ font-size: 2rem;
   font-weight: bold;
   margin: 15px 0 10px 0;
   letter-spacing: 2px;
+}
+.texteJeremie{
+  font-family: 'Rye', cursive;
+  font-size: 1rem;
+  margin: 10px 0;
 }
 
 .bounty {

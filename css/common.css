@@ -40,7 +40,18 @@ header {
       height: 160px;
     }
   }
+  a,
+  a:visited,
+  a:active,
+  a:focus {
+    color: var(--color-yellow);
+  }
+  a:hover {
+    color: #fffb01;
+  }
+
   nav {
+    position: relative;
     height: 100%;
     ul {
       height: 100%;
@@ -52,14 +63,20 @@ header {
         font-family: var(--font-rye);
         font-size: 32px;
         /* text-transform: uppercase; */
-        a,
-        a:visited,
-        a:active,
-        a:focus {
-          color: var(--color-yellow);
-        }
-        a:hover {
-          color: #fffb01;
+      }
+      .login-button a {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 16px 12px 8px 12px;
+        background-color: var(--color-yellow);
+        color: var(--color-blue);
+        font-family: var(--font-special);
+        border-radius: 3px;
+        &:hover {
+          color: #0e0091;
+          background-color: #fffb01;
         }
       }
     }
@@ -90,7 +107,7 @@ footer {
   background-color: var(--color-blue);
   border: 3px solid var(--color-yellow);
   color: var(--color-yellow);
-  font-family: var(--font-rye);
+  font-family: var(--font-shoju);
   font-size: 32px;
   text-align: center;
   align-content: center;

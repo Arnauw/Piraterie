@@ -2,6 +2,10 @@
   --color-brown: #582900;
   --color-yellow: #ffb601;
   --color-blue: #130c4d;
+  --font-shoju: "Shojumaru";
+  --font-special: "Special Elite";
+  --font-rye: "Rye";
+  --font-rubik: "Rubik Distressed";
 }
 
 * {
@@ -44,7 +48,10 @@ header {
       align-items: center;
       gap: 20px;
       li {
+        font-family: var(--font-shoju);
+        font-size: 32px;
         color: white;
+        color: var(--color-yellow);
       }
     }
   }

@@ -1,0 +1,135 @@
+@import url('fonts.css');
+@import url('common.css');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&family=Rye&family=Shojumaru&display=swap');
+
+
+
+.crew{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #f0e6d2;
+  background-color: var(--color-yellow);
+  gap: 150px;
+  height: 950px;
+}
+.crew-texte{
+display: flex;
+justify-content: center;
+font-family: 'Shojumaru', cursive;
+font-size: 2rem;
+margin-top: ;
+}
+.wanted{
+  display: flex;
+  align-items: flex-end;
+  
+}
+.poster {
+  width: 370px;
+  height: 550px;
+  margin: auto;
+  background: url('../imgs/tips-paper.png');
+  background-size: cover;
+  box-shadow: 15px 11px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  color: #461f02;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+.poster-arnaud{
+  display:flex;
+  flex-direction: column;
+  width: 370px;
+  height: 550px;
+  margin: auto;
+  background: url('../imgs/tips-paper.png');
+  background-size: cover;
+  box-shadow: 15px 11px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  color: #461f02;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  position: relative;
+  transform: translateY(-55px);
+}
+.wanted-title {
+  font-family: 'Rye', cursive;
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 4px;
+}
+.mugshot-mounir {
+  width: 220px;
+  height: 180px;
+  margin: 25px auto 15px auto;
+  border: 2px solid #5e3415;
+  background: url('../imgs/istockphoto-1159854564-612x612.jpg')  center;
+  background-size: cover;
+}
+.mugshot-arnaud{
+  display: flex;
+  width: 220px;
+  height: 180px;
+  margin: 25px auto 15px auto;
+  border: 2px solid #5e3415;
+  background: url('../imgs/istockphoto-1159854564-612x612.jpg')  center;
+  background-size: cover;
+}
+.mugshot-amine{
+  width: 220px;
+  height: 180px;
+  margin: 25px auto 15px auto;
+  border: 2px solid #5e3415;
+  background: url('../imgs/istockphoto-1159854564-612x612.jpg')  center;
+  background-size: cover;
+}
+.subheading {
+  font-family: 'Rye', cursive;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.namewanted {
+  font-family: 'Shojumaru', cursive;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 15px 0 10px 0;
+  letter-spacing: 2px;
+}
+
+.bounty {
+  font-size: 2.2rem;
+  font-family: "Rye";
+  font-weight: bold;
+  margin: 0px 0 10px 0;
+}
+
+.marine {
+  position: absolute;
+  right: 10px;
+  bottom:0px;
+  font-family: 'Rye', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.marine-arnaud{
+  position: absolute;
+  right: 10px;
+  bottom:0px;
+  font-family: 'Rye', cursive;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.shojumaru-regular {
+  font-family: "Shojumaru", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.rye-regular {
+  font-family: "Rye", serif;
+  font-weight: 400;
+  font-style: normal;
+}

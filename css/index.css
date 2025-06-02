@@ -1,0 +1,16 @@
+@import url("./fonts.css");
+@import url("./test.css");
+
+.test-backgroung {
+  background-image: url("../imgs/981.jpg");
+  background-attachment: fixed;
+  h1 {
+    font-family: "Shojumaru";
+  }
+  h2 {
+    font-family: "Shojumaru";
+  }
+  p {
+    font-family: "Special Elite";
+  }
+}

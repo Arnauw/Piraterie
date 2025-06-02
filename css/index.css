@@ -1,5 +1,5 @@
+@import url("./common.css");
 @import url("./fonts.css");
-@import url("./test.css");
 
 .test-backgroung {
   background-image: url("../imgs/981.jpg");

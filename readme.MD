@@ -7,5 +7,3 @@ Premier project de groupe avec :
 - [Amine](https://github.com/amineshwarz)
 - [Mounir](https://github.com/cmouns)
 - [Arnaud](https://github.com/Arnauw)
-
-

@@ -29,8 +29,8 @@ a:visited {
 
 header {
   position: relative;
-  height: 200px;
-  width: 100vw;
+  height: 160px;
+  width: 100%;
   background-color: var(--color-blue);
   /* background-color: var(--color-brown); */
   /* background-color: var(--color-yellow); */
@@ -39,8 +39,8 @@ header {
   .logo-container {
     position: absolute;
     img {
-      width: 200px;
-      height: 200px;
+      width: 160px;
+      height: 160px;
     }
   }
   nav {
@@ -59,8 +59,13 @@ header {
         font-size: 32px;
         /* text-transform: uppercase; */
         a,
-        a:visited {
+        a:visited,
+        a:active,
+        a:focus {
           color: var(--color-yellow);
+        }
+        a:hover {
+          color: #fffb01;
         }
       }
     }

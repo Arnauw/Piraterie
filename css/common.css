@@ -89,15 +89,6 @@ main {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  h1 {
-    font-family: "Shojumaru";
-  }
-  h2 {
-    font-family: "Shojumaru";
-  }
-  p {
-    font-family: "Special Elite";
-  }
 }
 
 footer {

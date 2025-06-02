@@ -16,12 +16,19 @@
 
 ul {
   list-style: none;
-  li {
-    text-decoration: none;
-  }
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
+  position: relative;
   height: 200px;
   width: 100vw;
   background-color: var(--color-blue);
@@ -31,9 +38,6 @@ header {
   border: 3px solid var(--color-yellow);
   .logo-container {
     position: absolute;
-    /* z-index: -10; */
-    /* left: 20px;
-    top: 20px; */
     img {
       width: 200px;
       height: 200px;
@@ -48,10 +52,57 @@ header {
       align-items: center;
       gap: 20px;
       li {
-        font-family: var(--font-shoju);
+        font-family: var(--font-rye);
+        /* font-family: var(--font-shoju); */
+        /* font-family: var(--font-special); */
+        /* font-family: var(--font-rubik); */
         font-size: 32px;
-        color: white;
-        color: var(--color-yellow);
+        /* text-transform: uppercase; */
+        a,
+        a:visited {
+          color: var(--color-yellow);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  header {
+    position: relative;
+    height: 200px;
+    width: 100vw;
+    background-color: var(--color-blue);
+    /* background-color: var(--color-brown); */
+    /* background-color: var(--color-yellow); */
+    /* background-color: black; */
+    border: 3px solid var(--color-yellow);
+    .logo-container {
+      position: absolute;
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    nav {
+      height: 100%;
+      ul {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        li {
+          /* font-family: var(--font-shoju); */
+          /* font-family: var(--font-special); */
+          font-family: var(--font-rye);
+          /* font-family: var(--font-rubik); */
+          font-size: 32px;
+          a,
+          a:visited {
+            color: var(--color-yellow);
+          }
+        }
       }
     }
   }

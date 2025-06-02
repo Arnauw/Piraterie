@@ -32,9 +32,6 @@ header {
   height: 160px;
   width: 100%;
   background-color: var(--color-blue);
-  /* background-color: var(--color-brown); */
-  /* background-color: var(--color-yellow); */
-  /* background-color: black; */
   border: 3px solid var(--color-yellow);
   .logo-container {
     position: absolute;
@@ -53,9 +50,6 @@ header {
       gap: 20px;
       li {
         font-family: var(--font-rye);
-        /* font-family: var(--font-shoju); */
-        /* font-family: var(--font-special); */
-        /* font-family: var(--font-rubik); */
         font-size: 32px;
         /* text-transform: uppercase; */
         a,
@@ -72,43 +66,32 @@ header {
   }
 }
 
-footer {
-  header {
-    position: relative;
-    height: 200px;
-    width: 100vw;
-    background-color: var(--color-blue);
-    /* background-color: var(--color-brown); */
-    /* background-color: var(--color-yellow); */
-    /* background-color: black; */
-    border: 3px solid var(--color-yellow);
-    .logo-container {
-      position: absolute;
-      img {
-        width: 200px;
-        height: 200px;
-      }
-    }
-    nav {
-      height: 100%;
-      ul {
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        li {
-          /* font-family: var(--font-shoju); */
-          /* font-family: var(--font-special); */
-          font-family: var(--font-rye);
-          /* font-family: var(--font-rubik); */
-          font-size: 32px;
-          a,
-          a:visited {
-            color: var(--color-yellow);
-          }
-        }
-      }
-    }
+main {
+  background-image: url("../imgs/981.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  h1 {
+    font-family: "Shojumaru";
   }
+  h2 {
+    font-family: "Shojumaru";
+  }
+  p {
+    font-family: "Special Elite";
+  }
+}
+
+footer {
+  position: relative;
+  height: 80px;
+  width: 100%;
+  background-color: var(--color-blue);
+  border: 3px solid var(--color-yellow);
+  color: var(--color-yellow);
+  font-family: var(--font-rye);
+  font-size: 32px;
+  text-align: center;
+  align-content: center;
 }

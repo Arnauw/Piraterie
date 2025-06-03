@@ -1,0 +1,38 @@
+@import url("./common.css");
+@import url("./fonts.css");
+
+main {
+  .contact {
+    width: 100%;
+    height: calc(calc(100vh - 82px) - 158px);
+    background-image: url(../imgs/contact/message-bottle.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .scroll {
+      width: 60%;
+      height: 80%;
+      background-color: transparent;
+      background-image: url("../imgs/contact/rolled-parchment-paper.png");
+      background-size: 100% 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        margin-bottom: 12px;
+      }
+      .form-container {
+        width: 60%;
+        height: 64%;
+        /* background-color: transparent; */
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: url("../imgs/contact/feather.png") 0 0, pointer;
+      }
+    }
+  }
+}

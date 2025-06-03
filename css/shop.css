@@ -1,5 +1,6 @@
 @import url("./common.css");
 @import url("./fonts.css");
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
 
 .test-backgroung {
@@ -37,7 +38,7 @@
 
 }
 .section1 nav{
-    width: 21%;
+    width: 25%;
 }
 .section1 ul {
     display: flex;
@@ -56,21 +57,126 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    justify-content: space-around;
+    gap:3%;
     padding-top: 2%;
 }
-.divBlocSec2{
-    display: flex;
-    flex-direction: column;
+.cardShop {
+    position: relative;
+    max-width: 20%;
+    width: 100%;
+    margin-bottom: 5%;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 1px -4px 20px 11px rgba(0, 0, 0,  42%);
+    padding: 15px;
+    border-radius: 5%;
+  }
+  .cardShop * {
+    -webkit-box-sizing: padding-box;
+    box-sizing: padding-box;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  .cardShop img {
+    max-width: 100%;
+    height: 15em;
+    vertical-align: top;
+    position: relative;
+    background-color: transparent;
+  }
+  .cardShop figcaption {
+    padding: 20px 15px;
+  }
+  .cardShop h3,
+  .cardShop p {
+    margin: 0;
+  }
+  .cardShop h3 {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  .cardShop p {
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+  .cardShop .price {
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 48px;
+    letter-spacing: 1px;
+  }
+  .cardShop .price s {
+    margin-right: 5px;
+    opacity: 0.5;
+    font-size: 0.9em;
+    color: red;
+  }
+  .cardShop i {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    width: 56px;
+    line-height: 56px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #FFB601;
+    color: #ffffff;
+    font-size: 1.6em;
+    border: 4px solid #ffffff;
+  }
+  .cardShop a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .cardShop:hover,
+  .cardShop.hover {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+  .cardShop:hover i,
+  .cardShop.hover i {
+    background-color: #00258C;
+  }
+  
+
+
+
+
+/******* Section 3 Footer **********/
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-25px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
 }
-.imgBlocSec2{
+
+.avatar {
     display: flex;
-    flex-direction: column;
-    width: 20em;
-    background-color: #f0f0f0;
+    justify-content: center;
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+   }
+
+.avatar img {
+    width: 10%;
+    height: 40%;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
 }
-.descBlocSec2{
-    background-color: blueviolet;
-    display: flex;
-    width: 20em;
-}
+

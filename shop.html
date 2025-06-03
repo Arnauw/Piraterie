@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="./css/shop.css" />
   </head>
   <body  class="test-backgroung">
-    <header>
+    <header class="desktop">
       <div class="logo-container">
-        <img src="./imgs/logo.png" alt="logo piraterie" />
+        <img src="./imgs/header/logo.png" alt="logo piraterie" />
       </div>
       <nav>
         <ul>
@@ -20,9 +20,26 @@
           <li><a href="shop.html">Shop</a></li>
           <li><a href="treasure.html">Treasures</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="login.html">Login</a></li>
+          <li class="login-button"><a href="login.html">Login</a></li>
         </ul>
       </nav>
+    </header>
+    <header class="burger">
+      <input type="checkbox" id="checkbox" class="__checkbox" />
+      <label for="checkbox" class="btn-burger"
+        ><div class="icon-burger"></div
+      ></label>
+      <div class="login-button"><a href="login.html">Login</a></div>
+      <nav class="__container">
+        <ul class="__list">
+          <li class="__item"><a href="index.html">Home</a></li>
+          <li class="__item"><a href="crew.html">Crew</a></li>
+          <li class="__item"><a href="shop.html">Shop</a></li>
+          <li class="__item"><a href="treasure.html">Treasures</a></li>
+          <li class="__item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- <div class="overlay-container"></div> -->
     </header>
     
     <main>
@@ -34,10 +51,10 @@
           <div class="test"> 
             <nav>
               <ul>
-                <li><a href="#">Produit1</a></li>
-                <li><a href="#">Produit2</a></li>
-                <li><a href="#">Produit3</a></li>
-                <li><a href="#">Produit4</a></li>
+                <li><a href="#S1">Les Mugs</a></li>
+                <li><a href="#S2">T-Shirts</a></li>
+                <li><a href="#S3">Accesoires</a></li>
+                <li><a href="#S4">Divers</a></li>
               </ul>
             </nav>
           </div>
@@ -47,43 +64,163 @@
 
       <section class="section2"> <!-- Section 2 Produit-->
         <div class="blocs"> <!-- div qui contient tout les blocs-->
-          <div class="divBlocSec2"> <!-- le bloc qui contien l'image et la description-->
-            <div class="imgBlocSec2">
-              <img src="./imgs/logo.png" alt="Produit 1" />
-            </div>
-            <div class="descBlocSec2">
-              <br><br><p>La Piraterie !</p><br><br>
-            </div>
+          <div class="cardShop">
+            <img src="./imgs/mug1.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
           </div>
-          <div class="divBlocSec2">
-            <div class="imgBlocSec2">
-              <img src="./imgs/logo.png" alt="Produit 1" />
-            </div>
-            <div class="descBlocSec2">
-              <br><br><p>La Piraterie !</p><br><br>
-            </div>
+          <div class="cardShop">
+            <img src="./imgs/mug2.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
           </div>
-          <div class="divBlocSec2">
-            <div class="imgBlocSec2">
-              <img src="./imgs/logo.png" alt="Produit 1" />
-            </div>
-            <div class="descBlocSec2">
-              <br><br><p>La Piraterie !</p><br><br>
-            </div>
+          <div class="cardShop">
+            <img src="./imgs/mug3.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
           </div>
-          <div class="divBlocSec2">
-            <div class="imgBlocSec2">
-              <img src="./imgs/logo.png" alt="Produit 1" />
-            </div>
-            <div class="descBlocSec2">
-              <br><br><p>La Piraterie !</p><br><br>
-            </div>
+          <div class="cardShop">
+            <img src="./imgs/mug4.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
           </div>
+        </div>       
+      </section>
+
+      <section class="section3"> <!-- Section 2 Produit-->
+        <div class="blocs"> <!-- div qui contient tout les blocs-->
+          <div class="cardShop">
+            <img src="./imgs/mug1.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
+          </div>
+          <div class="cardShop">
+            <img src="./imgs/mug2.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
+          </div>
+          <div class="cardShop">
+            <img src="./imgs/mug3.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
+          </div>
+          <div class="cardShop">
+            <img src="./imgs/mug4.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
+          </div>
+        </div>       
+      </section>
+
+      <section class="section4" id="S4"> <!-- Section 2 Produit-->
+        <div class="blocs"> <!-- div qui contient tout les blocs-->
+          <div class="cardShop">
+            <img src="./imgs/mug1.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
+          </div>
+          <div class="cardShop">
+            <img src="./imgs/mug2.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
+          </div>
+          <div class="cardShop">
+            <img src="./imgs/mug3.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
+          </div>
+          <div class="cardShop">
+            <img src="./imgs/mug4.png" alt="Mug noir avec logo" />
+            <figcaption>
+              <h3>Pudol Doux</h3>
+              <p>All this modern technology just makes people try to do everything at once.</p>
+              <div class="price">
+                <s>24.00€</s>19.00€
+              </div>
+            </figcaption><i class="ion-android-cart"></i>
+            <a href="#"></a>
+          </div>
+        </div> 
+        
+        
+        <div class="avatar">
+          <img src="./imgs/LOGO V1.png" alt="logo" />
         </div>
       </section>
+
+
+    
     </main>
 
     <footer>
+    
+
       <p>&copy; 2025 La Piraterie !</p>
     </footer>
   </body>

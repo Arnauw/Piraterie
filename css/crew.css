@@ -8,13 +8,7 @@
   box-sizing: border-box;
 }
 
-.background-texte{
-  display:flex;
-  align-self: center;
-  position:relative;
-  width: 30%;
-  margin-top: 1%;
-}
+
 .crew{
   width:100%;
   display: flex;
@@ -23,17 +17,29 @@
   background: url('../imgs/benedict-koh-benedictkoh-191409u-envis-a2.jpg') center no-repeat;
   background-size: cover;
   gap: 100px;
+  order:2;
+}
+.background-container {
+  position: relative;
+  width: 20%;      /* ou la largeur que tu veux */
+  margin-top: 1%;
+  display: flex;
+  align-self: center;
+
+}
+.background-texte{
+  width:100%;
+  margin-top: 1%;
+  text-align: center;
 }
 .crew-texte{
-display: flex;
-align-self: center;
-width: 40%;
-font-family: 'Shojumaru', cursive;
-font-size: 1.8rem;
-color: #461f02;
-position:absolute;
-top: 27%;
-left: 37.5%;
+  position: absolute;
+  text-align: center;
+  top: 14%;
+  transform: translateX(-50%, -50%);
+  font-family: 'Shojumaru', cursive;
+  font-size: clamp(0.5rem, 1.3vw, 10rem);
+  color: #461f02;
 
 }
 .wanted{
@@ -188,4 +194,14 @@ left: 37.5%;
   font-family: "Rye", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.iconeJeremie{
+  display:flex;
+  flex-direction: row;
+
+}
+.icone1{
+  position:absolute;
+  transform: scale(0.9);
 }

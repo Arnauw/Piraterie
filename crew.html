@@ -9,9 +9,9 @@
 
 <body>
      
-    <header>
-<div class="logo-container">
-        <img src="./imgs/logo.png" alt="logo piraterie" />
+    <header class="desktop">
+      <div class="logo-container">
+        <img src="./imgs/header/logo.png" alt="logo piraterie" />
       </div>
       <nav>
         <ul>
@@ -24,56 +24,101 @@
         </ul>
       </nav>
     </header>
+    <header class="burger">
+      <input type="checkbox" id="checkbox" class="__checkbox" />
+      <label for="checkbox" class="btn-burger"
+        ><div class="icon-burger"></div
+      ></label>
+      <div class="login-button"><a href="login.html">Login</a></div>
+      <nav class="__container">
+        <ul class="__list">
+          <li class="__item"><a href="index.html">Home</a></li>
+          <li class="__item"><a href="crew.html">Crew</a></li>
+          <li class="__item"><a href="shop.html">Shop</a></li>
+          <li class="__item"><a href="treasure.html">Treasures</a></li>
+          <li class="__item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- <div class="overlay-container"></div> -->
+    </header>
 <main>
-    <button id="play-audio">Activer le son</button>
-    <audio id="bg-audio" loop hidden>
-        <source src="imgs/Cowboy Standoff Music Sound Effect.mp3" type="audio/mpeg">
-    </audio>
+    
     <section class="crew">
         <div class="background-container">
             <img class="background-texte" src="../imgs/input-frame.png" alt="background pour le texte 'notre equipage'">
             <div class="crew-texte"><h1>NOTRE ÉQUIPAGE!</h1></div>
+            <div class="btnSon">
+                <button id="toggle-audio">Activer le son</button>
+                <audio id="bg-audio" loop hidden>
+                    <source src="imgs/Cowboy Standoff Music Sound Effect.mp3" type="audio/mpeg">
+                </audio>
+            </div>
         </div>
         <section class="iconeJeremie">
-            <div class="poster-jeremie">
-                <h1 class="wanted-title">WANTED</h1>
-                <div class="mugshot-jeremie"></div>
-                <p class="subheading">ALIVE ONLY</p>
-                <span class="texteJeremie">(sinon pas de formation lol)</span>
-                <h2 class="namewanted">JÉRÉMIE</h2>
-                <p class="bounty">$ 999 999 999- </p>
-                <p class="marine">MARINE</p>
+            <div class="poster-jeremie wanted-card">
+                <div class="wanted-front">
+                    <h1 class="wanted-title">WANTED</h1>
+                    <div class="wanted-question">?</div>
+                </div>
+                <div class="wanted-back">
+                    <h1 class="wanted-title">WANTED</h1>
+                    <div class="mugshot-jeremie"></div>
+                    <p class="subheading">ALIVE ONLY</p>
+                    <span class="texteJeremie">(sinon pas de formation lol)</span>
+                    <h2 class="namewanted">JÉRÉMIE</h2>
+                    <p class="bounty">$ 999 999 999- </p>
+                    <p class="marine">MARINE</p>
+                </div>
+                
             </div>
-            <div class="icone1">
-                <img src="../imgs/chapeau-pirate.png" alt="icone1">
+            <div class="pirate1">
+                <img src="imgs/vecteezy_ai-generated-vivid-background-with-a-charismatic-pirate_35617710-removebg-preview.png" alt="pirate">
             </div>
         </section>
         
         <div class ="wanted">
             
-            <div class="poster">
-                <h1 class="wanted-title">WANTED</h1>
-                <div class="mugshot-mounir"></div>
-                <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
-                <h2 class="namewanted">MOUNIR</h2>
-                <p class="bounty">$ 60 000 000- </p>
-                <p class="marine">MARINE</p>
+            <div class="poster wanted-card">
+                <div class="wanted-front">
+                    <h1 class="wanted-title">WANTED</h1>
+                    <div class="wanted-question">?</div>
+                </div>
+                <div class="wanted-back">
+                    <h1 class="wanted-title">WANTED</h1>
+                    <div class="mugshot-mounir"></div>
+                    <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
+                    <h2 class="namewanted">MOUNIR</h2>
+                    <p class="bounty">$ 60 000 000- </p>
+                    <p class="marine">MARINE</p>
+                </div>
             </div>
-            <div class="poster-arnaud">
-                <h1 class="wanted-title">WANTED</h1>
-                <div class="mugshot-arnaud"></div>
-                <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
-                <h2 class="namewanted">ARNAUD</h2>
-                <p class="bounty">$ 100 000 000- </p>
-                <p class="marine-arnaud">MARINE</p>
+            <div class="poster-arnaud wanted-card">
+                <div class="wanted-front">
+                    <h1 class="wanted-title">WANTED</h1>
+                    <div class="wanted-question">?</div>
+                </div>
+                <div class="wanted-back">
+                    <h1 class="wanted-title">WANTED</h1>
+                    <div class="mugshot-arnaud"></div>
+                    <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
+                    <h2 class="namewanted">ARNAUD</h2>
+                    <p class="bounty">$ 100 000 000- </p>
+                    <p class="marine-arnaud">MARINE</p>
+                </div>
             </div>
-            <div class="poster">
-                <h1 class="wanted-title">WANTED</h1>
-                <div class="mugshot-amine"></div>
-                <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
-                <h2 class="namewanted">AMINE</h2>
-                <p class="bounty">$ 60 000 000- </p>
-                <p class="marine">MARINE</p>
+            <div class="poster wanted-card">
+                <div class="wanted-front">
+                    <h1 class="wanted-title">WANTED</h1>
+                    <div class="wanted-question">?</div>
+                </div>
+                <div class="wanted-back">
+                    <h1 class="wanted-title">WANTED</h1>
+                    <div class="mugshot-amine"></div>
+                    <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
+                    <h2 class="namewanted">AMINE</h2>
+                    <p class="bounty">$ 60 000 000- </p>
+                    <p class="marine">MARINE</p>
+                </div>
             </div>
         </div>
             
@@ -83,9 +128,17 @@
 
 </footer>
 <script>
-document.getElementById('play-audio').addEventListener('click', function() {
-  document.getElementById('bg-audio').play();
-  this.style.display = "none"; // cache le bouton après clic
+const audio = document.getElementById('bg-audio');
+const btn = document.getElementById('toggle-audio');
+
+btn.addEventListener('click', function() {
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = "Couper le son";
+  } else {
+    audio.pause();
+    btn.textContent = "Activer le son";
+  }
 });
 </script>
 </body>

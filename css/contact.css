@@ -13,10 +13,15 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
-    .scroll {
+    .scroll-container {
       position: relative;
       width: 60%;
       height: 80%;
+    }
+    .scroll {
+      position: relative;
+      width: 100%;
+      height: 100%;
       background-color: transparent;
       background-image: url("../imgs/contact/rolled-parchment-paper.png");
       background-size: 100% 100%;
@@ -26,9 +31,7 @@ main {
       justify-content: center;
       align-items: center;
       /* padding-top: 20px; Give some space for the title */
-      clip-path: inset(
-        0 0 0 0
-      );
+      clip-path: inset(0 0 0 0);
       /* transition: clip-path 0.5s ease-out;  */
       h2 {
         margin-bottom: 12px;
@@ -49,18 +52,18 @@ main {
         position: relative;
         z-index: 5;
       }
-      .left-roll {
-        position: absolute;
-        /* top: 0;
-        left: 0;
-        height: 100%;
-        width: 15%; */
-        background-image: url("../imgs/contact/left-roll.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-          z-index: 10; /* Must be on top of the .scroll content it's hiding */
-    /* transition: left 0.5s ease-out; Optional: for smoother programmatic changes if not using rAF */
-      }
+    }
+    .left-roll {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 15%;
+      background-image: url("../imgs/contact/left-roll.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      z-index: 10; /* Must be on top of the .scroll content it's hiding */
+      /* transition: left 0.5s ease-out; Optional: for smoother programmatic changes if not using rAF */
     }
   }
 }

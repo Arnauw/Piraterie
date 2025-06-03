@@ -42,14 +42,31 @@
     </header>
     <main>
       <section class="contact">
+        <!-- THIS BUTTON IS THE TRIGGER -->
+        <button
+          id="rollButton"
+          style="
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 100;
+            padding: 10px;
+            cursor: pointer;
+          "
+        >
+          Roll Parchment
+        </button>
         <div class="scroll">
           <h2>Formulaire de contact</h2>
+
           <div class="form-container"></div>
         </div>
+        <div class="left-roll"></div>
       </section>
     </main>
     <footer>
       <p>© 2025 La Piraterie</p>
     </footer>
+    <script src="./js/contact.js"></script>
   </body>
 </html>

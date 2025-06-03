@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Piraterie !</title>
-    <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./imgs/header/logo.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
-    <header>
+    <header class="desktop">
       <div class="logo-container">
-        <img src="./imgs/logo.png" alt="logo piraterie" />
+        <img src="./imgs/header/logo.png" alt="logo piraterie" />
       </div>
       <nav>
         <ul>
@@ -22,6 +26,23 @@
           <li class="login-button"><a href="login.html">Login</a></li>
         </ul>
       </nav>
+    </header>
+    <header class="burger">
+      <input type="checkbox" id="checkbox" class="__checkbox" />
+      <label for="checkbox" class="btn-burger"
+        ><div class="icon-burger"></div
+      ></label>
+      <div class="login-button"><a href="login.html">Login</a></div>
+      <nav class="__container">
+        <ul class="__list">
+          <li class="__item"><a href="index.html">Home</a></li>
+          <li class="__item"><a href="crew.html">Crew</a></li>
+          <li class="__item"><a href="shop.html">Shop</a></li>
+          <li class="__item"><a href="treasure.html">Treasures</a></li>
+          <li class="__item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- <div class="overlay-container"></div> -->
     </header>
     <main class="">
       <section class="banner">
@@ -87,6 +108,7 @@
         </section>
       </div>
     </main>
+
     <footer>
       <p>© 2025 La Piraterie</p>
     </footer>

@@ -17,7 +17,20 @@ position: relative;
   left: 5vw;
   z-index: 0;
   filter: blur(7px) brightness(1.2) saturate(1.3);
-
+}
+.pirate2{
+  position: absolute;
+  transform: scale(0.5) translateY(-30vw);
+  right:-17vw;
+  z-index: 0;
+  filter: blur(4px) brightness(1.2) saturate(1.3);
+}
+.pirate2:hover {
+    filter: blur(0px) brightness(1.2) saturate(1.3);
+}
+.pirate1:hover{
+    filter: blur(0px) brightness(1.2) saturate(1.3);
+    
 }
 
 .crew{
@@ -59,11 +72,12 @@ position: relative;
   position: absolute;
   text-align: center;
   top: 9%;
-  transform: translateX(-50%, -50%);
   font-family: 'Shojumaru', cursive;
   font-size: clamp(0.5rem, 1.3vw, 10rem);
   color: #461f02;
-
+}
+.crew-texte:hover{
+  color: #ffd700;
 }
 .wanted{
   width: 100%;
@@ -219,11 +233,6 @@ position: relative;
   font-weight: 400;
   font-style: normal;
 }
-
-.cowboy{
-
-}
-
   #toggle-audio {
   display:flex;
   justify-self: center;

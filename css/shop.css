@@ -15,30 +15,35 @@
 
 /******* Section 1 Baner **********/
 .section1{
-    display: flex;
-    align-items: center;
     width: 100%;
-    max-width: 100%;
-}
-.imgBaner{
-    max-width: 100%;
-    height: auto;
-    object-fit: fill;
 }
 .menuBaner{
-    background-color: black;
-    color: whitesmoke;
+    left: 20;
+}
+.imgBaner{
+    display: flex;
+    width: 100%;
+    
 }
 .test{
     display: flex;
-    align-items: center;
     justify-content: center;
+    width: 100%;
+    background-color: black;
+    color: whitesmoke;
+    opacity: 0.7;
+    transform: translateY(-100%);
 
+
+}
+.section1 nav{
+    width: 21%;
 }
 .section1 ul {
     display: flex;
-    font-size: 2em;
-    padding: 3%;
+    font-size: 1.5em;
+    padding: 2%;
+    gap: 10%;
 }
 
 

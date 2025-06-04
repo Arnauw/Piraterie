@@ -1,49 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const rollButton = document.querySelector('.roll-btn'); // Ensure this class matches your button
+    // change button to submit when done.
+    const rollButton = document.querySelector('.roll-btn'); 
     const scrollElement = document.querySelector('.scroll');
     const leftRollElement = document.querySelector('.left-roll');
 
-    if (!scrollElement || !leftRollElement || !rollButton) {
-        console.error('Required elements not found!');
-        return;
-    }
-
-    const ROLL_WIDTH_PERCENTAGE = 0.15;
+    const rollWidthPercentage = 0.15;
     let animationFrameId = null;
-    let isRolled = false; // True if the parchment is currently in the "rolled up" state
+    let isRolled = false;
+
 
     // Function to set the .left-roll's position and size based on .scroll's current state
     // and whether it's supposed to be rolled or unrolled.
-    function syncLeftRollToScrollState() {
-        const scrollRect = scrollElement.getBoundingClientRect();
-        // Parent for relative positioning (e.g., .contact)
-        const contactRect = scrollElement.parentElement.getBoundingClientRect();
+    // function syncLeftRollToScrollState() {
+    //     const scrollRect = scrollElement.getBoundingClientRect();
+    //     // Parent for relative positioning (e.g., .contact)
+    //     const contactRect = scrollElement.parentElement.getBoundingClientRect();
 
-        const relativeScrollTop = scrollRect.top - contactRect.top;
-        const relativeScrollLeft = scrollRect.left - contactRect.left;
+    //     const relativeScrollTop = scrollRect.top - contactRect.top;
+    //     const relativeScrollLeft = scrollRect.left - contactRect.left;
 
-        leftRollElement.style.top = `${relativeScrollTop}px`;
-        leftRollElement.style.height = `${scrollRect.height}px`;
+    //     leftRollElement.style.top = `${relativeScrollTop}px`;
+    //     leftRollElement.style.height = `${scrollRect.height}px`;
 
-        const calculatedRollWidth = scrollRect.width * ROLL_WIDTH_PERCENTAGE;
-        leftRollElement.style.width = `${calculatedRollWidth}px`;
+    //     const calculatedRollWidth = scrollRect.width * rollWidthPercentage;
+    //     leftRollElement.style.width = `${calculatedRollWidth}px`;
 
-        if (isRolled) {
-            // Position for "rolled up" state: right edge of roll aligns with right edge of scroll
-            leftRollElement.style.left = `${relativeScrollLeft + scrollRect.width - calculatedRollWidth}px`;
-        } else {
-            // Position for "unrolled" state: left edge of roll aligns with left edge of scroll
-            leftRollElement.style.left = `${relativeScrollLeft}px`;
-        }
-    }
+    //     if (isRolled) {
+    //         // Position for "rolled up" state: right edge of roll aligns with right edge of scroll
+    //         leftRollElement.style.left = `${relativeScrollLeft + scrollRect.width - calculatedRollWidth}px`;
+    //     } else {
+    //         // Position for "unrolled" state: left edge of roll aligns with left edge of scroll
+    //         leftRollElement.style.left = `${relativeScrollLeft}px`;
+    //     }
+    // }
 
     // Initial setup: parchment is unrolled
     isRolled = false;
-    syncLeftRollToScrollState();
+    // syncLeftRollToScrollState();
 
     window.addEventListener('resize', () => {
         if (!animationFrameId) { // Only update if not currently animating
-            syncLeftRollToScrollState(); // Re-sync based on current isRolled state
+            // syncLeftRollToScrollState(); // Re-sync based on current isRolled state
         }
     });
 
@@ -103,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             animationFrameId = null;
             // If animation was interrupted, the `isRolled` state might be out of sync
             // with the visual. Call sync to fix visual based on last `isRolled` state.
-            syncLeftRollToScrollState();
+            // syncLeftRollToScrollState();
         }
 
         // Get current dimensions and positions using getBoundingClientRect for precision
@@ -115,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentScrollWidth = scrollRect.width;
         const currentScrollHeight = scrollRect.height;
 
-        const calculatedRollWidth = currentScrollWidth * ROLL_WIDTH_PERCENTAGE;
+        const calculatedRollWidth = currentScrollWidth * rollWidthPercentage;
 
         let animParams = {};
         const animationDuration = 1600;

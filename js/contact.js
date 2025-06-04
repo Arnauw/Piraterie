@@ -1,171 +1,167 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // change button to submit when done.
-    const rollButton = document.querySelector('.roll-btn'); 
-    const scrollElement = document.querySelector('.scroll');
-    const leftRollElement = document.querySelector('.left-roll');
+document.addEventListener("DOMContentLoaded", () => {
+  const rollButton = document.querySelector(".roll-btn");
+  const scrollElement = document.querySelector(".scroll");
+  const leftRollElement = document.querySelector(".left-roll");
 
-    const rollWidthPercentage = 0.15;
-    let animationFrameId = null;
-    let isRolled = false;
+  const rollWidthPercentage = 0.15;
+  let animationFrameId = null;
+  let isRolled = false;
 
+  const animationDuration = 1200;
+  const waitDuration = 1000;
 
-    // Function to set the .left-roll's position and size based on .scroll's current state
-    // and whether it's supposed to be rolled or unrolled.
-    // function syncLeftRollToScrollState() {
-    //     const scrollRect = scrollElement.getBoundingClientRect();
-    //     // Parent for relative positioning (e.g., .contact)
-    //     const contactRect = scrollElement.parentElement.getBoundingClientRect();
+  function animateRoll(timestamp, animParams) {
+    const {
+      startTime,
+      startRollLeft,
+      targetRollLeft,
+      startClipLeft,
+      targetClipLeft,
+      duration,
+      finalParchmentIsRolled,
+      finalRollElementLeft,
+      finalRollElementTop,
+      finalRollElementWidth,
+      finalRollElementHeight,
+      finalScrollClipLeft,
+    } = animParams;
 
-    //     const relativeScrollTop = scrollRect.top - contactRect.top;
-    //     const relativeScrollLeft = scrollRect.left - contactRect.left;
+    const elapsedTime = timestamp - startTime;
+    const progress = Math.min(elapsedTime / duration, 1);
 
-    //     leftRollElement.style.top = `${relativeScrollTop}px`;
-    //     leftRollElement.style.height = `${scrollRect.height}px`;
+    const currentRollLeft =
+      startRollLeft + (targetRollLeft - startRollLeft) * progress;
+    leftRollElement.style.left = `${currentRollLeft}px`;
 
-    //     const calculatedRollWidth = scrollRect.width * rollWidthPercentage;
-    //     leftRollElement.style.width = `${calculatedRollWidth}px`;
+    const currentClipLeft =
+      startClipLeft + (targetClipLeft - startClipLeft) * progress;
+    scrollElement.style.clipPath = `inset(0 0 0 ${currentClipLeft}px)`;
 
-    //     if (isRolled) {
-    //         // Position for "rolled up" state: right edge of roll aligns with right edge of scroll
-    //         leftRollElement.style.left = `${relativeScrollLeft + scrollRect.width - calculatedRollWidth}px`;
-    //     } else {
-    //         // Position for "unrolled" state: left edge of roll aligns with left edge of scroll
-    //         leftRollElement.style.left = `${relativeScrollLeft}px`;
-    //     }
-    // }
+    const scrollContent = scrollElement.querySelectorAll("h2, .form-container");
+    // Opacity fades out when rolling (targetClipLeft > startClipLeft, which is true for your roll-up)
+    // Opacity fades in when unrolling (targetClipLeft < startClipLeft, which is true for your unroll)
+    const opacityProgress =
+      targetClipLeft > startClipLeft ? 1 - progress : progress;
+    scrollContent.forEach(
+      (content) => (content.style.opacity = opacityProgress)
+    );
 
-    // Initial setup: parchment is unrolled
-    isRolled = false;
-    // syncLeftRollToScrollState();
+    if (progress < 1) {
+      animationFrameId = requestAnimationFrame((newTime) =>
+        animateRoll(newTime, animParams)
+      );
+    } else {
+      // Current animation segment finished
+      animationFrameId = null;
 
-    window.addEventListener('resize', () => {
-        if (!animationFrameId) { // Only update if not currently animating
-            // syncLeftRollToScrollState(); // Re-sync based on current isRolled state
+      // Apply the pre-calculated final state for THIS segment precisely
+      leftRollElement.style.left = `${finalRollElementLeft}px`;
+      leftRollElement.style.top = `${finalRollElementTop}px`;
+      leftRollElement.style.width = `${finalRollElementWidth}px`;
+      leftRollElement.style.height = `${finalRollElementHeight}px`;
+      scrollElement.style.clipPath = `inset(0 0 0 ${finalScrollClipLeft}px)`; // Use the final clip value
+      scrollContent.forEach(function (content) {
+        // 2. Use an if/else statement instead of the ternary operator
+        if (finalParchmentIsRolled === true) {
+          // or just `if (finalParchmentIsRolled)`
+          content.style.opacity = 0;
+        } else {
+          content.style.opacity = 1;
         }
-    });
+      });
 
-    function animateRoll(timestamp, animParams) {
-        const {
-            startTime,
-            startRollLeft, targetRollLeft, // For .left-roll's 'left'
-            startClipLeft, targetClipLeft, // For .scroll's clip-path
-            duration,
-            // Parameters for the precise final state after this animation segment finishes
-            finalParchmentIsRolled, // The state of `isRolled` AFTER this animation
-            finalRollElementLeft, finalRollElementTop,
-            finalRollElementWidth, finalRollElementHeight,
-            finalScrollClipLeft
-        } = animParams;
+      if (finalParchmentIsRolled === true && isRolled === false) {
+        // Just finished ROLLING UP
+        isRolled = true;
+        rollButton.textContent = "Waiting...";
+        // Button remains disabled
 
-        const elapsedTime = timestamp - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
+        setTimeout(() => {
+          const scrollRect = scrollElement.getBoundingClientRect();
+          const contactRect =
+            scrollElement.parentElement.getBoundingClientRect();
+          const currentRelativeScrollTop = scrollRect.top - contactRect.top;
+          const currentRelativeScrollLeft = scrollRect.left - contactRect.left;
+          const currentScrollWidth = scrollRect.width;
+          const currentScrollHeight = scrollRect.height;
+          const calculatedRollWidth = currentScrollWidth * rollWidthPercentage;
 
-        // Interpolate .left-roll's 'left' position
-        const currentRollLeft = startRollLeft + (targetRollLeft - startRollLeft) * progress;
-        leftRollElement.style.left = `${currentRollLeft}px`;
+          // Parameters for UNROLLING, using your original logic for clip values
+          const unrollAnimParams = {
+            startTime: performance.now(),
+            // Start from the final state of the .left-roll after rolling up
+            startRollLeft: finalRollElementLeft,
+            // Target the initial left position for .left-roll
+            targetRollLeft: currentRelativeScrollLeft,
 
-        // Interpolate .scroll's clip-path
-        const currentClipLeft = startClipLeft + (targetClipLeft - startClipLeft) * progress;
-        scrollElement.style.clipPath = `inset(0 0 0 ${currentClipLeft}px)`;
+            // **USING YOUR ORIGINAL VALUES FOR UNROLLING**
+            startClipLeft: currentScrollWidth - 100, // Corresponds to your original 'else' block's startClipLeft for unrolling
+            targetClipLeft: 100, // Corresponds to your original 'else' block's targetClipLeft for unrolling
 
-        // Fade content: if rolling up (targetClipLeft > startClipLeft), fade out (1 to 0)
-        // if unrolling (targetClipLeft < startClipLeft), fade in (0 to 1)
-        const scrollContent = scrollElement.querySelectorAll('h2, .form-container');
-        const opacityProgress = (targetClipLeft > startClipLeft) ? (1 - progress) : progress;
-        scrollContent.forEach(content => content.style.opacity = opacityProgress);
+            duration: animationDuration,
 
-        if (progress < 1) {
-            animationFrameId = requestAnimationFrame(newTime => animateRoll(newTime, animParams));
-        } else { // Animation finished
-            animationFrameId = null;
-            isRolled = finalParchmentIsRolled; // Update the global state
+            finalParchmentIsRolled: false,
+            finalRollElementLeft: currentRelativeScrollLeft,
+            finalRollElementTop: currentRelativeScrollTop,
+            finalRollElementWidth: calculatedRollWidth,
+            finalRollElementHeight: currentScrollHeight,
+            finalScrollClipLeft: 0, // Corresponds to your original 'else' block's finalScrollClipLeft
+          };
+          rollButton.textContent = "Unrolling...";
+          animationFrameId = requestAnimationFrame((newTime) =>
+            animateRoll(newTime, unrollAnimParams)
+          );
+        }, waitDuration);
+      } else if (finalParchmentIsRolled === false && isRolled === true) {
+        // Just finished UNROLLING
+        isRolled = false;
+        rollButton.textContent = "Roll Parchment";
+        rollButton.disabled = false;
+      }
+    }
+  }
 
-            // Apply the pre-calculated final state precisely
-            leftRollElement.style.left = `${finalRollElementLeft}px`;
-            leftRollElement.style.top = `${finalRollElementTop}px`;
-            leftRollElement.style.width = `${finalRollElementWidth}px`;
-            leftRollElement.style.height = `${finalRollElementHeight}px`;
-            scrollElement.style.clipPath = `inset(0 0 0 ${finalScrollClipLeft}px)`;
-
-            // Ensure content opacity is at its final value
-            scrollContent.forEach(content => content.style.opacity = finalParchmentIsRolled ? 0 : 1);
-
-            rollButton.textContent = isRolled ? "Reset Parchment" : "Roll Parchment";
-        }
+  rollButton.addEventListener("click", () => {
+    if (animationFrameId || isRolled) {
+      return;
     }
 
-    rollButton.addEventListener('click', () => {
-        if (animationFrameId) {
-            cancelAnimationFrame(animationFrameId);
-            animationFrameId = null;
-            // If animation was interrupted, the `isRolled` state might be out of sync
-            // with the visual. Call sync to fix visual based on last `isRolled` state.
-            // syncLeftRollToScrollState();
-        }
+    const scrollRect = scrollElement.getBoundingClientRect();
+    const contactRect = scrollElement.parentElement.getBoundingClientRect();
+    const currentRelativeScrollTop = scrollRect.top - contactRect.top;
+    const currentRelativeScrollLeft = scrollRect.left - contactRect.left;
+    const currentScrollWidth = scrollRect.width;
+    const currentScrollHeight = scrollRect.height;
+    const calculatedRollWidth = currentScrollWidth * rollWidthPercentage;
 
-        // Get current dimensions and positions using getBoundingClientRect for precision
-        const scrollRect = scrollElement.getBoundingClientRect();
-        const contactRect = scrollElement.parentElement.getBoundingClientRect(); // Parent (e.g., .contact)
+    const animStartRollLeft = currentRelativeScrollLeft;
+    const animTargetRollLeft =
+      currentRelativeScrollLeft + currentScrollWidth - calculatedRollWidth;
 
-        const currentRelativeScrollTop = scrollRect.top - contactRect.top;
-        const currentRelativeScrollLeft = scrollRect.left - contactRect.left;
-        const currentScrollWidth = scrollRect.width;
-        const currentScrollHeight = scrollRect.height;
+    // Parameters for ROLLING UP, using your original logic for clip values
+    const rollUpAnimParams = {
+      startTime: performance.now(),
+      startRollLeft: animStartRollLeft,
+      targetRollLeft: animTargetRollLeft,
 
-        const calculatedRollWidth = currentScrollWidth * rollWidthPercentage;
+      // **USING YOUR ORIGINAL VALUES FOR ROLLING UP**
+      startClipLeft: 100, // Corresponds to your original 'if (!isRolled)' block
+      targetClipLeft: currentScrollWidth - 100, // Corresponds to your original 'if (!isRolled)' block
 
-        let animParams = {};
-        const animationDuration = 1600;
+      duration: animationDuration,
 
-        if (!isRolled) { // === Current state: UNROLLED. Action: ROLL IT UP ===
-            // Start animation from current visual state of .left-roll
-            const animStartRollLeft = currentRelativeScrollLeft; // Left edge of scroll
-            // Target state for .left-roll
-            const animTargetRollLeft = currentRelativeScrollLeft + currentScrollWidth - calculatedRollWidth;
+      finalParchmentIsRolled: true,
+      finalRollElementLeft: animTargetRollLeft,
+      finalRollElementTop: currentRelativeScrollTop,
+      finalRollElementWidth: calculatedRollWidth,
+      finalRollElementHeight: currentScrollHeight,
+      finalScrollClipLeft: currentScrollWidth, // Corresponds to your original 'if (!isRolled)' block
+    };
 
-            animParams = {
-                startTime: performance.now(),
-                startRollLeft: animStartRollLeft,
-                targetRollLeft: animTargetRollLeft,
-                startClipLeft: 100,                       // Scroll starts unclipped
-                targetClipLeft: currentScrollWidth - 100,     // Scroll ends fully clipped from left
-
-                duration: animationDuration,
-
-                finalParchmentIsRolled: true, // State AFTER this animation
-                finalRollElementLeft: animTargetRollLeft, // .left-roll's final 'left'
-                finalRollElementTop: currentRelativeScrollTop,
-                finalRollElementWidth: calculatedRollWidth,
-                finalRollElementHeight: currentScrollHeight,
-                finalScrollClipLeft: currentScrollWidth
-            };
-            rollButton.textContent = "Rolling...";
-            // Note: isRolled is updated *after* animation in this model
-        } else { // === Current state: ROLLED. Action: UNROLL IT ===
-            // Start animation from current visual state of .left-roll
-            const animStartRollLeft = currentRelativeScrollLeft + currentScrollWidth - calculatedRollWidth;
-            // Target state for .left-roll
-            const animTargetRollLeft = currentRelativeScrollLeft; // Back to left edge of scroll
-
-            animParams = {
-                startTime: performance.now(),
-                startRollLeft: animStartRollLeft,
-                targetRollLeft: animTargetRollLeft,
-                startClipLeft: currentScrollWidth - 100,      // Scroll starts fully clipped
-                targetClipLeft: 100,                      // Scroll ends unclipped
-
-                duration: animationDuration,
-
-                finalParchmentIsRolled: false, // State AFTER this animation
-                finalRollElementLeft: animTargetRollLeft,
-                finalRollElementTop: currentRelativeScrollTop,
-                finalRollElementWidth: calculatedRollWidth,
-                finalRollElementHeight: currentScrollHeight,
-                finalScrollClipLeft: 0
-            };
-            rollButton.textContent = "Unrolling...";
-        }
-
-        animationFrameId = requestAnimationFrame(timestamp => animateRoll(timestamp, animParams));
-    });
+    rollButton.textContent = "Rolling...";
+    rollButton.disabled = true;
+    animationFrameId = requestAnimationFrame((timestamp) =>
+      animateRoll(timestamp, rollUpAnimParams)
+    );
+  });
 });

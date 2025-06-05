@@ -38,7 +38,8 @@
 
 }
 .section1 nav{
-    width: 25%;
+    width: 50%;
+    padding: 1%;
 }
 .section1 ul {
     display: flex;
@@ -65,7 +66,7 @@
     max-width: 20%;
     width: 100%;
     margin-bottom: 5%;
-    background: #ffffff;
+    background: #f5e8bd;
     text-align: center;
     box-shadow: 1px -4px 20px 11px rgba(0, 0, 0,  42%);
     padding: 15px;
@@ -82,7 +83,8 @@
     height: 15em;
     vertical-align: top;
     position: relative;
-    background-color: transparent;
+    background-color:#fff;
+    border-radius: 5%;
   }
   .cardShop figcaption {
     padding: 20px 15px;
@@ -180,3 +182,90 @@
     transition: all 0.3s ease-in-out;
 }
 
+
+
+
+
+
+
+/* CSS */
+.button-13 {
+  touch-action: manipulation;
+  background: none;
+  position: relative;
+  border-width: 4px 12px;
+  border-style: solid;
+  border-color: transparent;
+  padding: 8px 24px;
+  text-align: center;
+  color: #fff;
+  transition-property: transform;
+  transition-duration: 0.4s;
+}
+
+.button-13:active {
+  transform: scale(0.92);
+}
+
+.button-13-background {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  clip-path: polygon(12px 0, calc(100% - 12px) 0%, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0% calc(100% - 12px), 0% 12px);
+  background-color: saddlebrown;
+  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8)), linear-gradient(to bottom, #af6a65, calc(12.5% - 1px), #cfa381, #88312b calc(12.5% + 1px) 50%, #601d2c 50% calc(87.5% - 1px), #994021, #341227 calc(87.5% + 1px));
+  transition-property: filter;
+  transition-duration: 0.2s;
+  will-change: filter;
+}
+
+.button-13 .text {
+  background: linear-gradient(180deg, #FFE5C2 1%, #CDAF87 100%), #FFFFFF;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  z-index: 3;
+  position: relative;
+  font-size: 2em;
+}
+
+@media (hover: hover) {
+  .button-13:hover .button-13-background {
+    filter: brightness(0.8);
+  }
+}
+
+.button-13:active .button-13-background {
+  filter: brightness(0.6);
+}
+
+.button-13-border {
+  position: absolute;
+  z-index: 1;
+  inset: -4px -12px;
+}
+
+@supports (-webkit-mask-box-image: inherit) or (mask-border: inherit) {
+  .button-13-border {
+    background-image: linear-gradient(to bottom, #bb9d7a 50%, #806d56 50%);
+    -webkit-mask-box-image-source: url("https://csspro.com/css-3d-buttons/buttons-img/baldurs-gate-3-border.svg");
+    -webkit-mask-box-image-slice: 15 23;
+    -webkit-mask-box-image-width: 15px 23px;
+    -webkit-mask-box-image-repeat: repeat;
+  }
+}
+
+@supports not ((-webkit-mask-box-image: inherit) or (mask-border: inherit)) {
+  .button-13-border {
+    border-width: 15px 23px;
+    border-style: solid;
+    border-color: transparent;
+    border-image-source: url("https://csspro.com/css-3d-buttons/buttons-img/baldurs-gate-3-border-inverted.svg");
+    border-image-slice: 15 23;
+    border-image-width: 15px 23px;
+    border-image-repeat: repeat;
+    background-image: linear-gradient(#000, #000), linear-gradient(to bottom, #bb9d7a 50%, #806d56 50%);
+    background-origin: content-box, border-box;
+    background-repeat: no-repeat;
+    filter: url("#remove-black-button-13");
+  }
+}

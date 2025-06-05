@@ -224,7 +224,7 @@ if (window.innerWidth > 380) {
       messageTextarea.value = "";
       messageTextarea.placeholder =
         "Votre message a bien été envoyé à la mer !\nNotre équipage y répondra rapidement.";
-      console.log("CA MARCHE");
+      // console.log("CA MARCHE");
       setTimeout(function () {
         messageTextarea.placeholder = "Votre message ici..";
       }, 5000);

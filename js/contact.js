@@ -212,19 +212,12 @@ if (window.innerWidth > 380) {
 } else {
   document.addEventListener("DOMContentLoaded", function () {
     const rollButton = document.querySelector(".submit");
-    const scrollElement = document.querySelector(".scroll");
-    const leftRollElement = document.querySelector(".left-roll");
-
-    const scrollContainer = document.querySelector(".scroll-container");
-    const formContainer = document.querySelector(".form-container");
     const messageTextarea = document.getElementById("message");
-    const submitButton = document.querySelector(".submit");
 
     rollButton.addEventListener("click", function () {
       messageTextarea.value = "";
       messageTextarea.placeholder =
         "Votre message a bien été envoyé à la mer !\nNotre équipage y répondra rapidement.";
-      // console.log("CA MARCHE");
       setTimeout(function () {
         messageTextarea.placeholder = "Votre message ici..";
       }, 5000);

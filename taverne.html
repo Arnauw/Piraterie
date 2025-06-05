@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/crew.css">
+    <link rel="stylesheet" href="../css/taverne.css">
     <title>WANTED</title>
 </head>
 
@@ -42,11 +42,12 @@
       <!-- <div class="overlay-container"></div> -->
     </header>
 <main>
-    
+                <!---------Section Background et wanted jeremie------------>
+
     <section class="crew">
         <div class="background-container">
             <img class="background-texte" src="../imgs/input-frame.png" alt="background pour le texte 'notre equipage'">
-            <div class="crew-texte"><h1>NOTRE ÉQUIPAGE!</h1></div>
+            <div class="crew-texte"><h1>LA TAVERNE!</h1></div>
             <div class="btnSon">
                 <button id="toggle-audio">Activer le son</button>
                 <audio id="bg-audio" loop hidden>
@@ -55,6 +56,9 @@
             </div>
         </div>
         <section class="iconeJeremie">
+            <div class="pirate2">
+                <img src="imgs/pirate3.png" alt="pirate barbe noire">
+            </div>
             <div class="poster-jeremie wanted-card">
                 <div class="wanted-front">
                     <h1 class="wanted-title">WANTED</h1>
@@ -75,7 +79,8 @@
                 <img src="imgs/vecteezy_ai-generated-vivid-background-with-a-charismatic-pirate_35617710-removebg-preview.png" alt="pirate">
             </div>
         </section>
-        
+            <!---------Section Wanted Equipage------------>
+
         <div class ="wanted">
             
             <div class="poster wanted-card">
@@ -123,23 +128,25 @@
         </div>
             
     </section>
+    
+    <!---------Section Rumeur Taverne---------->
+    <section class="taverne">
+        <div class="background-container2">
+            <img class="background-texte" src="../imgs/input-frame.png" alt="background pour le texte 'notre equipage'">
+            <div class="crew-texte2"><h1>Rumeurs de la taverne!</h1></div>
+        </div>
+        <div id="zone-rumeurs"></div>
+    </section>
+
+        
 </main>
 <footer>
 
 </footer>
-<script>
-const audio = document.getElementById('bg-audio');
-const btn = document.getElementById('toggle-audio');
+<script src="js/audio-toggle.js"></script>
+<script src="js/rumeurs.js"></script>
 
-btn.addEventListener('click', function() {
-  if (audio.paused) {
-    audio.play();
-    btn.textContent = "Couper le son";
-  } else {
-    audio.pause();
-    btn.textContent = "Activer le son";
-  }
-});
-</script>
+
+
 </body>
 </html>

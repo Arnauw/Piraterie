@@ -138,30 +138,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const animTargetRollLeft =
       currentRelativeScrollLeft + currentScrollWidth - calculatedRollWidth;
 
-    // Parameters for ROLLING UP, using your original logic for clip values
-    const rollUpAnimParams = {
-      startTime: performance.now(),
-      startRollLeft: animStartRollLeft,
-      targetRollLeft: animTargetRollLeft,
+    // // Parameters for ROLLING UP, using your original logic for clip values
+    // const rollUpAnimParams = {
+    //   startTime: performance.now(),
+    //   startRollLeft: animStartRollLeft,
+    //   targetRollLeft: animTargetRollLeft,
 
-      // **USING YOUR ORIGINAL VALUES FOR ROLLING UP**
-      startClipLeft: 100, // Corresponds to your original 'if (!isRolled)' block
-      targetClipLeft: currentScrollWidth - 100, // Corresponds to your original 'if (!isRolled)' block
+    //   // **USING YOUR ORIGINAL VALUES FOR ROLLING UP**
+    //   startClipLeft: 100, // Corresponds to your original 'if (!isRolled)' block
+    //   targetClipLeft: currentScrollWidth - 100, // Corresponds to your original 'if (!isRolled)' block
 
-      duration: animationDuration,
+    //   duration: animationDuration,
 
-      finalParchmentIsRolled: true,
-      finalRollElementLeft: animTargetRollLeft,
-      finalRollElementTop: currentRelativeScrollTop,
-      finalRollElementWidth: calculatedRollWidth,
-      finalRollElementHeight: currentScrollHeight,
-      finalScrollClipLeft: currentScrollWidth, // Corresponds to your original 'if (!isRolled)' block
-    };
+    //   finalParchmentIsRolled: true,
+    //   finalRollElementLeft: animTargetRollLeft,
+    //   finalRollElementTop: currentRelativeScrollTop,
+    //   finalRollElementWidth: calculatedRollWidth,
+    //   finalRollElementHeight: currentScrollHeight,
+    //   finalScrollClipLeft: currentScrollWidth, // Corresponds to your original 'if (!isRolled)' block
+    // };
 
-    rollButton.textContent = "Rolling...";
-    rollButton.disabled = true;
-    animationFrameId = requestAnimationFrame((timestamp) =>
-      animateRoll(timestamp, rollUpAnimParams)
-    );
+    // rollButton.textContent = "Rolling...";
+    // rollButton.disabled = true;
+    // animationFrameId = requestAnimationFrame((timestamp) =>
+    //   animateRoll(timestamp, rollUpAnimParams)
+    // );
   });
 });

@@ -15,9 +15,14 @@ const rumeurs = [
  "Jérémie a tenté de dresser une mouette… elle lui a volé son chapeau."
 ];
 
-// Nombre de bulles à afficher en même temps
-const NB_BULLES = 8;
-
+let NB_BULLES;
+function updateNbBulles() {
+  if (window.innerWidth <= 768) {
+    NB_BULLES = 3;
+  } else {
+    NB_BULLES = 8;
+  }
+}
 function afficheRumeursMultiples() {
   const zone = document.getElementById('zone-rumeurs');
   zone.innerHTML = ''; // Vide la zone
@@ -36,5 +41,13 @@ function afficheRumeursMultiples() {
   }
 }
 
+addEventListener("resize", (event) => {
+updateNbBulles();
+afficheRumeursMultiples();
+});
+
 setInterval(afficheRumeursMultiples, 8000);
-window.onload = afficheRumeursMultiples;
+window.onload = () =>{
+  updateNbBulles();
+afficheRumeursMultiples();
+};

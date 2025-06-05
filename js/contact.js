@@ -123,6 +123,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (finalParchmentIsRolled === true && isRolled === false) {
+        messageTextarea.placeholder =
+          "Votre message a bien été envoyé à la mer !\nNotre équipage y répondra rapidement.";
+        messageTextarea.classList.add("center-placeholder");
+        // messageTextarea.style.color = "var(--color-blue)";
+        messageTextarea.value = "";
+
         isRolled = true;
 
         setTimeout(function () {

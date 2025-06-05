@@ -56,10 +56,19 @@ main {
           width: 120%;
           height: 100%;
           resize: none;
+          padding: 12px;
+          font-family: var(--font-special);
+          font-size: 40px;
+          color: #575655;
           &:focus {
             outline: none;
             border: none;
             /* box-shadow: none; */
+          }
+          &::placeholder {
+            font-family: var(--font-special);
+            /* text-align: center; */
+            font-size: 40px;
           }
         }
         button {
@@ -102,4 +111,9 @@ main {
       cursor: pointer;
     }
   }
+}
+
+.center-placeholder {
+  text-align: center;
+  color: var(--color-yellow);
 }

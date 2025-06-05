@@ -1,7 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const rollButton = document.querySelector(".roll-btn");
+  const rollButton = document.querySelector(".submit");
   const scrollElement = document.querySelector(".scroll");
   const leftRollElement = document.querySelector(".left-roll");
+
+  const scrollContainer = document.querySelector(".scroll-container");
+  const formContainer = document.querySelector(".form-container");
+  const messageTextarea = document.getElementById("message");
+  const submitButton = document.querySelector(".submit"); // Get the button element
+
+  // Check if all elements exist before adding listeners
+  if (scrollContainer && formContainer && messageTextarea && submitButton) {
+    scrollContainer.addEventListener("click", function (event) {
+      // IMPORTANT: Prevent focusing if the clicked element is the submit button itself
+      // This ensures the button's default behavior (form submission) is not interrupted.
+      if (
+        event.target === submitButton ||
+        submitButton.contains(event.target)
+      ) {
+        return; // Do nothing, let the button handle its own click
+      }
+
+      // Add a class to the form-container to make the textarea visible
+      formContainer.classList.add("show-textarea");
+
+      // Set focus to the textarea
+      messageTextarea.focus();
+    });
+  }
 
   const rollWidthPercentage = 0.15;
   let animationFrameId = null;
@@ -71,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
           } else {
             shadowOpacity = 0.8;
           }
-          
+
           shadowOpacity = Math.max(0, Math.min(0.8, shadowOpacity)); // Clamp
           leftRollElement.style.filter = `drop-shadow(40px 0px 20px rgba(0, 0, 0, ${shadowOpacity}))`;
         } else {
@@ -99,7 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (finalParchmentIsRolled === true && isRolled === false) {
         isRolled = true;
-        rollButton.textContent = "Waiting...";
 
         setTimeout(function () {
           const scrollRect = scrollElement.getBoundingClientRect();
@@ -127,14 +151,12 @@ document.addEventListener("DOMContentLoaded", function () {
             finalScrollClipLeft: 0,
           };
 
-          rollButton.textContent = "Unrolling...";
           animationFrameId = requestAnimationFrame(function (newTime) {
             animateRoll(newTime, unrollAnimParams);
           });
         }, waitDuration);
       } else if (finalParchmentIsRolled === false && isRolled === true) {
         isRolled = false;
-        rollButton.textContent = "Roll Parchment";
         rollButton.disabled = false;
       }
     }
@@ -173,7 +195,6 @@ document.addEventListener("DOMContentLoaded", function () {
       finalScrollClipLeft: currentScrollWidth,
     };
 
-    rollButton.textContent = "Rolling...";
     rollButton.disabled = true;
 
     animationFrameId = requestAnimationFrame(function (timestamp) {

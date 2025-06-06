@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/shop.css" />
   </head>
-  <body  class="test-backgroung">
+  <body id="aa" class="test-bg" >
     <header class="desktop">
       <div class="logo-container">
         <img src="./imgs/header/logo.png" alt="logo piraterie" />
@@ -42,19 +42,24 @@
       <!-- <div class="overlay-container"></div> -->
     </header>
     
-    <main>
+    <main >
       <section class="section1"> <!-- Section 1 baner-->
         <div  class="menuBaner"> <!-- div qui contient le menu et la bannier-->
-          <div>
-            <img class="imgBaner" src="./imgs/baner-shop.jpg" alt="Bannière de la boutique" />
+          <div class="caroussel">
+            <figure>
+              <img src="./imgs/Shop/caroussel/caroussel1.jpg">
+              <img src="./imgs/Shop/caroussel/caroussel2.jpg">
+              <img src="./imgs/Shop/caroussel/caroussel3.jpg">
+              <img src="./imgs/Shop/caroussel/caroussel1.jpg">
+              <img src="./imgs/Shop/caroussel/caroussel2.jpg">
+            </figure>
           </div>
           <div class="test"> 
             <nav>
               <ul>
-                <li><a href="#S1">Les Mugs</a></li>
-                <li><a href="#S2">T-Shirts</a></li>
-                <li><a href="#S3">Accesoires</a></li>
-                <li><a href="#S4">Divers</a></li>
+                <a href="#S2"><li>Les Mugs</li></a>
+                <a href="#S3"><li>T-Shirts</li></a>
+                <a href="#S4"><li>Accesoires</li></a>
               </ul>
             </nav>
           </div>
@@ -62,7 +67,7 @@
           
       </section>
 
-      <section class="section2"> <!-- Section 2 Produit-->
+      <section class="section2" id="S2"> <!-- Section 2 Produit-->
         <div class="blocs"> <!-- div qui contient tout les blocs-->
           <div class="cardShop">
             <img src="./imgs/mug1.png" alt="Mug noir avec logo" />
@@ -111,7 +116,7 @@
         </div>       
       </section>
 
-      <section class="section3"> <!-- Section 2 Produit-->
+      <section class="section3" id="S3"> <!-- Section 2 Produit-->
         <div class="blocs"> <!-- div qui contient tout les blocs-->
           <div class="cardShop">
             <img src="./imgs/Shop/tshirt noir.png" alt="Polo noir" />

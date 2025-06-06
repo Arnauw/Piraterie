@@ -3,49 +3,86 @@
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
 
 
-.test-backgroung {
-    background-image: url("../imgs/981.jpg");
-    background-size: cover;
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
 
-}
 
 
 /******* Section 1 Baner **********/
 .section1{
+  display: flex;
     width: 100%;
+
 }
 .menuBaner{
-    left: 20;
+  background-color: #262424;
+  padding: 1px;
+  /* transform: translate(-50%, -50%); */
 }
-.imgBaner{
-    display: flex;
-    width: 100%;
-    
+.caroussel{
+  overflow: hidden;
+  /* height: 70vh; */
+  max-height: 70vh;
 }
-.test{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: black;
-    color: whitesmoke;
-    opacity: 0.7;
-    transform: translateY(-100%);
+.caroussel figure{
+  display: flex;
+  justify-content: flex-start; 
+  position: relative;
+	width: 500%; 
+	margin: 0;
+	left: 0;
+  animation: 20s slideCaroussel infinite;
+}
+.caroussel figure img{
+  width: 20%;
+  float: right;
+}
+@keyframes slideCaroussel {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: -100%;
+  }
+  40% {
+    left: -200%;
+  }
+  60% {
+    left: -300%;
+  }
+  80% {
+    left: -400%;
+  }
+  100% {
+    left: 0;
+  }
+}
 
 
-}
-.section1 nav{
-    width: 50%;
-    padding: 1%;
-}
 .section1 ul {
-    display: flex;
-    font-size: 1.5em;
-    padding: 2%;
-    gap: 10%;
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  max-width: 100%;
+  margin: 0;
+  background-color: black;
+}
+.section1 li{
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  width: 20em;
+  padding: 4%;
+  border-bottom: solid;
+  border-width: 5px;
+  border-bottom-color:var(--color-blue);
+}
+.section1 li:hover {
+  border-bottom: solid;
+  border-bottom-color: var(--color-yellow);
+}
+.section1 li:active {
+  background-color: var(--color-brown);
+  border-width: 5px;
 }
 
 
@@ -141,8 +178,8 @@
   }
   .cardShop:hover,
   .cardShop.hover {
-    -webkit-transform: translateY(-5px);
-    transform: translateY(-5px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
   }
   .cardShop:hover i,
   .cardShop.hover i {
@@ -184,88 +221,39 @@
 
 
 
+@media (max-width: 768px) {
 
-
-
-
-/* CSS */
-.button-13 {
-  touch-action: manipulation;
-  background: none;
-  position: relative;
-  border-width: 4px 12px;
-  border-style: solid;
-  border-color: transparent;
-  padding: 8px 24px;
-  text-align: center;
-  color: #fff;
-  transition-property: transform;
-  transition-duration: 0.4s;
-}
-
-.button-13:active {
-  transform: scale(0.92);
-}
-
-.button-13-background {
-  position: absolute;
-  z-index: 2;
-  inset: 0;
-  clip-path: polygon(12px 0, calc(100% - 12px) 0%, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0% calc(100% - 12px), 0% 12px);
-  background-color: saddlebrown;
-  background-image: radial-gradient(transparent, rgba(0, 0, 0, 0.8)), linear-gradient(to bottom, #af6a65, calc(12.5% - 1px), #cfa381, #88312b calc(12.5% + 1px) 50%, #601d2c 50% calc(87.5% - 1px), #994021, #341227 calc(87.5% + 1px));
-  transition-property: filter;
-  transition-duration: 0.2s;
-  will-change: filter;
-}
-
-.button-13 .text {
-  background: linear-gradient(180deg, #FFE5C2 1%, #CDAF87 100%), #FFFFFF;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  z-index: 3;
-  position: relative;
-  font-size: 2em;
-}
-
-@media (hover: hover) {
-  .button-13:hover .button-13-background {
-    filter: brightness(0.8);
+  .blocs {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: wrap;
   }
-}
-
-.button-13:active .button-13-background {
-  filter: brightness(0.6);
-}
-
-.button-13-border {
-  position: absolute;
-  z-index: 1;
-  inset: -4px -12px;
-}
-
-@supports (-webkit-mask-box-image: inherit) or (mask-border: inherit) {
-  .button-13-border {
-    background-image: linear-gradient(to bottom, #bb9d7a 50%, #806d56 50%);
-    -webkit-mask-box-image-source: url("https://csspro.com/css-3d-buttons/buttons-img/baldurs-gate-3-border.svg");
-    -webkit-mask-box-image-slice: 15 23;
-    -webkit-mask-box-image-width: 15px 23px;
-    -webkit-mask-box-image-repeat: repeat;
+  .cardShop{
+      max-width: 90%;
+      width: 100%;
+      margin-bottom: 10%;
+      padding: 10px;
   }
+   
 }
 
-@supports not ((-webkit-mask-box-image: inherit) or (mask-border: inherit)) {
-  .button-13-border {
-    border-width: 15px 23px;
-    border-style: solid;
-    border-color: transparent;
-    border-image-source: url("https://csspro.com/css-3d-buttons/buttons-img/baldurs-gate-3-border-inverted.svg");
-    border-image-slice: 15 23;
-    border-image-width: 15px 23px;
-    border-image-repeat: repeat;
-    background-image: linear-gradient(#000, #000), linear-gradient(to bottom, #bb9d7a 50%, #806d56 50%);
-    background-origin: content-box, border-box;
-    background-repeat: no-repeat;
-    filter: url("#remove-black-button-13");
-  }
+@media (max-width: 380px) {
+
+  .cardShop{
+    max-width: 90%;
+    width: 100%;
+    margin-bottom: 10%;
+    padding: 10px;
+}
+.caroussel{
+  margin-top: 80px;
+}
+.section1 ul{
+  display: none;
+}
+
+
 }

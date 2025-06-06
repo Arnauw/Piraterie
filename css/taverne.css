@@ -234,7 +234,7 @@ position: relative;
   font-weight: 400;
   font-style: normal;
 }
-  #toggle-audio {
+  .toggle-audio {
     z-index: 1;
   display:flex;
   justify-self: center;
@@ -249,7 +249,7 @@ position: relative;
   cursor: pointer;
   transition: background(0.3s, color 0.3s, transform 0.2s);
 }
-#toggle-audio:hover {
+.toggle-audio:hover{
   background: #ffd700;
   color: #2d1a06;
   transform: scale(1.05) rotate(-2deg);
@@ -439,7 +439,7 @@ width: 40%;
   background-color: purple;
 }
 
- #toggle-audio1,#toggle-audio2,#toggle-audio3,#toggle-audio4 {
+#toggle-audioo,#toggle-audio2,#toggle-audio3,#toggle-audio4 {
   z-index: 1;
   width: 45%;
   display:flex;
@@ -456,9 +456,9 @@ width: 40%;
   transition: background(0.3s, color 0.3s, transform 0.2s);
   background-color: green;
 }
-.chant-texte1,.chant-texte2,.chant-texte3,.chant-texte4{
+.chant-texte1{
   position: absolute;
-  top:70%;
+  top:30%;
   width: 15%;
   display:flex;
   flex-wrap:wrap;
@@ -468,7 +468,43 @@ width: 40%;
   color: #461f02;
   background-color: yellow;
 }
-
+.chant-texte2{
+position: absolute;
+  top:30%;
+  width: 15%;
+  display:flex;
+  flex-wrap:wrap;
+  text-align: center;
+  font-family: 'Shojumaru', cursive;
+  font-size: clamp(1.1vw, 1.1vw, 10rem);
+  color: #461f02;
+  background-color: yellow;
+}
+.chant-texte3{
+position: absolute;
+  width: 15%;
+  top: 70%;
+  display:flex;
+  flex-wrap:wrap;
+  text-align: center;
+  font-family: 'Shojumaru', cursive;
+  font-size: clamp(1.1vw, 1.1vw, 10rem);
+  color: #461f02;
+  background-color: yellow;
+}
+.chant-texte4{
+position: absolute;
+  width: 15%;
+  top: 73%;
+  right: 20%;
+  display:flex;
+  flex-wrap:wrap;
+  text-align: center;
+  font-family: 'Shojumaru', cursive;
+  font-size: clamp(1.1vw, 1.1vw, 10rem);
+  color: #461f02;
+  background-color: yellow;
+}
 .chant{
   background-color:blue;
   display: flex;

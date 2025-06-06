@@ -2,20 +2,16 @@
 @import url("./fonts.css");
 
 #main{
-    background-image: none;
+    
 }
 .divMain {
     background-image: url("../imgs/treasure/map-treasure-2.jpg");
     height: calc(calc(100vh - 82px) - 154px);
     background-size: 100% 100%;
-    width: 80%;
+    width: 96%;
     opacity: 1;
-    margin-left: 10%;
-    margin-right: 10%;
-
-}
-.test{
-   margin: 0;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .htmlDiv{
     position: absolute;
@@ -29,14 +25,12 @@
     top: 70%;
     left: 20%;
 }
-
 .jsDiv{
     width: 2.5%;
     position: absolute;
     top: 55%;
     left: 30%;
 }
-
 .nodeDiv{
     width: 3.5%;
     position: absolute;
@@ -44,7 +38,6 @@
     left: 32%;
     border-radius: 30%;
 }
-
 .javaDiv{
     width: 2.5%;
     position: absolute;
@@ -52,7 +45,6 @@
     left: 40%;
     border-radius: 10%;
 }
-
 .phpDiv{
     width: 3.5%;
     position: absolute;
@@ -105,13 +97,46 @@
         img {
             transform: translateY(-50px);
         }
-    }
-    .test{
-        display: none;
+        .divSvg{
+            display: none;
+            
+        }
     }
     .divMainResponsiveT{
-        
-    } 
+        .divSvgTab{
+            .htmlDiv{
+                position: absolute;
+                top: 70%;
+                left: 5%;
+                width: 5%;
+            }
+            .cssDiv{
+                position: absolute;
+                top: 70%;
+                left: 11%;
+                width: 3.5%;
+            }
+            .jsDiv{
+                position: absolute;
+                top: 71%;
+                left: 16%;
+                width: 4%;
+            }
+            .nodeDiv{
+                position: absolute;
+                top: 71.5%;
+                left: 22%;
+                width: 5%;
+            }
+            .javaDiv{
+                position: absolute;
+                top: 69%;
+                left: 29%;
+                width: 3%;
+            }
+        }
+    }
+
 }
 
 @media (max-width: 380px) {

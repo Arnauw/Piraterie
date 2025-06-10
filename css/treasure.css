@@ -1,0 +1,156 @@
+@import url("./common.css");
+@import url("./fonts.css");
+
+#main{
+    
+}
+.divMain {
+    background-image: url("../imgs/treasure/map-treasure-2.jpg");
+    height: calc(calc(100vh - 82px) - 154px);
+    background-size: 100% 100%;
+    width: 96%;
+    opacity: 1;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.htmlDiv{
+    position: absolute;
+    top: 70%;
+    left: 22%;
+    width: 3%;
+}
+.cssDiv{
+    width: 2.1%;
+    position :absolute;
+    top: 70%;
+    left: 20%;
+}
+.jsDiv{
+    width: 2.5%;
+    position: absolute;
+    top: 55%;
+    left: 30%;
+}
+.nodeDiv{
+    width: 3.5%;
+    position: absolute;
+    top: 67%;
+    left: 32%;
+    border-radius: 30%;
+}
+.javaDiv{
+    width: 2.5%;
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    border-radius: 10%;
+}
+.phpDiv{
+    width: 3.5%;
+    position: absolute;
+    top: 36%;
+    left: 46%;
+}
+.symDiv{
+    width: 3%;
+    position: absolute;
+    top: 26%;
+    left: 48%;
+}
+
+.sqlDiv{
+    width: 5%;
+    position: absolute;
+    top: 23%;
+    left: 57%;
+}
+
+.MnDbDiv{
+    width: 3.5%;
+    position: absolute;
+    top: 35%;
+    left: 63%;
+}
+
+.reactDiv{
+    width: 3%;
+    position: absolute;
+    top: 42%;
+    left: 69%;
+    border-radius: 30%;
+}
+.certiDiv{
+    width: 4.5%;
+    position: absolute;
+    top: 61%;
+    left: 56%;
+}
+.afpaDiv{
+    width: 5%;
+    position: absolute;
+    top: 60%;
+    left: 51%;
+}
+
+@media (max-width: 768px) {
+    .divMain {
+        img {
+            transform: translateY(-50px);
+        }
+        .divSvg{
+            display: none;
+            
+        }
+    }
+    .divMainResponsiveT{
+        .divSvgTab{
+            .htmlDiv{
+                position: absolute;
+                top: 70%;
+                left: 5%;
+                width: 5%;
+            }
+            .cssDiv{
+                position: absolute;
+                top: 70%;
+                left: 11%;
+                width: 3.5%;
+            }
+            .jsDiv{
+                position: absolute;
+                top: 71%;
+                left: 16%;
+                width: 4%;
+            }
+            .nodeDiv{
+                position: absolute;
+                top: 71.5%;
+                left: 22%;
+                width: 5%;
+            }
+            .javaDiv{
+                position: absolute;
+                top: 69%;
+                left: 29%;
+                width: 3%;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 380px) {
+    .divMain {
+        display: none;
+    }
+    .test {
+        display: none;
+    }
+    .divMainResponsiveM{
+    background-image: url("../imgs/treasure/map-smartphone-2.jpg");
+    height: calc(calc(100vh - 82px) - 154px);
+    background-size: 100% 100%;
+    width: 100%;
+    }
+    
+}

@@ -113,7 +113,7 @@ main {
   main {
     .contact {
       width: 100%;
-      height: calc( 100vh - 186px);
+      height: calc( 100vh - 260px);
       .scroll-container {
         width: 80%;
       }
@@ -142,7 +142,7 @@ main {
     .contact {
       margin-top: 80px;
       width: 100%;
-      height: calc(100vh - 120px);
+      height: calc(100vh - 80px);
       .scroll-container {
         position: relative;
         width: 100%;

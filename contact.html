@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/contact.css" />
   </head>
   <body>
+    <div id="navbar"></div>
     <header class="desktop">
       <div class="logo-container">
         <img src="./imgs/header/logo.png" alt="logo piraterie" />
@@ -19,17 +20,36 @@
           <li><a href="shop.html">Boutique</a></li>
           <li><a href="treasure.html">Trésor</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="login-button"><a href="login.html">Connexion</a></li>
+          <li class="login-button"><a href="#open-modal">Connexion</a></li>
         </ul>
+        <div id="open-modal" class="modal-window">
+          <!-- div modal connexion -->
+          <div class="modal-content">
+            <a href="#" title="Close"><span class="modal-close">X</span></a>
+            <img src="./imgs/LOGO V1.png" alt="logo" />
+            <fieldset class="formulaire">
+              <label for="nom">Identifiant:</label>
+              <input type="text" name="nom" id="nom" /><br />
+              <label for="prenom">Mot de passe:</label>
+              <input type="text" name="prenom" id="prenom" required /><br />
+              <input type="submit" value="connexion" />
+            </fieldset>
+            <div>
+              <small>Mot de passe oublié</small>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <header class="burger">
-      <input type="checkbox" id="checkbox" class="__checkbox" />
+      <input type="checkbox" id="checkbox" class="checkbox" />
       <label for="checkbox" class="btn-burger"
         ><div class="icon-burger"></div
       ></label>
-      <div class="login-button"><a href="login.html">Connexion</a></div>
-      <nav class="__container">
+      <div class="login-button">
+        <a href="#open-modal-smartphone">Connexion</a>
+      </div>
+      <nav class="burger-nav">
         <ul class="__list">
           <li><a href="index.html">Accueil</a></li>
           <li><a href="taverne.html">Taverne</a></li>
@@ -37,6 +57,23 @@
           <li><a href="treasure.html">Trésor</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div id="open-modal-smartphone" class="modal-window-smartphone">
+          <!-- div modal connexion -->
+          <div class="modal-content">
+            <a href="#" title="Close"><span class="modal-close">X</span></a>
+            <img src="./imgs/LOGO V1.png" alt="logo" />
+            <fieldset class="formulaire">
+              <label for="nom">Identifiant:</label>
+              <input type="text" name="nom" id="nom"/><br />
+              <label for="prenom">Mot de passe:</label>
+              <input type="text" name="prenom" id="prenom" required /><br />
+              <input type="submit" value="connexion"/>
+            </fieldset>
+            <div>
+              <small>Mot de passe oublié</small>
+            </div>
+          </div>
+        </div>
       </nav>
       <!-- <div class="overlay-container"></div> -->
     </header>
@@ -66,21 +103,12 @@
     <footer>
       <div class="footer-container">
         <p>
-          <a href="./RGPD.html">
-            Mention légales&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a
-          >
+          <a href="./RGPD.html"> Mention légales</a>
         </p>
         <div class="avatar">
-          <img src="./imgs/LOGO V1.png" alt="logo" />
+          <a href="#navbar"><img src="./imgs/LOGO V1.png" alt="logo" /></a>
         </div>
-        <p>&copy; 2025 La Piraterie !</p>
-      </div>
-      <div class="footer-containerM">
-        <div class="avatar">
-          <img src="./imgs/LOGO V1.png" alt="logo" />
-        </div>
-        <p><a href="./RGPD.html"> Mention légales</a></p>
-        <p>&copy; 2025 La Piraterie !</p>
+        <p>© 2025 La Piraterie !</p>
       </div>
     </footer>
     <script src="./js/contact.js"></script>

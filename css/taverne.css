@@ -387,7 +387,9 @@ position: relative;
   color: #461f02;
 }
 .chantTaverne{
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
 
 }
@@ -415,13 +417,13 @@ width: 40%;
 .texteChant
 {
   z-index: 2;
-  
+  display: flex;
+  justify-content: center;
   width:55%;
 }
 .background-chant{
   
   display: flex;
-  justify-self: center;
   width: 80%;
   margin-top: 1%;  
 }
@@ -520,37 +522,35 @@ position: absolute;
 
       }
   .chant-texte1{
+    
       font-size: clamp(1.3vw, 2.1vw, 2.1vw);
-      width: 30%;
+      width: 100%;
       top: 19%;
-      left: 35%;
+      left: 0%;
       display:flex;
       flex-wrap: wrap;
   }
    .chant-texte2{
-     position: absolute;
       font-size: clamp(1.3vw, 2.1vw, 2.1vw);
-      width: 30%;
-      top: 40%;
-      left: 35%;
+      width: 70%;
+      top: 15%;
+      left: 13%;
       display:flex;
       flex-wrap: wrap;
   }
   .chant-texte3{
-     position: absolute;
       font-size: clamp(1.3vw, 2.1vw, 2.1vw);
-      width: 30%;
-      top: 61.5%;
-      left: 35%;
+      width: 80%;
+      top: 15%;
+      left: 13%;
       display:flex;
       flex-wrap: wrap;
   }
     .chant-texte4{
-     position: absolute;
-      font-size: clamp(1.3vw, 2.1vw, 2.1vw);
-      width: 30%;
-      top: 82.5%;
-      left: 35%;
+     font-size: clamp(1.3vw, 2.1vw, 2.1vw);
+      width: 80%;
+      top: 15%;
+      left: 13%;
       display:flex;
       flex-wrap: wrap;
   }
@@ -583,6 +583,10 @@ position: absolute;
   .chantTaverne{
     gap:20px;
   }
+  .btnSon{
+    display: flex;
+    justify-content: center;
+  }
   .btnSon1{
     margin-top: 2%;
     gap:20px;
@@ -593,8 +597,12 @@ position: absolute;
     align-items: center;
     gap: 20px;
   }
+  .texteChant{
+    width: 80%;
+    position: relative;
+  }
   .background-chant{
-    width: 180%;
+    width: 100%;
   }
   .poster-arnaud{
       transform: translateY(0px);
@@ -666,6 +674,10 @@ font-size: 0;}
       left: 9%;
       top: 15%;
   }
+  .texteChant{
+    width: 80%;
+    position: relative;
+  }
   .chant-texte1{
       font-size: clamp(1.3vw, 3.8vw, 5vw);
       width: 50%;
@@ -703,7 +715,6 @@ font-size: 0;}
     transform:scale(0.8);
     z-index: 1;
     display:flex;
-    justify-self: center;
     background: #2d1a06;
     color: #ffd700;
     border: 3px solid #ffd700;

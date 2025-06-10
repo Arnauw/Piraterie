@@ -1,6 +1,10 @@
 @import url("./common.css");
 @import url("./fonts.css");
 
+html {
+  scroll-behavior: smooth; /* For smooth scrolling */
+}
+
 main {
   h1 {
     font-family: "Shojumaru";
@@ -17,10 +21,11 @@ main {
   }
 
   .banner {
+    position: relative;
     padding: 0;
     width: 100%;
-    height: 40vh;
-    background-image: url(../imgs/index/index-banner-1.jpg);
+    height: calc(100vh - 160px);
+    background-image: url(../imgs/index/poster.png);
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -30,9 +35,57 @@ main {
     align-items: center;
     text-align: center;
     border-bottom: 2px solid black;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+      pointer-events: none;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .banner-text {
+      position: absolute;
+      bottom: 120px;
+      left: 50%; /* Position the left edge of the button at 50% of the viewport width */
+      transform: translateX(-50%);
+      color: var(--color-yellow);
+    }
+    .scroll-down-button {
+      position: fixed;
+      bottom: 30px;
+      left: 50%; /* Position the left edge of the button at 50% of the viewport width */
+      transform: translateX(
+        -50%
+      ); /* Shift the button back to the left by half its own width */
+      width: 50px; /* Adjust size */
+      height: 50px; /* Adjust size */
+      background-color: var(--color-yellow); /* Button background */
+      color: var(--color-brown);
+      border-radius: 50%; /* Make it a circle */
+      display: flex; /* For centering the arrow */
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      z-index: 100; /* Ensure it's on top */
+      a {
+        svg {
+          fill: var(--color-brown);
+        }
+      }
+    }
   }
 
   .main-container {
+    height: calc(100vh - 138px);
     padding: 20px 10%;
     display: flex;
     flex-wrap: wrap;
@@ -46,13 +99,8 @@ main {
       align-items: center;
       gap: 8px;
       p {
-        text-align: ce/* `nter;` is not a valid CSS property or value. It seems like there might be a
-        typo or a mistake in the code. If you provide more context or clarify the
-        specific part of the code you are referring to, I can help you further. */
-        nter;
+        text-align: center;
       }
-      /* h2 {
-      } */
     }
     .header {
       width: 100%;

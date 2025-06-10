@@ -9,14 +9,14 @@
             href="./imgs/header/logo.png"
             type="image/x-icon"
     />
-    <link rel="stylesheet" href="./css/index.css"/>
-</head>
-<body>
-<header class="desktop">
-    <div class="logo-container">
-        <img src="./imgs/header/logo.png" alt="logo piraterie"/>
-    </div>
-    <nav>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <header id="navbar" class="desktop">
+      <div class="logo-container">
+        <img src="./imgs/header/logo.png" alt="logo piraterie" />
+      </div>
+      <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="taverne.html">Taverne</a></li>
@@ -46,28 +46,55 @@
     <!-- <div class="overlay-container"></div> -->
 </header>
 
-<main class="">
-    <section class="banner">
-        <div class="banner-container">
-            <h1>La Piraterie !</h1>
-            <p>
-                Là où l'or brille plus fort que le soleil et où chaque vague cache
-                une nouvelle fortune.
-            </p>
+    <main class="">
+      <section id="banner" class="banner">
+        <video
+          class="background-video"
+          autoplay
+          loop
+          muted
+          playsinline
+          poster="./imgs/index/poster.png"
+          disablePictureInPicture
+        >
+          <source
+            src="./imgs/index/1K-Blackbeard_-_Edward_Teach_King_of_Pirates_Documentary.webm"
+            type="video/webm"
+          />
+          Your browser does not support the video tag.
+        </video>
+        <div class="arrow-bottom">
+          <div class="banner-text"><h1>Découvrez la piraterie !</h1></div>
+          <a
+            href="#categories"
+            class="scroll-down-button"
+            aria-label="Scroll to bottom"
+            >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.78 10.5 20.2 11.92 12 20.12 3.8 11.92 5.22 10.5 12 17.27z"
+              />
+            </svg>
+          </a>
         </div>
-    </section>
-    <div class="main-container">
+      </section>
+      <div id="categories" class="main-container">
         <section class="header">
-            <h2>La Piraterie</h2>
-            <p>
-                La piraterie est un sujet fascinant qui a marqué l'histoire
-                maritime. Des pirates célèbres comme Barbe Noire et Anne Bonny ont
-                laissé une empreinte indélébile dans la culture populaire.
-            </p>
-            <p>
-                Les pirates étaient souvent perçus comme des hors-la-loi, mais ils
-                avaient aussi leur propre code d'honneur et des règles de conduite.
-            </p>
+          <h2>La Piraterie</h2>
+          <p>Bienvenue à la Piraterie !</p>
+          <p>
+            Là où l'or brille plus fort que le soleil et où chaque vague cache
+            une nouvelle fortune.
+          </p>
+          <p>
+            La piraterie est un sujet fascinant qui a marqué l'histoire
+            maritime. Des pirates célèbres comme Barbe Noire et Anne Bonny ont
+            laissé une empreinte indélébile dans la culture populaire.
+          </p>
+          <p>
+            Les pirates étaient souvent perçus comme des hors-la-loi, mais ils
+            avaient aussi leur propre code d'honneur et des règles de conduite.
+          </p>
 
             <!-- <p>
               La piraterie est un phénomène historique complexe et captivant qui a
@@ -167,12 +194,47 @@
                 </p>
             </div>
         </section>
-    </div>
-</main>
+        <section class="contact">
+          <h2>Contact</h2>
+          <div class="text-container">
+            <p>
+              Les trésors, qu'ils soient faits d'or, de pierres précieuses ou
+              d'artefacts exotiques, sont intrinsèquement liés à l'imaginaire de
+              la piraterie.
+            </p>
+            <p>
+              Fruit d'abordages audacieux et de pillages, ces richesses étaient
+              souvent dissimulées dans des lieux lointains et secrets,
+              alimentant les mythes de cartes au trésor et de fortunes cachées.
+            </p>
+            <p>
+              Ils symbolisent l'attrait de l'aventure et de la fortune éphémère
+              qui animait la vie de ces marins hors-la-loi.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
 
-<footer>
-    <p>© 2025 La Piraterie</p>
-</footer>
-<script src="./js/index.js"></script>
-</body>
+    <footer>
+      <div class="footer-container">
+        <p>
+          <a href="./RGPD.html"> Mention légales</a>
+        </p>
+        <div class="avatar">
+          <img src="./imgs/LOGO V1.png" alt="logo" />
+        </div>
+        <p>&copy; 2025 La Piraterie !</p>
+      </div>
+      <div class="footer-containerM">
+        <div class="avatar">
+          <img src="./imgs/LOGO V1.png" alt="logo" />
+        </div>
+        <p><a href="./RGPD.html"> Mention légales</a></p>
+        <p>&copy; 2025 La Piraterie !</p>
+      </div>
+    </footer>
+
+    <script src="./js/index.js"></script>
+  </body>
 </html>

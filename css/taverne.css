@@ -756,25 +756,3 @@ font-size: 0;}
 
 
 
-@media screen and (max-width: 768px) {
-  .background-container,.background-container2, .background-container3{
-    width: 65%;
-  }
-  .crew-texte,.crew-texte2{
-  font-size: clamp(1.3vw, 4vw, 4vw);
-  }
-  .poster-arnaud{
-      transform: translateY(0px);
-  }
-  .wanted{
-    gap: 10px;
-  }
-  .pirate1, .pirate2 {
-    opacity: 0;
-  }
-  .bulle-rumeur{
-    padding: 30px 50px;
-    font-size: 1rem;
-
-  }
-}

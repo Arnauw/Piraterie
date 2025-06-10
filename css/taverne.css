@@ -7,6 +7,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+
 .iconeJeremie{
   display:flex;
 position: relative;
@@ -140,7 +142,7 @@ position: relative;
   position: relative;
   transform: translateY(-55px);
 }
-.wanted-title {
+.wanted-title,.wanted-title1 {
   font-family: 'Rye', cursive;
   font-size: 3rem;
   margin: 0;
@@ -338,7 +340,6 @@ position: relative;
   transform: translateY(-20px) scale(1.04);
 }
 .taverne{
-  
   width:100%;
   display: flex;
   flex-direction: column;
@@ -388,9 +389,9 @@ position: relative;
 .chantTaverne{
   justify-items: center;
   position: relative;
-  background-color: orangered;
+
 }
-/* .chantTaverne::before{
+.chantTaverne::before{
   content: " ";
   position: absolute;
   inset: 0;
@@ -399,12 +400,12 @@ position: relative;
   filter: blur(10px) brightness(1) saturate(1.4);
 
 
-} */
+
+}
 .btnSon1{
 display:flex;
 flex-direction: column;
 align-items: center;
-background-color: red;
 width: 40%;
 }
 .audioTaverne{
@@ -413,7 +414,7 @@ width: 40%;
 }
 .texteChant
 {
-  z-index: 10;
+  z-index: 2;
   
   width:55%;
 }
@@ -422,9 +423,7 @@ width: 40%;
   display: flex;
   justify-self: center;
   width: 80%;
-  margin-top: 1%;
-  background-color: pink;
-  
+  margin-top: 1%;  
 }
 .chant-texte{
   position:absolute;
@@ -436,29 +435,13 @@ width: 40%;
   font-family: 'Shojumaru', cursive;
   font-size: clamp(1.1vw, 1.1vw, 10rem);
   color: #461f02;
-  background-color: purple;
 }
 
-#toggle-audioo,#toggle-audio2,#toggle-audio3,#toggle-audio4 {
-  z-index: 1;
-  width: 45%;
-  display:flex;
-  align-self: center;
-  background: #2d1a06;
-  color: #ffd700;
-  border: 3px solid #ffd700;
-  border-radius: 12px;
-  font-family: 'Shojumaru', cursive;
-  font-size: 1.3rem;
-  padding: 12px 32px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  cursor: pointer;
-  transition: background(0.3s, color 0.3s, transform 0.2s);
-  background-color: green;
-}
+
 .chant-texte1{
   position: absolute;
-  top:30%;
+  top:34%;
+  left: 19%;
   width: 15%;
   display:flex;
   flex-wrap:wrap;
@@ -466,11 +449,11 @@ width: 40%;
   font-family: 'Shojumaru', cursive;
   font-size: clamp(1.1vw, 1.1vw, 10rem);
   color: #461f02;
-  background-color: yellow;
 }
 .chant-texte2{
 position: absolute;
-  top:30%;
+  top:34%;
+  right:19%;
   width: 15%;
   display:flex;
   flex-wrap:wrap;
@@ -478,38 +461,35 @@ position: absolute;
   font-family: 'Shojumaru', cursive;
   font-size: clamp(1.1vw, 1.1vw, 10rem);
   color: #461f02;
-  background-color: yellow;
 }
 .chant-texte3{
 position: absolute;
   width: 15%;
-  top: 70%;
+  top: 69%;
+  left: 19%;
   display:flex;
   flex-wrap:wrap;
   text-align: center;
   font-family: 'Shojumaru', cursive;
   font-size: clamp(1.1vw, 1.1vw, 10rem);
   color: #461f02;
-  background-color: yellow;
 }
 .chant-texte4{
 position: absolute;
   width: 15%;
-  top: 73%;
-  right: 20%;
+  top: 69%;
+  right:19%;
   display:flex;
   flex-wrap:wrap;
   text-align: center;
   font-family: 'Shojumaru', cursive;
   font-size: clamp(1.1vw, 1.1vw, 10rem);
   color: #461f02;
-  background-color: yellow;
 }
 .chant{
-  background-color:blue;
   display: flex;
   flex-wrap:wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
 }
 
@@ -531,6 +511,91 @@ position: absolute;
   .crew-texte,.crew-texte2{
   font-size: clamp(1.3vw, 4vw, 4vw);
   }
+  .chant-texte{
+      font-size: clamp(1.3vw, 4vw, 4vw);
+      width: 80%;
+      left: 9%;
+      top: 15%;
+
+
+      }
+  .chant-texte1{
+      font-size: clamp(1.3vw, 2.1vw, 2.1vw);
+      width: 30%;
+      top: 19%;
+      left: 35%;
+      display:flex;
+      flex-wrap: wrap;
+  }
+   .chant-texte2{
+     position: absolute;
+      font-size: clamp(1.3vw, 2.1vw, 2.1vw);
+      width: 30%;
+      top: 40%;
+      left: 35%;
+      display:flex;
+      flex-wrap: wrap;
+  }
+  .chant-texte3{
+     position: absolute;
+      font-size: clamp(1.3vw, 2.1vw, 2.1vw);
+      width: 30%;
+      top: 61.5%;
+      left: 35%;
+      display:flex;
+      flex-wrap: wrap;
+  }
+    .chant-texte4{
+     position: absolute;
+      font-size: clamp(1.3vw, 2.1vw, 2.1vw);
+      width: 30%;
+      top: 82.5%;
+      left: 35%;
+      display:flex;
+      flex-wrap: wrap;
+  }
+  .toggle-audio{
+    transform:translateY(-7px);
+    transform:scale(0.8);
+    z-index: 1;
+    display:flex;
+    justify-self: center;
+    background: #2d1a06;
+    color: #ffd700;
+    border: 3px solid #ffd700;
+    border-radius: 12px;
+    font-family: 'Shojumaru', cursive;
+    font-size: 1.3rem;
+    padding: 12px 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition: background(0.3s, color 0.3s, transform 0.2s);
+  }
+  .toggle-audio:hover{
+    transform:translateY(-7px);
+    transform:scale(0.8);
+    border-radius: 12px;
+        background: #2d1a06;
+    color: #ffd700;
+
+    font-family: 'Shojumaru', cursive;
+  }
+  .chantTaverne{
+    gap:20px;
+  }
+  .btnSon1{
+    margin-top: 2%;
+    gap:20px;
+  }
+  .chant{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .background-chant{
+    width: 180%;
+  }
   .poster-arnaud{
       transform: translateY(0px);
   }
@@ -545,4 +610,137 @@ position: absolute;
     font-size: 1rem;
 
   }
+}
+
+
+
+
+
+/* RESPONSIVE PHONE */
+@media screen and (max-width: 380px) {
+  .burger{
+    z-index: 3;
+  }
+  .crew{
+    margin-top: 21%;
+    
+  }
+.poster-jeremie, .wanted-card{
+  width: 80%;
+}
+  .poster-arnaud{
+      transform: translateY(0px);
+  }
+    .wanted-back {
+  z-index: 1;
+  opacity: 1;
+  pointer-events: none;
+}
+.wanted-question{
+font-size: 0;}
+.wanted-title1{
+  font-size: 0;
+}
+.wanted{
+    transform: translateY(-70px);
+}
+ .pirate1, .pirate2 {
+    opacity: 0;
+  }
+  .bulle-rumeur{
+    padding: 30px 50px;
+    font-size: 1rem;
+
+    }
+  .background-container,.background-container2, .background-container3{
+    width: 80%;
+  }
+
+  .crew-texte,.crew-texte2{
+  font-size: clamp(1.3vw, 5vw, 5vw);
+  }
+  .chant-texte
+  {
+      font-size: clamp(1.3vw, 5vw, 5vw);
+      width: 80%;
+      left: 9%;
+      top: 15%;
+  }
+  .chant-texte1{
+      font-size: clamp(1.3vw, 3.8vw, 5vw);
+      width: 50%;
+      top: 13.5%;
+      left: 25%;
+      display:flex;
+      flex-wrap: wrap;
+  }
+   .chant-texte2{
+     font-size: clamp(1.3vw, 3.7vw, 5vw);
+      width: 50%;
+      top: 36%;
+      left: 25%;
+      display:flex;
+      flex-wrap: wrap;
+  }
+  .chant-texte3{
+     font-size: clamp(1.3vw, 3.7vw, 5vw);
+      width: 50%;
+      top: 58.5%;
+      left: 25%;
+      display:flex;
+      flex-wrap: wrap;
+  }
+    .chant-texte4{
+    font-size: clamp(1.3vw, 3.7vw, 5vw);
+      width: 50%;
+      top: 81%;
+      left: 25%;
+      display:flex;
+      flex-wrap: wrap;
+  }
+  .toggle-audio{
+    transform:translateY(-7px);
+    transform:scale(0.8);
+    z-index: 1;
+    display:flex;
+    justify-self: center;
+    background: #2d1a06;
+    color: #ffd700;
+    border: 3px solid #ffd700;
+    border-radius: 12px;
+    font-family: 'Shojumaru', cursive;
+    font-size: 1.3rem;
+    padding: 12px 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    cursor: pointer;
+    transition: background(0.3s, color 0.3s, transform 0.2s);
+  }
+  .toggle-audio:hover{
+    transform:translateY(-7px);
+    transform:scale(0.8);
+    border-radius: 12px;
+        background: #2d1a06;
+    color: #ffd700;
+
+    font-family: 'Shojumaru', cursive;
+  }
+  .chantTaverne{
+    gap:20px;
+  }
+  .btnSon1{
+    margin-top: 2%;
+    gap:20px;
+  }
+  .chant{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .background-chant{
+    width: 220%;
+  }
+
+ 
+
 }

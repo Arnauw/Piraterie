@@ -13,6 +13,9 @@ for (let i = 0; i < audios.length && i < btns.length; i++) {
   });
 }
 
+
+//  Manière longue mais sure pour débutant.
+// 
 // document.addEventListener("DOMContentLoaded", () => {
 //   const btn1 = document.querySelector(".toggle-audio-1");
 //   const btn2 = document.querySelector(".toggle-audio-2");

@@ -258,6 +258,9 @@ footer {
       width: 100%;
       margin-top: 6px;
     }
+    p:last-child {
+      margin-left: 20px;
+    }
     img {
       width: 100%;
     }
@@ -272,7 +275,6 @@ footer {
     overflow: hidden;
     transform: translatey(0px);
     animation: float 6s ease-in-out infinite;
-    width: 50%;
   }
 }
 
@@ -305,7 +307,7 @@ footer {
   }
 
   .burger {
-    z-index: 1;
+    z-index: 9;
     position: fixed;
     display: flex;
     align-items: center;

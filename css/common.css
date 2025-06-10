@@ -119,28 +119,25 @@ footer {
     p {
       font-size: 65%;
       color: var(--color-yellow);
-      margin-left: 10px;
+      width: 33%;
+    }
+    .avatar {
+      justify-content: center;
+      overflow: hidden;
+      transform: translatey(0px);
+      animation: float 6s ease-in-out infinite;
+      img {
+        width: 140px;
+        /* height: 30%; */
+        object-fit: cover;
+        transition: all 0.3s ease-in-out;
+      }
     }
   }
 }
 
-.avatar {
-  justify-content: center;
-  overflow: hidden;
-  transform: translatey(0px);
-  animation: float 6s ease-in-out infinite;
-  width: 10%;
-}
-
-.avatar img {
-  width: 70%;
-  /* height: 30%; */
-  object-fit: cover;
-  transition: all 0.3s ease-in-out;
-}
-
 .footer-containerM {
-  display: none;
+  /* display: none; */
 }
 
 /******* image Footer **********/
@@ -440,30 +437,6 @@ footer {
     }
   }
 
-  footer {
-    height: 266px;
-    .footer-container {
-      display: none;
-    }
-  }
-
-  .footer-containerM {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5%;
-  }
-  .footer-containerM p {
-    font-size: 60%;
-    color: var(--color-yellow);
-    margin-bottom: 3%;
-    text-align: center;
-  }
-  .footer-containerM img {
-    width: 100%;
-  }
-
   /**********Css pour modal**********/
   .modal-window-smartphone {
     position: fixed;
@@ -529,6 +502,38 @@ footer {
           &:visited {
             color: var(--color-brown);
           }
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 266px;
+    .footer-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      
+      p {
+        font-size: 60%;
+        color: var(--color-yellow);
+        margin-bottom: 3%;
+        text-align: center;
+        margin-bottom: 5%;
+        width: 100%;
+      }
+      p:first-child {
+        order: 2;
+      }
+
+      p:last-child {
+        order: 3;
+      }
+      .avatar {
+        order: 1;
+        img {
+
         }
       }
     }

@@ -5,8 +5,10 @@
     background-image: url("../imgs/treasure/map-treasure-2.jpg");
     height: calc(calc(100vh - 82px) - 154px);
     background-size: 100% 100%;
-    width: 100%;
+    width: 96%;
     opacity: 1;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .htmlDiv{
     position: absolute;
@@ -86,20 +88,16 @@
     top: 60%;
     left: 51%;
 }
-.navireDiv{
-    display: none;
-}
 
 @media (max-width: 768px) {
-
-    .divMain{
-        .divSvg {      
+    .divMain {
+        img {
+            transform: translateY(-50px);
+        }
+        .divSvg{
             display: none;
         }
-    }
-    
-    .divMainResponsiveM{
-        display: none;
+
     }
     
     .divMainResponsiveT{
@@ -190,29 +188,26 @@
         display: none;
     }
     .divMainResponsiveM{
-        display: block;
         background-image: url("../imgs/treasure/map-smartphone-2.jpg");
         height: calc(calc(100vh - 82px) - 154px);
         background-size: 100% 100%;
         width: 100%;
-        margin-top: 20%;
         .divSvgMobil{
             .certiDiv{
                 position: absolute;
-                top: 25%;
+                top: 15%;
                 left: 70%;
                 width: 10%;
             }
             .afpaDiv{
                 position: absolute;
-                top: 25%;
+                top: 15%;
                 left: 80%;
                 width: 10%;
             }
             .navireDiv{
-                display: block;
                 position: absolute;
-                top: 60%;
+                top: 45%;
                 left: 15%;
                 width: 6em;
             }

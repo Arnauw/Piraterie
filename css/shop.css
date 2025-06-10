@@ -186,40 +186,7 @@
     background-color: #00258C;
   }
   
-
-
-
-
-/******* Section 3 Footer **********/
-
-@keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-25px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
-}
-
-.avatar {
-    display: flex;
-    justify-content: center;
-	overflow: hidden;
-	transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
-   }
-
-.avatar img {
-    width: 10%;
-    height: 40%;
-    object-fit: cover;
-    transition: all 0.3s ease-in-out;
-}
-
-
+/******* Media Queries **********/
 
 @media (max-width: 768px) {
 

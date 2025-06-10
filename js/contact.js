@@ -42,7 +42,6 @@ if (window.innerWidth > 380) {
       const finalParchmentIsRolled = animParams.finalParchmentIsRolled;
       const finalRollElementLeft = animParams.finalRollElementLeft;
       const finalRollElementTop = animParams.finalRollElementTop;
-      const finalRollElementWidth = animParams.finalRollElementWidth;
       const finalScrollClipLeft = animParams.finalScrollClipLeft;
 
       const elapsedTime = timestamp - startTime;
@@ -106,7 +105,6 @@ if (window.innerWidth > 380) {
 
         leftRollElement.style.left = finalRollElementLeft + "px";
         leftRollElement.style.top = finalRollElementTop + "px";
-        leftRollElement.style.width = finalRollElementWidth + "px";
 
         scrollElement.style.clipPath =
           "inset(0 0 0 " + finalScrollClipLeft + "px)";

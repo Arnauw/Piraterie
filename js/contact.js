@@ -43,7 +43,6 @@ if (window.innerWidth > 380) {
       const finalRollElementLeft = animParams.finalRollElementLeft;
       const finalRollElementTop = animParams.finalRollElementTop;
       const finalRollElementWidth = animParams.finalRollElementWidth;
-      const finalRollElementHeight = animParams.finalRollElementHeight;
       const finalScrollClipLeft = animParams.finalScrollClipLeft;
 
       const elapsedTime = timestamp - startTime;
@@ -108,7 +107,6 @@ if (window.innerWidth > 380) {
         leftRollElement.style.left = finalRollElementLeft + "px";
         leftRollElement.style.top = finalRollElementTop + "px";
         leftRollElement.style.width = finalRollElementWidth + "px";
-        leftRollElement.style.height = finalRollElementHeight + "px";
 
         scrollElement.style.clipPath =
           "inset(0 0 0 " + finalScrollClipLeft + "px)";
@@ -139,7 +137,6 @@ if (window.innerWidth > 380) {
             const currentRelativeScrollLeft =
               scrollRect.left - contactRect.left;
             const currentScrollWidth = scrollRect.width;
-            const currentScrollHeight = scrollRect.height;
             const calculatedRollWidth =
               currentScrollWidth * rollWidthPercentage;
 
@@ -154,7 +151,6 @@ if (window.innerWidth > 380) {
               finalRollElementLeft: currentRelativeScrollLeft,
               finalRollElementTop: currentRelativeScrollTop,
               finalRollElementWidth: calculatedRollWidth,
-              finalRollElementHeight: currentScrollHeight,
               finalScrollClipLeft: 0,
             };
 
@@ -180,7 +176,6 @@ if (window.innerWidth > 380) {
       const currentRelativeScrollTop = scrollRect.top - contactRect.top;
       const currentRelativeScrollLeft = scrollRect.left - contactRect.left;
       const currentScrollWidth = scrollRect.width;
-      const currentScrollHeight = scrollRect.height;
       const calculatedRollWidth = currentScrollWidth * rollWidthPercentage;
 
       const animStartRollLeft = currentRelativeScrollLeft;
@@ -198,7 +193,6 @@ if (window.innerWidth > 380) {
         finalRollElementLeft: animTargetRollLeft,
         finalRollElementTop: currentRelativeScrollTop,
         finalRollElementWidth: calculatedRollWidth,
-        finalRollElementHeight: currentScrollHeight,
         finalScrollClipLeft: currentScrollWidth,
       };
 

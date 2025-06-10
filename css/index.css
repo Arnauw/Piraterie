@@ -42,9 +42,18 @@ main {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.5);
       z-index: 0;
       pointer-events: none;
+    }
+    h1 {
+      color: var(--color-yellow);
+      position: absolute;
+      top: 40px;
+      text-shadow: -2px -2px 0 #ffffff, /* haut-gauche */ 2px -2px 0 #ffffff,
+        /* haut-droite */ -2px 2px 0 #ffffff, /* bas-gauche */ 2px 2px 0 #ffffff,
+        /* bas-droite */ -2px 0 0 #ffffff, /* gauche */ 2px 0 0 #ffffff,
+        /* droite */ 0 -2px 0 #ffffff, /* haut */ 0 2px 0 #ffffff; /* bas */
     }
     video {
       width: 100%;
@@ -52,14 +61,23 @@ main {
       object-fit: cover;
     }
     .banner-text {
+      width: 100%;
       position: absolute;
       bottom: 120px;
       left: 50%; /* Position the left edge of the button at 50% of the viewport width */
       transform: translateX(-50%);
       color: var(--color-yellow);
+      text-shadow: -2px -2px 0 #ffffff, /* haut-gauche */ 2px -2px 0 #ffffff,
+        /* haut-droite */ -2px 2px 0 #ffffff, /* bas-gauche */ 2px 2px 0 #ffffff,
+        /* bas-droite */ -2px 0 0 #ffffff, /* gauche */ 2px 0 0 #ffffff,
+        /* droite */ 0 -2px 0 #ffffff, /* haut */ 0 2px 0 #ffffff; /* bas */
+      h2 {
+        font-size: 40px;
+        width: 100%;
+      }
     }
     .scroll-down-button {
-      position: fixed;
+      position: absolute;
       bottom: 30px;
       left: 50%; /* Position the left edge of the button at 50% of the viewport width */
       transform: translateX(
@@ -76,6 +94,7 @@ main {
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
       transition: background-color 0.3s ease;
       z-index: 100; /* Ensure it's on top */
+      animation: float 2s ease-in-out infinite;
       a {
         svg {
           fill: var(--color-brown);

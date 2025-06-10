@@ -21,8 +21,25 @@
           <li><a href="shop.html">Boutique</a></li>
           <li><a href="treasure.html">Trésor</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="login-button"><a href="login.html">Connexion</a></li>
+          <li class="login-button"><a href="#open-modal">Connexion</a></li>
         </ul>
+        <div id="open-modal" class="modal-window"> <!-- div modal connexion --> 
+          <div class="modal-content">
+            <a href="#" title="Close" class="modal-close">X</a>
+            <h1>Connexion</h1>
+            <img src="./imgs/LOGO V1.png" alt="logo" />
+            <fieldset class="formulaire">
+              <label for="nom">Identifiant:</label>
+              <input type="text" name="nom" id="nom"><br>
+              <label for="prenom">Mot de passe:</label>
+              <input type="text" name="prenom" id="prenom" required><br>
+              <input  type="submit" value="connexion">
+            </fieldset>
+            <div>
+              <small>Mot de passe oublié</small>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <header class="burger">
@@ -214,24 +231,12 @@
           </div>
         </div> 
       </section>
-
-      <!-- Bouton pour ouvrir la pop-up -->
-      <button onclick="openPopup()">Ouvrir la pop-up</button>
-      <script>  
-        function openPopup() {
-          document.getElementById('popup').classList.add('active');
-        }
-
-        function closePopup() {
-          document.getElementById('popup').classList.remove('active');
-        }
-      </script>
     </main>
 
     <footer>
-      <footer>
+
         <div class="footer-container">
-          <p> <a href="./RGPD.html"> Mention légales&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p> 
+          <p> <a href="./RGPD.html"> Mention légales</a></p> 
           <div class="avatar">
             <img src="./imgs/LOGO V1.png" alt="logo" />
           </div>
@@ -241,10 +246,9 @@
           <div class="avatar">
             <img src="./imgs/LOGO V1.png" alt="logo" />
           </div>
-          <p> <a href="./RGPD.html"> Mention légales</p></a>
+          <p> <a href="./RGPD.html"> Mention légales</a></p>
           <p>&copy; 2025 La Piraterie !</p>
         </div>
-      </footer>
     </footer>
 
   </body>

@@ -1,2 +1,1 @@
 *.webm filter=lfs diff=lfs merge=lfs -text
-imgs/index/1K-Blackbeard_-_Edward_Teach_King_of_Pirates_Documentary.webm filter=lfs diff=lfs merge=lfs -text

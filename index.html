@@ -21,9 +21,9 @@
       <nav>
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="taverne.html">Taverne</a></li>
-          <li><a href="shop.html">Boutique</a></li>
+          <li><a href="tavern.html">Taverne</a></li>
           <li><a href="treasure.html">Trésor</a></li>
+          <li><a href="shop.html">Boutique</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li class="login-button"><a href="#open-modal">Connexion</a></li>
         </ul>
@@ -57,9 +57,9 @@
       <nav class="burger-nav">
         <ul class="__list">
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="taverne.html">Taverne</a></li>
-          <li><a href="shop.html">Boutique</a></li>
+          <li><a href="tavern.html">Taverne</a></li>
           <li><a href="treasure.html">Trésor</a></li>
+          <li><a href="shop.html">Boutique</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <div id="open-modal-smartphone" class="modal-window-smartphone">
@@ -85,7 +85,7 @@
 
     <main class="">
       <section id="banner" class="banner">
-        <h1>Bienvenue chez les Pirates de l'AFPA !</h1>
+        <h1 class="title">Bienvenue chez les Pirates de l'AFPA !</h1>
         <video
           class="background-video"
           autoplay
@@ -102,8 +102,11 @@
           Your browser does not support the video tag.
         </video>
         <div class="arrow-bottom">
-          <div class="banner-text">
+          <div class="banner-text banner-text-desktop">
             <h2>Cliquez ici pour découvrir la piraterie !</h2>
+          </div>
+          <div class="banner-text banner-text-mobile">
+            <h2>Glissez vers le bas pour découvrir la piraterie !</h2>
           </div>
           <a
             href="#page-wrapper"
@@ -116,6 +119,13 @@
               />
             </svg>
           </a>
+          <div class="scroll-down-button-mobile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.78 10.5 20.2 11.92 12 20.12 3.8 11.92 5.22 10.5 12 17.27z"
+              />
+            </svg>
+          </div>
         </div>
       </section>
       <div id="page-wrapper" class="page-wrapper">
@@ -127,15 +137,14 @@
               alt="Illustration de la Piraterie !"
               class="card-image"
             />
-            <p>Bienvenue à la Piraterie !</p>
+            <p>Bienvenue sur le site de la Piraterie !</p>
             <p>
               Là où l'or brille plus fort que le soleil et où chaque vague cache
               une nouvelle fortune.
             </p>
             <p>
-              La piraterie est un sujet fascinant qui a marqué l'histoire
-              maritime. Des pirates célèbres comme Barbe Noire et Anne Bonny ont
-              laissé une empreinte indélébile dans la culture populaire.
+              Plus qu'une simple page d'histoire maritime, la piraterie est une
+              épopée rugissante qui a déferlé sur les sept mers.
             </p>
             <p>
               Les pirates étaient souvent perçus comme des hors-la-loi, mais ils
@@ -144,13 +153,15 @@
             </p>
           </section>
 
-          <section class="content-card">
+          <section id="1st-category" class="content-card">
             <h2>LA TAVERNE</h2>
-            <img
-              src="./imgs/index/tavern-img.jpg"
-              alt="Entrée de la Taverne Pirate"
-              class="card-image"
-            />
+            <div class="card-img-container">
+              <img
+                src="./imgs/index/tavern-img.jpg"
+                alt="Entrée de la Taverne Pirate"
+                class="card-image"
+              />
+            </div>
             <p>
               Poussez les portes de notre taverne et plongez au cœur de
               l'ambiance pirate ! Écoutez les rumeurs, partagez un grog et
@@ -160,18 +171,44 @@
               Des histoires de trésors perdus aux dernières nouvelles du port,
               la taverne est le lieu de rendez-vous de tous les flibustiers.
             </p>
-            <a href="taverne.html" class="card-action-button"
+            <a href="tavern.html" class="card-action-button"
               >Entrer dans la Taverne</a
             >
           </section>
 
           <section class="content-card">
+            <h2>LA CARTE AU TRÉSOR</h2>
+            <div class="card-img-container">
+              <img
+                src="./imgs/index/treasure-img.png"
+                alt="Illustration des trésors de la piraterie"
+                class="card-image"
+              />
+            </div>
+            <p>
+              Les trésors, qu'ils soient faits d'or, de pierres précieuses ou
+              d'artefacts exotiques, sont intrinsèquement liés à l'imaginaire de
+              la piraterie.
+            </p>
+            <p>
+              Fruit d'abordages audacieux et de pillages, ces richesses étaient
+              souvent dissimulées dans des lieux lointains et secrets,
+              alimentant les mythes de cartes au trésor et de fortunes cachées.
+            </p>
+            <a href="treasure.html" class="card-action-button"
+              >Voir la Carte au trésor</a
+            >
+          </section>
+
+          <section id="3rd-category" class="content-card">
             <h2>LA BOUTIQUE</h2>
-            <img
-              src="./imgs/index/shop-img.jpg"
-              alt="Illustration de la boutique de la piraterie"
-              class="card-image"
-            />
+            <div class="card-img-container">
+              <img
+                src="./imgs/index/shop-img.jpg"
+                alt="Illustration de la boutique de la piraterie"
+                class="card-image"
+              />
+            </div>
             <p>
               Découvrez notre boutique, un lieu où l'esprit de la piraterie
               prend vie à travers une sélection d'articles.
@@ -182,48 +219,20 @@
               que des répliques d'épées pour les passionnés et des chapeaux
               emblématiques qui complètent la panoplie du parfait flibustier.
             </p>
-            <p>
-              C'est l'occasion de ramener un souvenir de cette époque fascinante
-              !
-            </p>
             <a href="shop.html" class="card-action-button"
               >Entrer dans la Boutique</a
             >
           </section>
 
           <section class="content-card">
-            <h2>LA CARTE AU TRÉSOR</h2>
-            <img
-              src="./imgs/index/treasure-img.png"
-              alt="Illustration des trésors de la piraterie"
-              class="card-image"
-            />
-            <p>
-              Les trésors, qu'ils soient faits d'or, de pierres précieuses ou
-              d'artefacts exotiques, sont intrinsèquement liés à l'imaginaire de
-              la piraterie.
-            </p>
-            <p>
-              Fruit d'abordages audacieux et de pillages, ces richesses étaient
-              souvent dissimulées dans des lieux lointains et secrets,
-              alimentant les mythes de cartes au trésor et de fortunes cachées.
-            </p>
-            <p>
-              Ils symbolisent l'attrait de l'aventure et de la fortune éphémère
-              qui animait la vie de ces marins hors-la-loi.
-            </p>
-            <a href="treasure.html" class="card-action-button"
-              >Entrer voir notre Carte au trésor</a
-            >
-          </section>
-
-          <section class="content-card">
             <h2>CONTACT</h2>
-            <img
-              src="./imgs/index/contact-img.png"
-              alt="Illustration du contact de la piraterie"
-              class="card-image"
-            />
+            <div class="card-img-container">
+              <img
+                src="./imgs/index/contact-img.png"
+                alt="Illustration du contact de la piraterie"
+                class="card-image"
+              />
+            </div>
             <p>
               Les trésors, qu'ils soient faits d'or, de pierres précieuses ou
               d'artefacts exotiques, sont intrinsèquement liés à l'imaginaire de
@@ -233,10 +242,6 @@
               Fruit d'abordages audacieux et de pillages, ces richesses étaient
               souvent dissimulées dans des lieux lointains et secrets,
               alimentant les mythes de cartes au trésor et de fortunes cachées.
-            </p>
-            <p>
-              Ils symbolisent l'attrait de l'aventure et de la fortune éphémère
-              qui animait la vie de ces marins hors-la-loi.
             </p>
             <a href="contact.html" class="card-action-button"
               >Envoyer un message a notre équipage</a

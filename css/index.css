@@ -134,19 +134,38 @@ main {
 /* Responsive Tablets */
 @media (max-width: 768px) {
   main {
-    h1 {
-      font-size: 30px;
+    .banner {
+      height: calc(100vh - 96px);
+      h1 {
+        font-size: 30px;
+        padding: 20px;
+      }
+      .banner-text {
+        h2 {
+          font-size: 30px;
+          padding: 20px;
+        }
+      }
     }
+
     h2 {
       font-size: 24px;
-    }
-    p {
-      font-size: 14px;
     }
 
     .main-container {
       padding: 20px 5%;
       gap: 32px;
+      .header {
+        width: 100%;
+        p {
+          font-size: 14px;
+          width: 100%;
+        }
+      }
+      p {
+        font-size: 14px;
+        width: 100%;
+      }
       section {
         width: 44%;
       }
@@ -157,6 +176,10 @@ main {
 /* Responsive Smartphones */
 @media (max-width: 380px) {
   main {
+    margin-top: 80px;
+    .banner {
+      height: calc(100vh - 80px);
+    }
     h1 {
       font-size: 24px;
     }
@@ -168,8 +191,10 @@ main {
     }
     .main-container {
       gap: 20px;
+      height: 100%;
       section {
         width: 100%;
+        height: 50%;
       }
     }
   }

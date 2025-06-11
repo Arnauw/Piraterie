@@ -209,10 +209,10 @@ html {
     .divMainResponsiveM{
         display: block;
         background-image: url("../imgs/treasure/map-smartphone-2.jpg");
-        height: calc(100vh - 68px);
+        height: calc(100vh - 80px);
         background-size: 100% 100%;
         width: 100%;
-        margin-top: 20%;
+        margin-top: 80px;
         .divSvgMobil{
             .certiDiv{
                 position: absolute;

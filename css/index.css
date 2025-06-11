@@ -2,7 +2,7 @@
 @import url("./fonts.css");
 
 html {
-  scroll-behavior: smooth; /* For smooth scrolling */
+  scroll-behavior: smooth;
 }
 
 main {
@@ -64,7 +64,7 @@ main {
       width: 100%;
       position: absolute;
       bottom: 120px;
-      left: 50%; /* Position the left edge of the button at 50% of the viewport width */
+      left: 50%;
       transform: translateX(-50%);
       color: var(--color-yellow);
       text-shadow: -2px -2px 0 #ffffff, /* haut-gauche */ 2px -2px 0 #ffffff,
@@ -201,16 +201,15 @@ main {
 }
 
 .page-wrapper {
-  background-image: url("parchment-background.jpg"); /* Replace with your actual background */
-  background-color: #f5e9c9; /* Fallback color if image fails */
-  background-size: cover; /* Or 'contain', 'repeat' depending on your image */
+  background-image: url("parchment-background.jpg");
+  background-color: #f5e9c9;
+  background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Optional: for a parallax-like effect */
+  background-attachment: fixed;
   min-height: 100vh;
   /* padding-bottom: 40px; */
 }
 
-/* --- Common Container for Centering Content --- */
 .site-header,
 .site-footer-bottom {
   max-width: 1200px;
@@ -220,7 +219,6 @@ main {
   padding-right: 20px;
 }
 
-/* --- Header Section --- */
 .site-header {
   text-align: center;
   padding-top: 40px;
@@ -234,10 +232,10 @@ main {
 
 .site-header h1 {
   font-family: "Pirata One", "Impact", fantasy; /* Pirate-style font for main title */
-  font-size: 3.5em; /* Adjust size */
-  color: #5d4037; /* Darker brown for title */
+  font-size: 3.5em;
+  color: #5d4037;
   margin-bottom: 0.5em;
-  font-weight: bold; /* Make sure it's bold */
+  font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -250,36 +248,33 @@ main {
     margin-right: auto; */
 }
 
-/* --- Main Content Grid (for the cards) --- */
 .main-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  justify-items: center;
   align-items: center;
-  align-self: center;
-  gap: 30px; /* Space between cards */
+  gap: 30px;
   padding-bottom: 40px;
 }
 
 .content-card {
+  position: relative;
   width: 45%;
   height: 100vh;
-  /* Cards don't need a background if the page background shows through */
-  /* background-color: rgba(255, 255, 255, 0.1); /* Optional: slight transparency if needed */
+  background-color: rgba(97, 54, 12, 0.17);
   padding: 25px;
-  text-align: center; /* As per your image */
-  /* border: 1px solid rgba(0,0,0,0.1); /* Optional: subtle border for cards */
-  /* border-radius: 8px; /* Optional: rounded corners */
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .content-card h2 {
-  font-family: "Pirata One", "Impact", fantasy; /* Pirate-style font for card titles */
-  font-size: 2.2em; /* Adjust size */
-  color: #5d4037; /* Darker brown */
+  font-family: "Pirata One", "Impact", fantasy;
+  font-size: 2.2em;
+  color: #5d4037;
   margin-top: 0;
   margin-bottom: 20px;
-  font-weight: bold; /* Make sure it's bold */
+  font-weight: bold;
 }
 
 .content-card p {
@@ -288,19 +283,6 @@ main {
   margin-bottom: 1em;
 }
 
-/* --- Responsive Adjustments --- */
-@media (max-width: 768px) {
-  .site-header h1 {
-    font-size: 2.8em;
-  }
-
-  .main-content {
-    grid-template-columns: 1fr; /* Stack cards on smaller screens */
-    gap: 20px;
-  }
-}
-
-/* --- Styles for Images within Content Cards --- */
 .card-image {
   display: block;
   max-width: 80%;
@@ -310,14 +292,40 @@ main {
   border-radius: 10px;
 }
 
-/* Adjustments for content card if images are added */
 .content-card h2 {
-  /* No change needed here unless image placement affects it visually for you */
-  margin-bottom: 15px; /* You might adjust this slightly if image is directly under */
+  margin-bottom: 15px;
   margin-top: 15px;
 }
 
+.card-action-button {
+  padding: 16px 12px 8px 12px;
+  background-color: var(--color-yellow);
+  color: var(--color-brown);
+  font-family: var(--font-special);
+  border-radius: 3px;
+  &:hover {
+    color: #8b4100;
+    background-color: #fffb01;
+  }
+  &:visited {
+    color: var(--color-brown);
+  }
+}
+
+.content-card p:last-of-type {
+  margin-bottom: 40px;
+}
+
 .content-card p:first-of-type {
-  /* If the image is directly above the first paragraph, you might not need extra top margin on the p */
-  /* margin-top: 0; */
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .site-header h1 {
+    font-size: 2.8em;
+  }
+
+  .main-content {
+    gap: 20px;
+  }
 }

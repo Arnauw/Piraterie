@@ -2,7 +2,7 @@
 @import url("./fonts.css");
 
 html {
-  scroll-behavior: smooth; /* For smooth scrolling */
+  scroll-behavior: smooth;
 }
 
 main {
@@ -60,11 +60,14 @@ main {
       height: 100%;
       object-fit: cover;
     }
+    .banner-text-mobile {
+      display: none;
+    }
     .banner-text {
       width: 100%;
       position: absolute;
       bottom: 120px;
-      left: 50%; /* Position the left edge of the button at 50% of the viewport width */
+      left: 50%;
       transform: translateX(-50%);
       color: var(--color-yellow);
       text-shadow: -2px -2px 0 #ffffff, /* haut-gauche */ 2px -2px 0 #ffffff,
@@ -176,6 +179,20 @@ main {
 /* Responsive Smartphones */
 @media (max-width: 380px) {
   main {
+    .banner {
+      .title {
+        font-size: 24px;
+      }
+      .banner-text-desktop {
+        display: none;
+      }
+      .banner-text-mobile {
+        display: flex;
+        h2 {
+          font-size: 18px;
+        }
+      }
+    }
     margin-top: 80px;
     .banner {
       height: calc(100vh - 80px);
@@ -201,16 +218,15 @@ main {
 }
 
 .page-wrapper {
-  background-image: url("parchment-background.jpg"); /* Replace with your actual background */
-  background-color: #f5e9c9; /* Fallback color if image fails */
-  background-size: cover; /* Or 'contain', 'repeat' depending on your image */
+  background-image: url("parchment-background.jpg");
+  background-color: #f5e9c9;
+  background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Optional: for a parallax-like effect */
+  background-attachment: fixed;
   min-height: 100vh;
   /* padding-bottom: 40px; */
 }
 
-/* --- Common Container for Centering Content --- */
 .site-header,
 .site-footer-bottom {
   max-width: 1200px;
@@ -220,8 +236,8 @@ main {
   padding-right: 20px;
 }
 
-/* --- Header Section --- */
 .site-header {
+  position: relative;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 50px;
@@ -234,10 +250,10 @@ main {
 
 .site-header h1 {
   font-family: "Pirata One", "Impact", fantasy; /* Pirate-style font for main title */
-  font-size: 3.5em; /* Adjust size */
-  color: #5d4037; /* Darker brown for title */
+  font-size: 3.5em;
+  color: #5d4037;
   margin-bottom: 0.5em;
-  font-weight: bold; /* Make sure it's bold */
+  font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -250,36 +266,38 @@ main {
     margin-right: auto; */
 }
 
-/* --- Main Content Grid (for the cards) --- */
 .main-content {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  justify-items: center;
   align-items: center;
-  align-self: center;
-  gap: 30px; /* Space between cards */
+  gap: 30px;
   padding-bottom: 40px;
 }
 
 .content-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   width: 45%;
   height: 100vh;
-  /* Cards don't need a background if the page background shows through */
-  /* background-color: rgba(255, 255, 255, 0.1); /* Optional: slight transparency if needed */
+  background-color: rgba(97, 54, 12, 0.17);
   padding: 25px;
-  text-align: center; /* As per your image */
-  /* border: 1px solid rgba(0,0,0,0.1); /* Optional: subtle border for cards */
-  /* border-radius: 8px; /* Optional: rounded corners */
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .content-card h2 {
-  font-family: "Pirata One", "Impact", fantasy; /* Pirate-style font for card titles */
-  font-size: 2.2em; /* Adjust size */
-  color: #5d4037; /* Darker brown */
+  font-family: "Pirata One", "Impact", fantasy;
+  font-size: 2.2em;
+  color: #5d4037;
   margin-top: 0;
   margin-bottom: 20px;
-  font-weight: bold; /* Make sure it's bold */
+  font-weight: bold;
 }
 
 .content-card p {
@@ -287,37 +305,128 @@ main {
   line-height: 1.7;
   margin-bottom: 1em;
 }
+.card-img-container {
+  /* width: 100%;
+  height: 100%; */
+  max-width: 80%;
+}
+.card-image {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  max-height: 40vh;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+}
 
-/* --- Responsive Adjustments --- */
+.content-card h2 {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.card-action-button {
+  padding: 16px 12px 8px 12px;
+  background-color: var(--color-yellow);
+  color: var(--color-brown);
+  font-family: var(--font-special);
+  border-radius: 3px;
+  &:hover {
+    color: #8b4100;
+    background-color: #fffb01;
+  }
+  &:visited {
+    color: var(--color-brown);
+  }
+}
+
+.content-card p:last-of-type {
+  margin-bottom: 40px;
+}
+
+.content-card p:first-of-type {
+  margin-top: 40px;
+}
+
 @media (max-width: 768px) {
   .site-header h1 {
     font-size: 2.8em;
   }
 
   .main-content {
-    grid-template-columns: 1fr; /* Stack cards on smaller screens */
     gap: 20px;
+  }
+  .content-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    height: 800px;
+  }
+  .card-image {
+    max-height: 30vh;
   }
 }
 
-/* --- Styles for Images within Content Cards --- */
-.card-image {
-  display: block;
-  max-width: 80%;
-  height: auto;
-  max-height: 50vh;
-  margin: 0 auto 20px auto;
-  border-radius: 10px;
-}
+@media (max-width: 380px) {
+  .scroll-down-button {
+    display: none;
+    top: 3;
+    a {
+      display: none;
+      svg {
+        fill: var(--color-brown);
+      }
+    }
+  }
+  .scroll-down-button-mobile {
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-yellow);
+    color: var(--color-brown);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    z-index: 1;
+    animation: float 2s ease-in-out infinite;
+    a {
+      svg {
+        fill: var(--color-brown);
+      }
+    }
+  }
+  .site-header {
+    height: 1000px;
+    margin-bottom: 100px;
+    margin-top: 0px;
+  }
+  .site-header h1 {
+    font-size: 2.8em;
+  }
 
-/* Adjustments for content card if images are added */
-.content-card h2 {
-  /* No change needed here unless image placement affects it visually for you */
-  margin-bottom: 15px; /* You might adjust this slightly if image is directly under */
-  margin-top: 15px;
-}
+  .main-content {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-.content-card p:first-of-type {
-  /* If the image is directly above the first paragraph, you might not need extra top margin on the p */
-  /* margin-top: 0; */
+  .content-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 800px;
+  }
+  .card-image {
+    max-height: 30vh;
+  }
 }

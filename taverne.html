@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/taverne.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/taverne.css" />
     <title>WANTED</title>
-</head>
+  </head>
 
-<body>
-     <div id="navbar"></div>
+  <body>
+    <div id="navbar"></div>
     <header class="desktop">
       <div class="logo-container">
         <img src="./imgs/header/logo.png" alt="logo piraterie" />
@@ -64,10 +64,10 @@
             <img src="./imgs/LOGO V1.png" alt="logo" />
             <fieldset class="formulaire">
               <label for="nom">Identifiant:</label>
-              <input type="text" name="nom" id="nom"/><br />
+              <input type="text" name="nom" id="nom" /><br />
               <label for="prenom">Mot de passe:</label>
               <input type="text" name="prenom" id="prenom" required /><br />
-              <input type="submit" value="connexion"/>
+              <input type="submit" value="connexion" />
             </fieldset>
             <div>
               <small>Mot de passe oublié</small>
@@ -77,161 +77,194 @@
       </nav>
       <!-- <div class="overlay-container"></div> -->
     </header>
-<main>
-                <!---------Section Background et wanted jeremie------------>
+    <main>
+      <!---------Section Background et wanted jeremie------------>
 
-    <section class="crew">
+      <section class="crew">
         <div class="background-container">
-            <img class="background-texte" src="./imgs/input-frame.png" alt="background pour le texte 'notre equipage'">
-            <div class="crew-texte"><h1>LA TAVERNE!</h1></div>
-            <div class="btnSon">
-                <button class="toggle-audio">Activer le son</button>
-                <audio class="bg-audio" loop hidden>
-                    <source src="imgs/medieval_village_atmosphere-79282.mp3" type="audio/mpeg">
-                </audio>
-            </div>
+          <img
+            class="background-texte"
+            src="./imgs/input-frame.png"
+            alt="background pour le texte 'notre equipage'"
+          />
+          <div class="crew-texte"><h1>LA TAVERNE!</h1></div>
+          <div class="btnSon">
+            <button class="toggle-audio">Activer le son</button>
+            <audio class="bg-audio" loop hidden>
+              <source
+                src="imgs/medieval_village_atmosphere-79282.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </div>
         </div>
         <section class="iconeJeremie">
-            <div class="pirate2">
-                <img src="imgs/pirate3.png" alt="pirate barbe noire">
+          <div class="pirate2">
+            <img src="imgs/pirate3.png" alt="pirate barbe noire" />
+          </div>
+          <div class="poster-jeremie wanted-card">
+            <div class="wanted-front">
+              <h1 class="wanted-title1">WANTED</h1>
+              <div class="wanted-question">?</div>
             </div>
-            <div class="poster-jeremie wanted-card">
-                <div class="wanted-front">
-                    <h1 class="wanted-title1">WANTED</h1>
-                    <div class="wanted-question">?</div>
-                </div>
-                <div class="wanted-back">
-                    <h1 class="wanted-title">WANTED</h1>
-                    <div class="mugshot-jeremie"></div>
-                    <p class="subheading">ALIVE ONLY</p>
-                    <span class="texteJeremie">(sinon pas de formation lol)</span>
-                    <h2 class="namewanted">JÉRÉMIE</h2>
-                    <p class="bounty">$ 999 999 999- </p>
-                    <p class="marine">MARINE</p>
-                </div>
-                
+            <div class="wanted-back">
+              <h1 class="wanted-title">WANTED</h1>
+              <div class="mugshot-jeremie"></div>
+              <p class="subheading">ALIVE ONLY</p>
+              <span class="texteJeremie">(sinon pas de formation lol)</span>
+              <h2 class="namewanted">JÉRÉMIE</h2>
+              <p class="bounty">$ 999 999 999-</p>
+              <p class="marine">MARINE</p>
             </div>
-            <div class="pirate1">
-                <img src="imgs/vecteezy_ai-generated-vivid-background-with-a-charismatic-pirate_35617710-removebg-preview.png" alt="pirate">
-            </div>
+          </div>
+          <div class="pirate1">
+            <img
+              src="imgs/vecteezy_ai-generated-vivid-background-with-a-charismatic-pirate_35617710-removebg-preview.png"
+              alt="pirate"
+            />
+          </div>
         </section>
-            <!---------Section Wanted Equipage------------>
+        <!---------Section Wanted Equipage------------>
 
-        <div class ="wanted">
-            
-            <div class="poster wanted-card">
-                <div class="wanted-front">
-                    <h1 class="wanted-title1">WANTED</h1>
-                    <div class="wanted-question">?</div>
-                </div>
-                <div class="wanted-back">
-                    <h1 class="wanted-title">WANTED</h1>
-                    <div class="mugshot-mounir"></div>
-                    <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
-                    <h2 class="namewanted">MOUNIR</h2>
-                    <p class="bounty">$ 60 000 000- </p>
-                    <p class="marine">MARINE</p>
-                </div>
+        <div class="wanted">
+          <div class="poster wanted-card">
+            <div class="wanted-front">
+              <h1 class="wanted-title1">WANTED</h1>
+              <div class="wanted-question">?</div>
             </div>
-            <div class="poster-arnaud wanted-card">
-                <div class="wanted-front">
-                    <h1 class="wanted-title1">WANTED</h1>
-                    <div class="wanted-question">?</div>
-                </div>
-                <div class="wanted-back">
-                    <h1 class="wanted-title">WANTED</h1>
-                    <div class="mugshot-arnaud"></div>
-                    <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
-                    <h2 class="namewanted">ARNAUD</h2>
-                    <p class="bounty">$ 99 000 001- </p>
-                    <p class="marine-arnaud">MARINE</p>
-                </div>
+            <div class="wanted-back">
+              <h1 class="wanted-title">WANTED</h1>
+              <div class="mugshot-mounir"></div>
+              <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
+              <h2 class="namewanted">MOUNIR</h2>
+              <p class="bounty">$ 60 000 000-</p>
+              <p class="marine">MARINE</p>
             </div>
-            <div class="poster wanted-card">
-                <div class="wanted-front">
-                    <h1 class="wanted-title1">WANTED</h1>
-                    <div class="wanted-question">?</div>
-                </div>
-                <div class="wanted-back">
-                    <h1 class="wanted-title">WANTED</h1>
-                    <div class="mugshot-amine"></div>
-                    <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
-                    <h2 class="namewanted">AMINE</h2>
-                    <p class="bounty">$ 60 000 000- </p>
-                    <p class="marine">MARINE</p>
-                </div>
+          </div>
+          <div class="poster-arnaud wanted-card">
+            <div class="wanted-front">
+              <h1 class="wanted-title1">WANTED</h1>
+              <div class="wanted-question">?</div>
             </div>
+            <div class="wanted-back">
+              <h1 class="wanted-title">WANTED</h1>
+              <div class="mugshot-arnaud"></div>
+              <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
+              <h2 class="namewanted">ARNAUD</h2>
+              <p class="bounty">$ 99 000 001-</p>
+              <p class="marine-arnaud">MARINE</p>
+            </div>
+          </div>
+          <div class="poster wanted-card">
+            <div class="wanted-front">
+              <h1 class="wanted-title1">WANTED</h1>
+              <div class="wanted-question">?</div>
+            </div>
+            <div class="wanted-back">
+              <h1 class="wanted-title">WANTED</h1>
+              <div class="mugshot-amine"></div>
+              <p class="subheading">DEAD OR ALIVE(c'est faux hein)</p>
+              <h2 class="namewanted">AMINE</h2>
+              <p class="bounty">$ 60 000 000-</p>
+              <p class="marine">MARINE</p>
+            </div>
+          </div>
         </div>
-            
-    </section>
-    
-    <!---------Section Rumeur Taverne---------->
-    <section class="taverne">
+      </section>
+
+      <!---------Section Rumeur Taverne---------->
+      <section class="taverne">
         <div class="background-container2">
-            <img class="background-texte" src="./imgs/input-frame.png" alt="background pour le texte 'notre equipage'">
-            <div class="crew-texte2"><h1>Rumeurs de la taverne!</h1></div>
+          <img
+            class="background-texte"
+            src="./imgs/input-frame.png"
+            alt="background pour le texte 'notre equipage'"
+          />
+          <div class="crew-texte2"><h1>Rumeurs de la taverne!</h1></div>
         </div>
         <div id="zone-rumeurs"></div>
-    </section>
-    <!----------Chant de la taverne------------>
-    <section class="chantTaverne">
+      </section>
+      <!----------Chant de la taverne------------>
+      <section class="chantTaverne">
         <div class="background-container3">
-            <img class="background-texte" src="./imgs/input-frame.png" alt="background pour le texte 'notre equipage'">
-            <div class="chant-texte"><h1>Chant de la Taverne!</h1></div>
+          <img
+            class="background-texte"
+            src="./imgs/input-frame.png"
+            alt="background pour le texte 'notre equipage'"
+          />
+          <div class="chant-texte"><h1>Chant de la Taverne!</h1></div>
         </div>
-        <div class="audioTaverne"> 
-            <div class="chant">
-                <div class="btnSon1">
-                    <div class="texteChant">
-                        <img class="background-chant" src="./imgs/input-frame.png" alt="background pour le texte 'notre equipage'">
-                        <div class="chant-texte1"><h1>Chant de la Mer!</h1></div>
-                    </div>
-                    <button class="toggle-audio">Activer le son</button>
-                    <audio class="bg-audio" loop hidden>
-                        <source src="imgs/a-pirate-343849.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-                <div class="btnSon1">
-                    <div class="texteChant">
-                        <img class="background-chant" src="./imgs/input-frame.png" alt="background pour le texte 'notre equipage'">
-                        <div class="chant-texte2"><h1>Pirate des Caraibes!</h1></div>
-                    </div>
-                    <button class="toggle-audio">Activer le son</button>
-                    <audio class="bg-audio" loop hidden>
-                        <source src="imgs/pirate-theme-made-with-Voicemod.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-                <div class="btnSon1">
-                    <div class="texteChant">
-                        <img class="background-chant" src="./imgs/input-frame.png" alt="background pour le texte 'notre equipage'">
-                        <div class="chant-texte3"><h1>LA FAMILLE PIRATE!</h1></div>
-                    </div>
-                    <button class="toggle-audio">Activer le son</button>
-                    <audio class="bg-audio" loop hidden>
-                        <source src="imgs/la-famille-pirate-générique-vf-made-with-Voicemod.mp3" type="audio/mpeg">
-                    </audio>
-                </div>
-                <div class="btnSon1">
-                    <div class="texteChant">
-                        <img class="background-chant" src="./imgs/input-frame.png" alt="background pour le texte 'notre equipage'">
-                        <div class="chant-texte4"><h1>RHUM DE BINKS!</h1></div>
-                    </div>
-                    <button class="toggle-audio">Activer le son</button>
-                    <audio class="bg-audio" loop hidden>
-                        <source src="imgs/hd-brook-le-bon-rhum-de-binks-vf_eBl83WKW.mp3" alt="audio/mpeg">
-                    </audio>
-                </div>
+        <div class="audioTaverne">
+          <div class="chant">
+            <div class="btnSon1">
+              <div class="texteChant">
+                <img
+                  class="background-chant"
+                  src="./imgs/input-frame.png"
+                  alt="background pour le texte 'notre equipage'"
+                />
+                <div class="chant-texte1"><h1>Chant de la Mer!</h1></div>
+              </div>
+              <button class="toggle-audio">Activer le son</button>
+              <audio class="bg-audio" loop hidden>
+                <source src="imgs/a-pirate-343849.mp3" type="audio/mpeg" />
+              </audio>
             </div>
+            <div class="btnSon1">
+              <div class="texteChant">
+                <img
+                  class="background-chant"
+                  src="./imgs/input-frame.png"
+                  alt="background pour le texte 'notre equipage'"
+                />
+                <div class="chant-texte2"><h1>Pirate des Caraibes!</h1></div>
+              </div>
+              <button class="toggle-audio">Activer le son</button>
+              <audio class="bg-audio" loop hidden>
+                <source
+                  src="imgs/pirate-theme-made-with-Voicemod.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+            </div>
+            <div class="btnSon1">
+              <div class="texteChant">
+                <img
+                  class="background-chant"
+                  src="./imgs/input-frame.png"
+                  alt="background pour le texte 'notre equipage'"
+                />
+                <div class="chant-texte3"><h1>LA FAMILLE PIRATE!</h1></div>
+              </div>
+              <button class="toggle-audio">Activer le son</button>
+              <audio class="bg-audio" loop hidden>
+                <source
+                  src="imgs/la-famille-pirate-générique-vf-made-with-Voicemod.mp3"
+                  type="audio/mpeg"
+                />
+              </audio>
+            </div>
+            <div class="btnSon1">
+              <div class="texteChant">
+                <img
+                  class="background-chant"
+                  src="./imgs/input-frame.png"
+                  alt="background pour le texte 'notre equipage'"
+                />
+                <div class="chant-texte4"><h1>RHUM DE BINKS!</h1></div>
+              </div>
+              <button class="toggle-audio">Activer le son</button>
+              <audio class="bg-audio" loop hidden>
+                <source
+                  src="imgs/hd-brook-le-bon-rhum-de-binks-vf_eBl83WKW.mp3"
+                  alt="audio/mpeg"
+                />
+              </audio>
+            </div>
+          </div>
         </div>
-           
-    </section>
-    
-
-        
-</main>
-
-
-
+      </section>
+    </main>
 
     <footer>
       <div class="footer-container">
@@ -244,7 +277,9 @@
         <p>© 2025 La Piraterie !</p>
       </div>
     </footer>
-<script src="js/audio-toggle.js"></script>
-<script src="js/rumeurs.js"></script>
-</body>
+    <script src="js/audio-toggle.js"></script>
+    <script src="js/rumeurs.js"></script>
+    <script src="./js/cookieconsent.umd.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
 </html>

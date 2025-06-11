@@ -9,7 +9,7 @@
       href="./imgs/header/logo.png"
       type="image/x-icon"
     />
-     <link rel="stylesheet" href="./css/cookieconsent.css" />
+    <link rel="stylesheet" href="./css/cookieconsent.css" />
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
@@ -106,7 +106,7 @@
             <h2>Cliquez ici pour découvrir la piraterie !</h2>
           </div>
           <a
-            href="#categories"
+            href="#page-wrapper"
             class="scroll-down-button"
             aria-label="Scroll to bottom"
           >
@@ -118,47 +118,60 @@
           </a>
         </div>
       </section>
-      <div id="categories" class="main-container">
-        <section class="header">
-          <h2>La Piraterie</h2>
-          <p>Bienvenue à la Piraterie !</p>
-          <p>
-            Là où l'or brille plus fort que le soleil et où chaque vague cache
-            une nouvelle fortune.
-          </p>
-          <p>
-            La piraterie est un sujet fascinant qui a marqué l'histoire
-            maritime. Des pirates célèbres comme Barbe Noire et Anne Bonny ont
-            laissé une empreinte indélébile dans la culture populaire.
-          </p>
-          <p>
-            Les pirates étaient souvent perçus comme des hors-la-loi, mais ils
-            avaient aussi leur propre code d'honneur et des règles de conduite.
-          </p>
-        </section>
+      <div id="page-wrapper" class="page-wrapper">
+        <main class="main-content">
+          <section class="site-header">
+            <h1>LA PIRATERIE</h1>
+            <img
+              src="./imgs/index/poster.png"
+              alt="Illustration de la Piraterie !"
+              class="card-image"
+            />
+            <p>Bienvenue à la Piraterie !</p>
+            <p>
+              Là où l'or brille plus fort que le soleil et où chaque vague cache
+              une nouvelle fortune.
+            </p>
+            <p>
+              La piraterie est un sujet fascinant qui a marqué l'histoire
+              maritime. Des pirates célèbres comme Barbe Noire et Anne Bonny ont
+              laissé une empreinte indélébile dans la culture populaire.
+            </p>
+            <p>
+              Les pirates étaient souvent perçus comme des hors-la-loi, mais ils
+              avaient aussi leur propre code d'honneur et des règles de
+              conduite.
+            </p>
+          </section>
 
-        <section class="crew">
-          <div class="text-container">
-            <h2>L'équipage</h2>
+          <section class="content-card">
+            <h2>LA TAVERNE</h2>
+            <img
+              src="./imgs/index/tavern-img.jpg"
+              alt="Entrée de la Taverne Pirate"
+              class="card-image"
+            />
             <p>
-              L'équipage est le cœur vibrant de tout navire pirate, un mélange
-              hétéroclite d'hommes et de femmes issus de divers horizons.
+              Poussez les portes de notre taverne et plongez au cœur de
+              l'ambiance pirate ! Écoutez les rumeurs, partagez un grog et
+              entonnez des chants de marins avec l'équipage.
             </p>
             <p>
-              Malgré leur réputation d'anarchie, la vie à bord était régie par
-              une discipline stricte et une forme de démocratie, où chaque
-              membre avait sa place et ses responsabilités.
+              Des histoires de trésors perdus aux dernières nouvelles du port,
+              la taverne est le lieu de rendez-vous de tous les flibustiers.
             </p>
-            <p>
-              La survie en haute mer et le succès des expéditions dépendaient de
-              la cohésion et de la loyauté de l'équipage.
-            </p>
-          </div>
-        </section>
+            <a href="taverne.html" class="card-action-button"
+              >Entrer dans la Taverne</a
+            >
+          </section>
 
-        <section class="shop">
-          <div class="text-container">
-            <h2>La boutique</h2>
+          <section class="content-card">
+            <h2>LA BOUTIQUE</h2>
+            <img
+              src="./imgs/index/shop-img.jpg"
+              alt="Illustration de la boutique de la piraterie"
+              class="card-image"
+            />
             <p>
               Découvrez notre boutique, un lieu où l'esprit de la piraterie
               prend vie à travers une sélection d'articles.
@@ -173,12 +186,15 @@
               C'est l'occasion de ramener un souvenir de cette époque fascinante
               !
             </p>
-          </div>
-        </section>
+          </section>
 
-        <section class="treasure">
-          <h2>Les trésors</h2>
-          <div class="text-container">
+          <section class="content-card">
+            <h2>LES TRÉSORS</h2>
+            <img
+              src="./imgs/index/treasure-img.png"
+              alt="Illustration des trésors de la piraterie"
+              class="card-image"
+            />
             <p>
               Les trésors, qu'ils soient faits d'or, de pierres précieuses ou
               d'artefacts exotiques, sont intrinsèquement liés à l'imaginaire de
@@ -193,11 +209,15 @@
               Ils symbolisent l'attrait de l'aventure et de la fortune éphémère
               qui animait la vie de ces marins hors-la-loi.
             </p>
-          </div>
-        </section>
-        <section class="contact">
-          <h2>Contact</h2>
-          <div class="text-container">
+          </section>
+
+          <section class="content-card">
+            <h2>CONTACT</h2>
+            <img
+              src="./imgs/index/contact-img.png"
+              alt="Illustration du contact de la piraterie"
+              class="card-image"
+            />
             <p>
               Les trésors, qu'ils soient faits d'or, de pierres précieuses ou
               d'artefacts exotiques, sont intrinsèquement liés à l'imaginaire de
@@ -212,8 +232,8 @@
               Ils symbolisent l'attrait de l'aventure et de la fortune éphémère
               qui animait la vie de ces marins hors-la-loi.
             </p>
-          </div>
-        </section>
+          </section>
+        </main>
       </div>
     </main>
 
@@ -231,6 +251,5 @@
 
     <script src="./js/cookieconsent.umd.js"></script>
     <script src="./js/index.js"></script>
-
   </body>
 </html>

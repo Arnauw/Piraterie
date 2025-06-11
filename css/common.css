@@ -316,6 +316,8 @@ footer {
     left: 0;
     right: 0;
     height: 80px;
+    width: 100%;
+    max-width: 380px;
 
     .burger-nav {
       position: fixed;
@@ -329,6 +331,8 @@ footer {
       height: 0;
       opacity: 1;
       overflow: hidden;
+      width: 100%;
+      max-width: 380px;
       ul {
         list-style: none;
         padding-left: 0;
@@ -352,7 +356,7 @@ footer {
       height: 100%;
       cursor: pointer;
       transition: 0.4s;
-      margin-left: 32px;
+      /* margin-left: 32px; */
     }
 
     .icon-burger {
@@ -441,6 +445,8 @@ footer {
 
   /**********Css pour modal**********/
   .modal-window-smartphone {
+    width: 100%;
+    max-width: 380px;
     position: fixed;
     top: 0;
     right: 0;

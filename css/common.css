@@ -541,3 +541,113 @@ footer {
     }
   }
 }
+
+
+
+/* Make sure your CSS file is loaded AFTER any CookieConsent CSS (if you're linking one separately)
+   or just put these in your main stylesheet. */
+
+/**
+ * CONSENT MODAL (The initial banner)
+ */
+
+/* Main consent modal background and text color */
+.cc--main { /* This is a common class for the main consent modal container */
+    background-color: var(--color-brown) !important; /* Your desired background color */
+    color: #333333 !important;            /* Your desired default text color for the modal */
+}
+
+/* Consent modal title */
+.cc--main .cc__title {
+    color: #111111 !important; /* Your desired title color */
+}
+
+/* Consent modal description text */
+.cc--main .cc__description {
+    color: #444444 !important; /* Your desired description text color */
+}
+
+/* Consent modal links (e.g., in the footer for privacy policy) */
+.cc--main .cc__footer a,
+.cc--main .cc__footer a:visited {
+    color: #007bff !important; /* Your desired link color */
+}
+.cc--main .cc__footer a:hover {
+    color: #0056b3 !important; /* Your desired link hover color */
+}
+
+
+/* General styling for ALL buttons in the consent modal */
+.cc--main .cc__btn {
+    /* If you want all buttons to have a common base style */
+}
+
+/* "Accept all" button in consent modal */
+.cc--main .cc__btn--acceptall, /* Or could be a more generic primary button class */
+.cc--main .cc__btn[data-action="accept_all"] { /* More specific if data-action is used */
+    background-color: #28a745 !important; /* Your desired "Accept all" button background */
+    color: #ffffff !important;            /* Your desired "Accept all" button text color */
+    border-color: #28a745 !important;     /* Optional: if it has a border */
+}
+
+/* "Reject all" or "Accept necessary" button in consent modal */
+.cc--main .cc__btn--secondary, /* Common class for secondary buttons */
+.cc--main .cc__btn[data-action="accept_necessary"] { /* More specific */
+    background-color: #dc3545 !important; /* Your desired "Reject all" button background */
+    color: #ffffff !important;            /* Your desired "Reject all" button text color */
+    border-color: #dc3545 !important;     /* Optional */
+}
+
+/* "Manage preferences" button in consent modal */
+.cc--main .cc__btn--tertiary, /* Common class for tertiary/link-like buttons */
+.cc--main .cc__btn[data-action="show_preferences"] { /* More specific */
+    background-color: #6c757d !important; /* Your desired "Manage" button background */
+    color: #ffffff !important;            /* Your desired "Manage" button text color */
+    border-color: #6c757d !important;     /* Optional */
+}
+
+
+/**
+ * PREFERENCES MODAL (The modal that opens when you click "Manage preferences")
+ */
+
+/* Main preferences modal background and text color */
+.pm--main { /* This is a common class for the preferences modal container */
+    background-color: #e9ecef !important; /* Your desired background color */
+    color: #212529 !important;            /* Your desired default text color for this modal */
+}
+
+/* Preferences modal title */
+.pm--main .pm__title {
+    color: #000000 !important; /* Your desired title color */
+}
+
+/* Preferences modal section titles */
+.pm--main .pm__section-title {
+    color: #1a1a1a !important;
+}
+
+/* Preferences modal section descriptions and other text */
+.pm--main .pm__section-desc,
+.pm--main p { /* General paragraphs within the preferences modal */
+    color: #3d3d3d !important;
+}
+
+/* Buttons in the preferences modal */
+/* "Accept all" button in preferences modal */
+.pm--main .pm__btn[data-action="accept_all"] {
+    background-color: #28a745 !important;
+    color: #ffffff !important;
+}
+
+/* "Reject all" button in preferences modal */
+.pm--main .pm__btn[data-action="accept_necessary"] {
+    background-color: #dc3545 !important;
+    color: #ffffff !important;
+}
+
+/* "Save preferences" button in preferences modal */
+.pm--main .pm__btn[data-action="save_preferences"] {
+    background-color: #007bff !important; /* Your desired "Save" button background */
+    color: #ffffff !important;            /* Your desired "Save" button text color */
+}

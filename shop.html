@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Piraterie !</title>
     <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/cookieconsent.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/shop.css" />
     <link rel="stylesheet" href="./css/common.css" />
   </head>
-  <body id="aa" class="test-bg" >
+  <body id="aa" class="test-bg">
+    <div id="navbar"></div>
     <header class="desktop">
       <div class="logo-container">
         <img src="./imgs/header/logo.png" alt="logo piraterie" />
@@ -17,45 +19,84 @@
       <nav>
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="taverne.html">Taverne</a></li>
-          <li><a href="shop.html">Boutique</a></li>
+          <li><a href="tavern.html">Taverne</a></li>
           <li><a href="treasure.html">Trésor</a></li>
+          <li><a href="shop.html">Boutique</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="login-button"><a href="login.html">Connexion</a></li>
+          <li class="login-button"><a href="#open-modal">Connexion</a></li>
         </ul>
+        <div id="open-modal" class="modal-window">
+          <!-- div modal connexion -->
+          <div class="modal-content">
+            <a href="#" title="Close"><span class="modal-close">X</span></a>
+            <img src="./imgs/LOGO V1.png" alt="logo" />
+            <fieldset class="formulaire">
+              <label for="nom">Identifiant:</label>
+              <input type="text" name="nom" id="nom" /><br />
+              <label for="prenom">Mot de passe:</label>
+              <input type="text" name="prenom" id="prenom" required /><br />
+              <input type="submit" value="connexion" />
+            </fieldset>
+            <div>
+              <small>Mot de passe oublié</small>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <header class="burger">
-      <input type="checkbox" id="checkbox" class="__checkbox" />
+      <input type="checkbox" id="checkbox" class="checkbox" />
       <label for="checkbox" class="btn-burger"
         ><div class="icon-burger"></div
       ></label>
-      <div class="login-button"><a href="login.html">Connexion</a></div>
-      <nav class="__container">
+      <div class="login-button">
+        <a href="#open-modal-smartphone">Connexion</a>
+      </div>
+      <nav class="burger-nav">
         <ul class="__list">
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="taverne.html">Taverne</a></li>
-          <li><a href="shop.html">Boutique</a></li>
+          <li><a href="tavern.html">Taverne</a></li>
           <li><a href="treasure.html">Trésor</a></li>
+          <li><a href="shop.html">Boutique</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div id="open-modal-smartphone" class="modal-window-smartphone">
+          <!-- div modal connexion -->
+          <div class="modal-content">
+            <a href="#" title="Close"><span class="modal-close">X</span></a>
+            <img src="./imgs/LOGO V1.png" alt="logo" />
+            <fieldset class="formulaire">
+              <label for="nom">Identifiant:</label>
+              <input type="text" name="nom" id="nom" /><br />
+              <label for="prenom">Mot de passe:</label>
+              <input type="text" name="prenom" id="prenom" required /><br />
+              <input type="submit" value="connexion" />
+            </fieldset>
+            <div>
+              <small>Mot de passe oublié</small>
+            </div>
+          </div>
+        </div>
       </nav>
       <!-- <div class="overlay-container"></div> -->
     </header>
-    
-    <main >
-      <section class="section1"> <!-- Section 1 baner-->
-        <div  class="menuBaner"> <!-- div qui contient le menu et la bannier-->
+
+
+    <main>
+      <section class="section1">
+        <!-- Section 1 baner-->
+        <div class="menuBaner">
+          <!-- div qui contient le menu et la bannier-->
           <div class="caroussel">
             <figure>
-              <img src="./imgs/Shop/caroussel/caroussel1.jpg">
-              <img src="./imgs/Shop/caroussel/caroussel2.jpg">
-              <img src="./imgs/Shop/caroussel/caroussel3.jpg">
-              <img src="./imgs/Shop/caroussel/caroussel1.jpg">
-              <img src="./imgs/Shop/caroussel/caroussel2.jpg">
+              <img src="./imgs/Shop/caroussel/caroussel1.jpg" />
+              <img src="./imgs/Shop/caroussel/caroussel2.jpg" />
+              <img src="./imgs/Shop/caroussel/caroussel3.jpg" />
+              <img src="./imgs/Shop/caroussel/caroussel1.jpg" />
+              <img src="./imgs/Shop/caroussel/caroussel2.jpg" />
             </figure>
           </div>
-          <div class="test"> 
+          <div class="test">
             <nav>
               <ul>
                 <a href="#S2"><li>Les Mugs</li></a>
@@ -65,20 +106,20 @@
             </nav>
           </div>
         </div>
-          
       </section>
 
-      <section class="section2" id="S2"> <!-- Section 2 Produit-->
-        <div class="blocs"> <!-- div qui contient tout les blocs-->
+      <section class="section2" id="S2">
+        <!-- Section 2 Produit-->
+        <div class="blocs">
+          <!-- div qui contient tout les blocs-->
           <div class="cardShop">
             <img src="./imgs/mug1.png" alt="Mug noir avec logo" />
             <figcaption>
               <h3>Mug Blanc</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>8.00€</s>5.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>8.00€</s>5.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
           <div class="cardShop">
@@ -86,10 +127,9 @@
             <figcaption>
               <h3>Chope en bois</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>8.00€</s>5.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>8.00€</s>5.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
           <div class="cardShop">
@@ -97,10 +137,9 @@
             <figcaption>
               <h3>Verre</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>8.00€</s>5.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>8.00€</s>5.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
           <div class="cardShop">
@@ -108,26 +147,26 @@
             <figcaption>
               <h3>mug noir</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>8.00€</s>5.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>8.00€</s>5.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
-        </div>       
+        </div>
       </section>
 
-      <section class="section3" id="S3"> <!-- Section 2 Produit-->
-        <div class="blocs"> <!-- div qui contient tout les blocs-->
+      <section class="section3" id="S3">
+        <!-- Section 2 Produit-->
+        <div class="blocs">
+          <!-- div qui contient tout les blocs-->
           <div class="cardShop">
             <img src="./imgs/Shop/tshirt noir.png" alt="Polo noir" />
             <figcaption>
               <h3>Polo noir</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>24.00€</s>19.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>24.00€</s>19.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
           <div class="cardShop">
@@ -135,10 +174,9 @@
             <figcaption>
               <h3>Polo blanc</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>24.00€</s>19.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>24.00€</s>19.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
           <div class="cardShop">
@@ -146,10 +184,9 @@
             <figcaption>
               <h3>hoodie noir</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>60.00€</s>35.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>60.00€</s>35.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
           <div class="cardShop">
@@ -157,95 +194,83 @@
             <figcaption>
               <h3>Hoodie blanc</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>60.00€</s>35.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>60.00€</s>35.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
-        </div>       
+        </div>
       </section>
 
-      <section class="section4" id="S4"> <!-- Section 2 Produit-->
-        <div class="blocs"> <!-- div qui contient tout les blocs-->
+      <section class="section4" id="S4">
+        <!-- Section 2 Produit-->
+        <div class="blocs">
+          <!-- div qui contient tout les blocs-->
           <div class="cardShop">
             <img src="./imgs/Shop/coffre-pirate.jpg" alt="Mug noir avec logo" />
             <figcaption>
               <h3>coffre de pirate</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>55.00€</s>40.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>55.00€</s>40.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
           <div class="cardShop">
-            <img src="./imgs/Shop/collier-boussole.jpg" alt="Mug noir avec logo" />
+            <img
+              src="./imgs/Shop/collier-boussole.jpg"
+              alt="Mug noir avec logo"
+            />
             <figcaption>
               <h3>Boussole en collier</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>24.00€</s>19.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>24.00€</s>19.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
           <div class="cardShop">
-            <img src="./imgs/Shop/drapeau-pirate.jpg" alt="Mug noir avec logo" />
+            <img
+              src="./imgs/Shop/drapeau-pirate.jpg"
+              alt="Mug noir avec logo"
+            />
             <figcaption>
               <h3>Drapeau de pirate</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>8.00€</s>5.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>8.00€</s>5.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
           <div class="cardShop">
-            <img src="./imgs/Shop/longue-vue-coffret.jpg" alt="Mug noir avec logo" />
+            <img
+              src="./imgs/Shop/longue-vue-coffret.jpg"
+              alt="Mug noir avec logo"
+            />
             <figcaption>
               <h3>Longue vue en coffret</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <div class="price">
-                <s>24.00€</s>19.00€
-              </div>
-            </figcaption><i class="ion-android-cart"></i>
+              <div class="price"><s>24.00€</s>19.00€</div>
+            </figcaption>
+            <i class="ion-android-cart"></i>
             <a href="#"></a>
           </div>
-        </div> 
+        </div>
       </section>
-
-      <!-- Bouton pour ouvrir la pop-up -->
-      <button onclick="openPopup()">Ouvrir la pop-up</button>
-      <script>  
-        function openPopup() {
-          document.getElementById('popup').classList.add('active');
-        }
-
-        function closePopup() {
-          document.getElementById('popup').classList.remove('active');
-        }
-      </script>
     </main>
 
     <footer>
-      <footer>
-        <div class="footer-container">
-          <p> <a href="./RGPD.html"> Mention légales&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p> 
-          <div class="avatar">
-            <img src="./imgs/LOGO V1.png" alt="logo" />
-          </div>
-          <p>&copy; 2025 La Piraterie !</p>
+      <div class="footer-container">
+        <p>
+          <a href="./RGPD.html"> Mention légales</a>
+        </p>
+        <div class="avatar">
+          <a href="#navbar"><img src="./imgs/LOGO V1.png" alt="logo" /></a>
         </div>
-        <div class="footer-containerM">
-          <div class="avatar">
-            <img src="./imgs/LOGO V1.png" alt="logo" />
-          </div>
-          <p> <a href="./RGPD.html"> Mention légales</p></a>
-          <p>&copy; 2025 La Piraterie !</p>
-        </div>
-      </footer>
+        <p>© 2025 La Piraterie !</p>
+      </div>
     </footer>
-
+    <script src="./js/cookieconsent.umd.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

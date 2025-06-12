@@ -1,6 +1,10 @@
 @import url("./common.css");
 @import url("./fonts.css");
 
+html {
+  scroll-behavior: smooth;
+}
+
 main {
   h1 {
     font-family: "Shojumaru";
@@ -38,24 +42,72 @@ main {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.5);
       z-index: 0;
       pointer-events: none;
+    }
+    h1 {
+      color: var(--color-yellow);
+      position: absolute;
+      top: 40px;
+      text-shadow: -2px -2px 0 #ffffff, /* haut-gauche */ 2px -2px 0 #ffffff,
+        /* haut-droite */ -2px 2px 0 #ffffff, /* bas-gauche */ 2px 2px 0 #ffffff,
+        /* bas-droite */ -2px 0 0 #ffffff, /* gauche */ 2px 0 0 #ffffff,
+        /* droite */ 0 -2px 0 #ffffff, /* haut */ 0 2px 0 #ffffff; /* bas */
     }
     video {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+    .banner-text-mobile {
+      display: none;
+    }
     .banner-text {
+      width: 100%;
       position: absolute;
-      top: 40px;
+      bottom: 120px;
+      left: 50%;
+      transform: translateX(-50%);
       color: var(--color-yellow);
+      text-shadow: -2px -2px 0 #ffffff, /* haut-gauche */ 2px -2px 0 #ffffff,
+        /* haut-droite */ -2px 2px 0 #ffffff, /* bas-gauche */ 2px 2px 0 #ffffff,
+        /* bas-droite */ -2px 0 0 #ffffff, /* gauche */ 2px 0 0 #ffffff,
+        /* droite */ 0 -2px 0 #ffffff, /* haut */ 0 2px 0 #ffffff; /* bas */
+      h2 {
+        font-size: 40px;
+        width: 100%;
+      }
+    }
+    .scroll-down-button-mobile {
+      display: none;
+    }
+    .scroll-down-button {
+      position: absolute;
+      bottom: 30px;
+      left: calc(50% - 25px);
+      width: 50px;
+      height: 50px;
+      background-color: var(--color-yellow);
+      color: var(--color-brown);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease;
+      z-index: 1;
+      animation: float 2s ease-in-out infinite;
+      a {
+        svg {
+          fill: var(--color-brown);
+        }
+      }
     }
   }
 
   .main-container {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 138px);
     padding: 20px 10%;
     display: flex;
     flex-wrap: wrap;
@@ -69,14 +121,8 @@ main {
       align-items: center;
       gap: 8px;
       p {
-        text-align: ce
-          /* `nter;` is not a valid CSS property or value. It seems like there might be a
-        typo or a mistake in the code. If you provide more context or clarify the
-        specific part of the code you are referring to, I can help you further. */
-          nter;
+        text-align: center;
       }
-      /* h2 {
-      } */
     }
     .header {
       width: 100%;
@@ -94,19 +140,38 @@ main {
 /* Responsive Tablets */
 @media (max-width: 768px) {
   main {
-    h1 {
-      font-size: 30px;
+    .banner {
+      height: calc(100vh - 96px);
+      h1 {
+        font-size: 30px;
+        padding: 20px;
+      }
+      .banner-text {
+        h2 {
+          font-size: 30px;
+          padding: 20px;
+        }
+      }
     }
+
     h2 {
       font-size: 24px;
-    }
-    p {
-      font-size: 14px;
     }
 
     .main-container {
       padding: 20px 5%;
       gap: 32px;
+      .header {
+        width: 100%;
+        p {
+          font-size: 14px;
+          width: 100%;
+        }
+      }
+      p {
+        font-size: 14px;
+        width: 100%;
+      }
       section {
         width: 44%;
       }
@@ -117,6 +182,24 @@ main {
 /* Responsive Smartphones */
 @media (max-width: 380px) {
   main {
+    .banner {
+      .title {
+        font-size: 24px;
+      }
+      .banner-text-desktop {
+        display: none;
+      }
+      .banner-text-mobile {
+        display: flex;
+        h2 {
+          font-size: 18px;
+        }
+      }
+    }
+    margin-top: 80px;
+    .banner {
+      height: calc(100vh - 80px);
+    }
     h1 {
       font-size: 24px;
     }
@@ -128,9 +211,249 @@ main {
     }
     .main-container {
       gap: 20px;
+      height: 100%;
       section {
         width: 100%;
+        height: 50%;
       }
     }
+  }
+}
+
+.page-wrapper {
+  background-image: url("parchment-background.jpg");
+  background-color: #f5e9c9;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  /* padding-bottom: 40px; */
+}
+
+.site-header,
+.site-footer-bottom {
+  /* margin-left: auto;
+  margin-right: auto; */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.site-header {
+  position: relative;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 140px; */
+  width: 100%;
+  height: 720px;
+  max-height: 100vh;
+}
+
+.site-header h1 {
+  font-family: "Pirata One", "Impact", fantasy; /* Pirate-style font for main title */
+  font-size: 3.5em;
+  color: var(--color-yellow);
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000000, /* haut-gauche */ 1px -1px 0 #000000,
+    /* haut-droite */ -1px 1px 0 #000000, /* bas-gauche */ 1px 1px 0 #000000,
+    /* bas-droite */ -1px 0 0 #000000, /* gauche */ 1px 0 0 #000000,
+    /* droite */ 0 -1px 0 #000000, /* haut */ 0 1px 0 #000000; /* bas */
+}
+
+.site-header p {
+  color: var(--color-brown);
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  /* max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; */
+  text-shadow: -2px -2px 0 var(--color-yellow),
+    /* haut-gauche */ 2px -2px 0 var(--color-yellow),
+    /* haut-droite */ -2px 2px 0 var(--color-yellow),
+    /* bas-gauche */ 2px 2px 0 var(--color-yellow),
+    /* bas-droite */ -2px 0 0 var(--color-yellow),
+    /* gauche */ 2px 0 0 var(--color-yellow),
+    /* droite */ 0 -2px 0 var(--color-yellow),
+    /* haut */ 0 2px 0 var(--color-yellow); /* bas */
+}
+
+.site-header p:first-of-type {
+  margin-top: 20px;
+}
+
+.main-content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.content-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 22%;
+  height: 600px;
+  background-color: rgb(133, 71, 9);
+  /* background-color: rgb(97, 54, 12); */
+  /* background-color: var(--color-brown); */
+  padding: 25px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: var(--color-yellow);
+  border: 3px solid var(--color-yellow);
+}
+
+.content-card h2 {
+  font-family: "Pirata One", "Impact", fantasy;
+  font-size: 2.2em;
+  color: var(--color-yellow);
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.content-card p {
+  font-size: 1em;
+  line-height: 1.7;
+  margin-bottom: 1em;
+}
+.card-img-container {
+  /* width: 100%;
+  height: 100%; */
+  max-width: 80%;
+}
+.card-image {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  max-height: 40vh;
+  margin: 0 auto 20px auto;
+  border-radius: 10px;
+}
+
+.content-card h2 {
+  margin-bottom: 12px;
+  margin-top: 0px;
+  /* background-color: RED; */
+}
+
+.card-action-button {
+  padding: 16px 12px 8px 12px;
+  background-color: var(--color-yellow);
+  color: var(--color-brown);
+  font-family: var(--font-special);
+  border-radius: 3px;
+  &:hover {
+    color: #8b4100;
+    background-color: #fffb01;
+  }
+  &:visited {
+    color: var(--color-brown);
+  }
+}
+
+.content-card p:first-of-type {
+  margin-top: 12px;
+}
+
+.content-card p:last-of-type {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .site-header h1 {
+    font-size: 2.8em;
+  }
+
+  .main-content {
+    gap: 20px;
+  }
+  .content-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    height: 600px;
+  }
+  .card-image {
+    max-height: 30vh;
+  }
+}
+
+@media (max-width: 380px) {
+  main {
+    .banner {
+      .scroll-down-button-desktop {
+        display: none;
+        a {
+          display: none;
+          svg {
+            fill: var(--color-brown);
+          }
+        }
+      }
+      .scroll-down-button-mobile {
+        position: absolute;
+        bottom: 30px;
+        left: calc(50% - 25px);
+        width: 50px;
+        height: 50px;
+        background-color: var(--color-yellow);
+        color: var(--color-brown);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+        z-index: 1;
+        animation: float 2s ease-in-out infinite;
+        a {
+          svg {
+            fill: var(--color-brown);
+          }
+        }
+      }
+    }
+  }
+
+  .site-header {
+    height: 1000px;
+    margin-bottom: 100px;
+    margin-top: 0px;
+  }
+  .site-header h1 {
+    font-size: 2.8em;
+  }
+
+  .main-content {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .content-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    /* height: 800px; */
+  }
+  .card-image {
+    max-height: 30vh;
   }
 }

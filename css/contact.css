@@ -4,7 +4,7 @@
 main {
   .contact {
     width: 100%;
-    height: calc(calc(100vh - 82px) - 158px);
+    height: calc(100vh - 320px);
     min-height: 400px;
     background-image: url(../imgs/contact/message-bottle.jpg);
     background-size: 100% 100%;
@@ -113,7 +113,7 @@ main {
   main {
     .contact {
       width: 100%;
-      height: calc(calc(100vh - 62px) - 98px);
+      height: calc( 100vh - 260px);
       .scroll-container {
         width: 80%;
       }
@@ -140,8 +140,9 @@ main {
 @media (max-width: 380px) {
   main {
     .contact {
+      margin-top: 80px;
       width: 100%;
-      height: calc(100vh - 60px);
+      height: calc(100vh - 80px);
       .scroll-container {
         position: relative;
         width: 100%;

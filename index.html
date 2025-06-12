@@ -9,9 +9,11 @@
       href="./imgs/header/logo.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="./css/cookieconsent.css" />
     <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
+    <div id="navbar"></div>
     <header class="desktop">
       <div class="logo-container">
         <img src="./imgs/header/logo.png" alt="logo piraterie" />
@@ -19,34 +21,71 @@
       <nav>
         <ul>
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="taverne.html">Taverne</a></li>
-          <li><a href="shop.html">Boutique</a></li>
+          <li><a href="tavern.html">Taverne</a></li>
           <li><a href="treasure.html">Trésor</a></li>
+          <li><a href="shop.html">Boutique</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="login-button"><a href="login.html">Connexion</a></li>
+          <li class="login-button"><a href="#open-modal">Connexion</a></li>
         </ul>
+        <div id="open-modal" class="modal-window">
+          <!-- div modal connexion -->
+          <div class="modal-content">
+            <a href="#" title="Close"><span class="modal-close">X</span></a>
+            <img src="./imgs/LOGO V1.png" alt="logo" />
+            <fieldset class="formulaire">
+              <label for="nom">Identifiant:</label>
+              <input type="text" name="nom" id="nom" /><br />
+              <label for="prenom">Mot de passe:</label>
+              <input type="text" name="prenom" id="prenom" required /><br />
+              <input type="submit" value="connexion" />
+            </fieldset>
+            <div>
+              <small>Mot de passe oublié</small>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
     <header class="burger">
-      <input type="checkbox" id="checkbox" class="__checkbox" />
+      <input type="checkbox" id="checkbox" class="checkbox" />
       <label for="checkbox" class="btn-burger"
         ><div class="icon-burger"></div
       ></label>
-      <div class="login-button"><a href="login.html">Connexion</a></div>
-      <nav class="__container">
+      <div class="login-button">
+        <a href="#open-modal-smartphone">Connexion</a>
+      </div>
+      <nav class="burger-nav">
         <ul class="__list">
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="taverne.html">Taverne</a></li>
-          <li><a href="shop.html">Boutique</a></li>
+          <li><a href="tavern.html">Taverne</a></li>
           <li><a href="treasure.html">Trésor</a></li>
+          <li><a href="shop.html">Boutique</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <div id="open-modal-smartphone" class="modal-window-smartphone">
+          <!-- div modal connexion -->
+          <div class="modal-content">
+            <a href="#" title="Close"><span class="modal-close">X</span></a>
+            <img src="./imgs/LOGO V1.png" alt="logo" />
+            <fieldset class="formulaire">
+              <label for="nom">Identifiant:</label>
+              <input type="text" name="nom" id="nom" /><br />
+              <label for="prenom">Mot de passe:</label>
+              <input type="text" name="prenom" id="prenom" required /><br />
+              <input type="submit" value="connexion" />
+            </fieldset>
+            <div>
+              <small>Mot de passe oublié</small>
+            </div>
+          </div>
+        </div>
       </nav>
       <!-- <div class="overlay-container"></div> -->
     </header>
 
     <main class="">
-      <section class="banner">
+      <section id="banner" class="banner">
+        <h1 class="title">Bienvenue chez les Pirates de l'AFPA !</h1>
         <video
           class="background-video"
           autoplay
@@ -54,158 +93,159 @@
           muted
           playsinline
           poster="./imgs/index/poster.png"
+          disablePictureInPicture
         >
           <source
-            src="./imgs/index/1K-Blackbeard_-_Edward_Teach_King_of_Pirates_Documentary.webm"
+            src="https://media.githubusercontent.com/media/Arnauw/Piraterie/refs/heads/main/imgs/index/piraterie.webm"
             type="video/webm"
           />
           Your browser does not support the video tag.
         </video>
-        <div class="banner-text">
-          <h1>TEST La Piraterie !</h1>
+        <div class="arrow-bottom">
+          <div class="banner-text banner-text-desktop">
+            <h2>Cliquez ici pour découvrir la piraterie !</h2>
+          </div>
+          <div class="banner-text banner-text-mobile">
+            <h2>Glissez vers le bas pour découvrir la piraterie !</h2>
+          </div>
+          <a
+            href="#page-wrapper"
+            class="scroll-down-button scroll-down-button-desktop"
+            aria-label="Scroll to bottom"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.78 10.5 20.2 11.92 12 20.12 3.8 11.92 5.22 10.5 12 17.27z"
+              />
+            </svg>
+          </a>
+          <div class="scroll-down-button-mobile">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 17.27L18.78 10.5 20.2 11.92 12 20.12 3.8 11.92 5.22 10.5 12 17.27z"
+              />
+            </svg>
+          </div>
         </div>
       </section>
-      <div class="main-container">
-        <section class="header">
-          <h2>La Piraterie</h2>
-          <p>Bienvenue à la Piraterie !</p>
-          <p>
-            Là où l'or brille plus fort que le soleil et où chaque vague cache
-            une nouvelle fortune.
-          </p>
-          <p>
-            La piraterie est un sujet fascinant qui a marqué l'histoire
-            maritime. Des pirates célèbres comme Barbe Noire et Anne Bonny ont
-            laissé une empreinte indélébile dans la culture populaire.
-          </p>
-          <p>
-            Les pirates étaient souvent perçus comme des hors-la-loi, mais ils
-            avaient aussi leur propre code d'honneur et des règles de conduite.
-          </p>
-
-          <!-- <p>
-            La piraterie est un phénomène historique complexe et captivant qui a
-            façonné l'histoire maritime. Des figures emblématiques comme Barbe
-            Noire, Henry Morgan ou Anne Bonny ont profondément marqué
-            l'imaginaire collectif. Souvent perçus comme de simples brigands,
-            les pirates fonctionnaient pourtant selon des codes stricts et des
-            règles de vie en communauté, témoignant d'une organisation bien
-            particulière.
-          </p> -->
-        </section>
-
-        <section class="crew">
-          <div class="text-container">
-            <h2>L'équipage</h2>
-            <!-- <p>
-            La piraterie est un sujet fascinant qui a marqué l'histoire
-            maritime. Des pirates célèbres comme Barbe Noire et Anne Bonny ont
-            laissé une empreinte indélébile dans la culture populaire.
-          </p>
-          <p>
-            Les pirates étaient souvent perçus comme des hors-la-loi, mais ils
-            avaient aussi leur propre code d'honneur et des règles de conduite.
-          </p> -->
-
+      <div id="page-wrapper" class="page-wrapper">
+        <main class="main-content">
+          <section class="site-header">
+            <h1>LA PIRATERIE</h1>
+            <img
+              src="./imgs/index/poster.png"
+              alt="Illustration de la Piraterie !"
+              class="card-image"
+            />
+            <p>Bienvenue sur le site de la Piraterie !</p>
             <p>
-              L'équipage est le cœur vibrant de tout navire pirate, un mélange
-              hétéroclite d'hommes et de femmes issus de divers horizons.
+              Là où l'or brille plus fort que le soleil et où chaque vague cache
+              une nouvelle fortune.
             </p>
             <p>
-              Malgré leur réputation d'anarchie, la vie à bord était régie par
-              une discipline stricte et une forme de démocratie, où chaque
-              membre avait sa place et ses responsabilités.
+              Plus qu'une simple page d'histoire maritime, la piraterie est une
+              épopée rugissante qui a déferlé sur les sept mers.
             </p>
             <p>
-              La survie en haute mer et le succès des expéditions dépendaient de
-              la cohésion et de la loyauté de l'équipage.
+              Les pirates étaient souvent perçus comme des hors-la-loi, mais ils
+              avaient aussi leur propre code d'honneur et des règles de
+              conduite.
             </p>
-          </div>
-        </section>
+          </section>
 
-        <section class="shop">
-          <div class="text-container">
-            <h2>La boutique</h2>
-            <!-- <p>
-            La piraterie est un sujet fascinant qui a marqué l'histoire
-            maritime. Des pirates célèbres comme Barbe Noire et Anne Bonny ont
-            laissé une empreinte indélébile dans la culture populaire.
-          </p>
-          <p>
-            Les pirates étaient souvent perçus comme des hors-la-loi, mais ils
-            avaient aussi leur propre code d'honneur et des règles de conduite.
-          </p> -->
+          <section id="1st-category" class="content-card">
+            <h2>LA TAVERNE</h2>
+            <div class="card-img-container">
+              <img
+                src="./imgs/index/tavern-img.jpg"
+                alt="Entrée de la Taverne Pirate"
+                class="card-image"
+              />
+            </div>
+            <p>
+              Poussez les portes de notre taverne et plongez au cœur de
+              l'ambiance pirate ! Écoutez les rumeurs, partagez un grog et
+              entonnez des chants de marins avec l'équipage.
+            </p>
+            <a href="tavern.html" class="card-action-button"
+              >Entrer dans la Taverne</a
+            >
+          </section>
+
+          <section class="content-card">
+            <h2>LA CARTE AU TRÉSOR</h2>
+            <div class="card-img-container">
+              <img
+                src="./imgs/index/treasure-img.png"
+                alt="Illustration des trésors de la piraterie"
+                class="card-image"
+              />
+            </div>
+            <p>
+              Les trésors, qu'ils soient faits d'or, de pierres précieuses ou
+              d'artefacts exotiques, sont intrinsèquement liés à l'imaginaire de
+              la piraterie.
+            </p>
+            <a href="treasure.html" class="card-action-button"
+              >Voir la Carte au trésor</a
+            >
+          </section>
+
+          <section id="3rd-category" class="content-card">
+            <h2>LA BOUTIQUE</h2>
+            <div class="card-img-container">
+              <img
+                src="./imgs/index/shop-img.jpg"
+                alt="Illustration de la boutique de la piraterie"
+                class="card-image"
+              />
+            </div>
             <p>
               Découvrez notre boutique, un lieu où l'esprit de la piraterie
-              prend vie à travers une sélection d'articles.
+              prend vie à travers une sélection d'articles comme des mugs,
+              chapeaux et accéssoires.
             </p>
-            <p>
-              Vous y trouverez des t-shirts aux motifs évoquant les voyages
-              maritimes, des mugs robustes parfaits pour vos breuvages, ainsi
-              que des répliques d'épées pour les passionnés et des chapeaux
-              emblématiques qui complètent la panoplie du parfait flibustier.
-            </p>
-            <p>
-              C'est l'occasion de ramener un souvenir de cette époque fascinante
-              !
-            </p>
-          </div>
-        </section>
 
-        <section class="treasure">
-          <h2>Les trésors</h2>
-          <div class="text-container">
-            <!-- <p>
-            La piraterie est un sujet fascinant qui a marqué l'histoire
-            maritime. Des pirates célèbres comme Barbe Noire et Anne Bonny ont
-            laissé une empreinte indélébile dans la culture populaire.
-          </p>
-          <p>
-            Les pirates étaient souvent perçus comme des hors-la-loi, mais ils
-            avaient aussi leur propre code d'honneur et des règles de conduite.
-          </p> -->
+            <a href="shop.html" class="card-action-button"
+              >Entrer dans la Boutique</a
+            >
+          </section>
 
+          <section class="content-card">
+            <h2>CONTACT</h2>
+            <div class="card-img-container">
+              <img
+                src="./imgs/index/contact-img.png"
+                alt="Illustration du contact de la piraterie"
+                class="card-image"
+              />
+            </div>
             <p>
-              Les trésors, qu'ils soient faits d'or, de pierres précieuses ou
-              d'artefacts exotiques, sont intrinsèquement liés à l'imaginaire de
-              la piraterie.
+              Un message pour l'équipage ? Rédigez-le à la plume, nous le
+              glisserons dans une bouteille et le lancerons à la mer. Nos vigies
+              sont à l'affût et vous répondront !
             </p>
-            <p>
-              Fruit d'abordages audacieux et de pillages, ces richesses étaient
-              souvent dissimulées dans des lieux lointains et secrets,
-              alimentant les mythes de cartes au trésor et de fortunes cachées.
-            </p>
-            <p>
-              Ils symbolisent l'attrait de l'aventure et de la fortune éphémère
-              qui animait la vie de ces marins hors-la-loi.
-            </p>
-          </div>
-        </section>
-        <section class="contact">
-          <h2>Contact</h2>
-          <div class="text-container">
-            <p>
-              Les trésors, qu'ils soient faits d'or, de pierres précieuses ou
-              d'artefacts exotiques, sont intrinsèquement liés à l'imaginaire de
-              la piraterie.
-            </p>
-            <p>
-              Fruit d'abordages audacieux et de pillages, ces richesses étaient
-              souvent dissimulées dans des lieux lointains et secrets,
-              alimentant les mythes de cartes au trésor et de fortunes cachées.
-            </p>
-            <p>
-              Ils symbolisent l'attrait de l'aventure et de la fortune éphémère
-              qui animait la vie de ces marins hors-la-loi.
-            </p>
-          </div>
-        </section>
+            <a href="contact.html" class="card-action-button"
+              >Envoyer un message a notre équipage</a
+            >
+          </section>
+        </main>
       </div>
     </main>
 
     <footer>
-      <p>© 2025 La Piraterie</p>
+      <div class="footer-container">
+        <p>
+          <a href="./RGPD.html"> Mention légales</a>
+        </p>
+        <div class="avatar">
+          <a href="#navbar"><img src="./imgs/LOGO V1.png" alt="logo" /></a>
+        </div>
+        <p>© 2025 La Piraterie !</p>
+      </div>
     </footer>
+
+    <script src="./js/cookieconsent.umd.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>

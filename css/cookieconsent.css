@@ -1,5 +1,4 @@
 #cc-main {
-  
   background: transparent;
   color: var(--cc-primary-color);
   font-family: var(--cc-font-family);
@@ -1449,6 +1448,7 @@ html.disable--interaction.show--consent body {
     transform: translateY(0) !important;
   }
 }
+
 /* Floute tout le site sauf la fenêtre cookie quand la modale cookie est ouverte */
 body.blur-cookie main,
 body.blur-cookie header,

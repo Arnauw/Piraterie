@@ -1,94 +1,91 @@
-@import url('fonts.css');
-@import url('common.css');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&family=Rye&family=Shojumaru&display=swap');
+@import url("fonts.css");
+@import url("common.css");
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-.iconeJeremie{
-  display:flex;
-position: relative;
+.iconeJeremie {
+  display: flex;
+  position: relative;
 }
-.pirate1{
+.pirate1 {
   position: absolute;
   transform: translateY(1vw);
   left: 5vw;
   z-index: 0;
   filter: blur(7px) brightness(1.2) saturate(1.3);
 }
-.pirate2{
+.pirate2 {
   position: absolute;
   transform: scale(0.5) translateY(-30vw);
-  right:-17vw;
+  right: -17vw;
   z-index: 0;
   filter: blur(4px) brightness(1.2) saturate(1.3);
 }
 .pirate2:hover {
-    filter: blur(0px) brightness(1.2) saturate(1.3);
+  filter: blur(0px) brightness(1.2) saturate(1.3);
 }
-.pirate1:hover{
-    filter: blur(0px) brightness(1.2) saturate(1.3);
-    
+.pirate1:hover {
+  filter: blur(0px) brightness(1.2) saturate(1.3);
 }
 
-.crew{
-  width:100%;
+.crew {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background: none;
   gap: 75px;
-  position:relative;
-  overflow: hidden;  
+  position: relative;
+  overflow: hidden;
 }
-.crew::before{
+.crew::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index:0;
-  background: url('../imgs/benedict-koh-benedictkoh-191409u-envis-a2.jpg') center/cover no-repeat;
+  z-index: 0;
+  background: url("../imgs/benedict-koh-benedictkoh-191409u-envis-a2.jpg")
+    center/cover no-repeat;
   filter: blur(6px) brightness(1.5) saturate(1.3);
   background-blend-mode: lighten;
 }
 
 .background-container {
   position: relative;
-  width: 20%;      /* ou la largeur que tu veux */
+  width: 20%; /* ou la largeur que tu veux */
   margin-top: 1%;
   display: flex;
   flex-direction: column;
-  gap:30px;
+  gap: 30px;
   align-self: center;
-
 }
-.background-texte{
-  width:100%;
+.background-texte {
+  width: 100%;
   margin-top: 1%;
   text-align: center;
 }
-.crew-texte{
+.crew-texte {
   position: absolute;
   text-align: center;
-  inset:2em 0px 20px;
-  font-family: 'Shojumaru', cursive;
+  inset: 2em 0px 20px;
+  font-family: "Shojumaru", cursive;
   font-size: clamp(1.3vw, 1.3vw, 10rem);
   color: #461f02;
 }
-.crew-texte:hover{
+.crew-texte:hover {
   color: #ffd700;
 }
-.wanted{
+.wanted {
   width: 100%;
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
   margin-bottom: 50px;
 }
-.wantedJeremie{
+.wantedJeremie {
   width: 100%;
   display: flex;
   align-items: flex-end;
@@ -98,43 +95,39 @@ position: relative;
   width: 370px;
   height: 550px;
   margin: auto;
-  background: url('../imgs/tips-paper.png');
+  background: url("../imgs/tips-paper.png");
   background-size: cover;
-  box-shadow: 15px 11px 16px rgba(0,0,0,0.2);
+  box-shadow: 15px 11px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #461f02;
   padding: 30px 20px;
   box-sizing: border-box;
   position: relative;
 }
-.poster-jeremie{
-
+.poster-jeremie {
   width: 370px;
   height: 550px;
   margin: 0 auto;
-  background: url('../imgs/tips-paper.png');
+  background: url("../imgs/tips-paper.png");
   background-size: cover;
-  box-shadow: 15px 11px 16px rgba(0,0,0,0.2);
+  box-shadow: 15px 11px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #461f02;
   padding: 30px 20px;
   box-sizing: border-box;
   transform: translateY(-35px);
   z-index: 1;
-
-
 }
 
-
-.poster-arnaud{
-  display:flex;
+.poster-arnaud {
+  display: flex;
   flex-direction: column;
   width: 370px;
   height: 550px;
   margin: auto;
-  background: url('../imgs/tips-paper.png');
+  background: url("../imgs/tips-paper.png");
   background-size: cover;
-  box-shadow: 15px 11px 16px rgba(0,0,0,0.2);
+  box-shadow: 15px 11px 16px rgba(0, 0, 0, 0.2);
   text-align: center;
   color: #461f02;
   padding: 30px 20px;
@@ -142,8 +135,9 @@ position: relative;
   position: relative;
   transform: translateY(-55px);
 }
-.wanted-title,.wanted-title1 {
-  font-family: 'Rye', cursive;
+.wanted-title,
+.wanted-title1 {
+  font-family: "Rye", cursive;
   font-size: 3rem;
   margin: 0;
   letter-spacing: 4px;
@@ -153,51 +147,50 @@ position: relative;
   height: 180px;
   margin: 25px auto 15px auto;
   border: 2px solid #5e3415;
-  background: url('../imgs/mounirPirate.JPG') center;
+  background: url("../imgs/mounirPirate.JPG") center;
   background-size: cover;
   background-position: center calc(50% - 20px);
 }
-.mugshot-jeremie{
+.mugshot-jeremie {
   width: 220px;
   height: 180px;
   margin: 25px auto 15px auto;
   border: 2px solid #5e3415;
-  background: url('../imgs/jeremiePirate.JPG') center;
+  background: url("../imgs/jeremiePirate.JPG") center;
   background-size: cover;
-  background-position:  25% 75%;
-
+  background-position: 25% 75%;
 }
-.mugshot-arnaud{
+.mugshot-arnaud {
   display: flex;
   width: 220px;
   height: 180px;
   margin: 25px auto 15px auto;
   border: 2px solid #5e3415;
-  background: url('../imgs/arnaudPirate.JPG')  center;
+  background: url("../imgs/arnaudPirate.JPG") center;
   background-size: cover;
 }
-.mugshot-amine{
+.mugshot-amine {
   width: 220px;
   height: 180px;
   margin: 25px auto 15px auto;
   border: 2px solid #5e3415;
-  background: url('../imgs/aminePirate.JPG')  center;
+  background: url("../imgs/aminePirate.JPG") center;
   background-size: cover;
 }
 .subheading {
-  font-family: 'Rye', cursive;
+  font-family: "Rye", cursive;
   font-size: 1.5rem;
   margin: 10px 0;
 }
 .namewanted {
-  font-family: 'Shojumaru', cursive;
+  font-family: "Shojumaru", cursive;
   font-size: 2.2rem;
   font-weight: bold;
   margin: 15px 0 10px 0;
   letter-spacing: 2px;
 }
-.texteJeremie{
-  font-family: 'Rye', cursive;
+.texteJeremie {
+  font-family: "Rye", cursive;
   font-size: 1rem;
   margin: 10px 0;
 }
@@ -212,16 +205,16 @@ position: relative;
 .marine {
   position: absolute;
   right: 10px;
-  bottom:0px;
-  font-family: 'Rye', cursive;
+  bottom: 0px;
+  font-family: "Rye", cursive;
   font-size: 1.5rem;
   letter-spacing: 2px;
 }
-.marine-arnaud{
+.marine-arnaud {
   position: absolute;
   right: 10px;
-  bottom:0px;
-  font-family: 'Rye', cursive;
+  bottom: 0px;
+  font-family: "Rye", cursive;
   font-size: 1.5rem;
   letter-spacing: 2px;
 }
@@ -236,26 +229,27 @@ position: relative;
   font-weight: 400;
   font-style: normal;
 }
-  .toggle-audio {
-    z-index: 1;
-  display:flex;
-  justify-self: center;
+.toggle-audio {
+  z-index: 1;
+  display: flex;
+  /* justify-self: center; */
+  align-self: center;
   background: #2d1a06;
   color: #ffd700;
   border: 3px solid #ffd700;
   border-radius: 12px;
-  font-family: 'Shojumaru', cursive;
+  font-family: "Shojumaru", cursive;
   font-size: 1.3rem;
   padding: 12px 32px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   cursor: pointer;
   transition: background(0.3s, color 0.3s, transform 0.2s);
 }
-.toggle-audio:hover{
+.toggle-audio:hover {
   background: #ffd700;
   color: #2d1a06;
   transform: scale(1.05) rotate(-2deg);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
 }
 .wanted-card {
   position: relative;
@@ -273,7 +267,6 @@ position: relative;
   transition: opacity 0.5s, transform 0.5s;
   width: 100%;
   height: 100%;
-
 }
 
 .wanted-front {
@@ -282,13 +275,12 @@ position: relative;
   opacity: 1;
   pointer-events: none;
   filter: blur(0px) brightness(1.5) saturate(1.3);
-
 }
 
 .wanted-question {
   font-size: 7rem;
   color: #b77b1b;
-  font-family: 'Shojumaru', cursive;
+  font-family: "Shojumaru", cursive;
   margin-top: 32px;
   text-shadow: 0 2px 12px #fff2, 0 0 28px #ffd70077;
 }
@@ -323,7 +315,7 @@ position: relative;
   border: 2px solid #b77b1b;
   border-radius: 30px;
   color: #461f02;
-  font-family: 'Rye', cursive;
+  font-family: "Rye", cursive;
   font-size: 1.3rem;
   box-shadow: 0 4px 18px #0002;
   padding: 30px 50px;
@@ -339,431 +331,400 @@ position: relative;
   opacity: 1;
   transform: translateY(-20px) scale(1.04);
 }
-.taverne{
-  width:100%;
+.taverne {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: none;
   gap: 75px;
-  position:relative;
-  overflow: hidden;  
+  position: relative;
+  overflow: hidden;
 }
 
-
-.taverne::before{
+.taverne::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index:0;
-  background: url('../imgs/rumeurs2.jpg') center/cover no-repeat;
+  z-index: 0;
+  background: url("../imgs/rumeurs2.jpg") center/cover no-repeat;
   filter: blur(0px) brightness(1) saturate(1.4);
   background-blend-mode: lighten;
 }
 
-.background-container2{
+.background-container2 {
   position: relative;
   margin-top: 1%;
   gap: 5%;
-  width: 22%;      
+  width: 22%;
   display: flex;
   flex-direction: column;
   align-self: center;
 }
-.background-container3{
-  
+.background-container3 {
   position: relative;
-  width: 22%;      
+  width: 22%;
   display: flex;
   flex-direction: column;
   align-self: center;
 }
-.crew-texte2{
+.crew-texte2 {
   position: absolute;
   text-align: center;
   top: 15%;
-  font-family: 'Shojumaru', cursive;
+  font-family: "Shojumaru", cursive;
   font-size: clamp(0.5rem, 1.3vw, 10rem);
   color: #461f02;
 }
-.chantTaverne{
+.chantTaverne {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
-
 }
-.chantTaverne::before{
+.chantTaverne::before {
   content: " ";
   position: absolute;
   inset: 0;
-  z-index:0;
+  z-index: 0;
   background: url(../imgs/taverne/sea-of-thieves-sot.gif) center/cover no-repeat;
   filter: blur(10px) brightness(1) saturate(1.4);
-
-
-
 }
-.btnSon1{
-display:flex;
-flex-direction: column;
-align-items: center;
-width: 40%;
+.btnSon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.audioTaverne{
-  display:flex;
-
+.btnSon1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
 }
-.texteChant
-{
+.audioTaverne {
+  display: flex;
+}
+.texteChant {
   z-index: 2;
   display: flex;
   justify-content: center;
-  width:55%;
+  width: 55%;
 }
-.background-chant{
-  
+.background-chant {
   display: flex;
   width: 80%;
-  margin-top: 1%;  
+  margin-top: 1%;
 }
-.chant-texte{
-  position:absolute;
+.chant-texte {
+  position: absolute;
   display: flex;
   width: 60%;
-  top:22%;
+  top: 22%;
   text-align: center;
   right: 20%;
-  font-family: 'Shojumaru', cursive;
+  font-family: "Shojumaru", cursive;
   font-size: clamp(1.1vw, 1.1vw, 10rem);
   color: #461f02;
 }
 
-
-.chant-texte1{
+.chant-texte1 {
   position: absolute;
-  top:34%;
+  top: 34%;
   left: 19%;
   width: 15%;
-  display:flex;
-  flex-wrap:wrap;
-  text-align: center;
-  font-family: 'Shojumaru', cursive;
-  font-size: clamp(1.1vw, 1.1vw, 10rem);
-  color: #461f02;
-}
-.chant-texte2{
-position: absolute;
-  top:34%;
-  right:19%;
-  width: 15%;
-  display:flex;
-  flex-wrap:wrap;
-  text-align: center;
-  font-family: 'Shojumaru', cursive;
-  font-size: clamp(1.1vw, 1.1vw, 10rem);
-  color: #461f02;
-}
-.chant-texte3{
-position: absolute;
-  width: 15%;
-  top: 69%;
-  left: 19%;
-  display:flex;
-  flex-wrap:wrap;
-  text-align: center;
-  font-family: 'Shojumaru', cursive;
-  font-size: clamp(1.1vw, 1.1vw, 10rem);
-  color: #461f02;
-}
-.chant-texte4{
-position: absolute;
-  width: 15%;
-  top: 69%;
-  right:19%;
-  display:flex;
-  flex-wrap:wrap;
-  text-align: center;
-  font-family: 'Shojumaru', cursive;
-  font-size: clamp(1.1vw, 1.1vw, 10rem);
-  color: #461f02;
-}
-.chant{
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: "Shojumaru", cursive;
+  font-size: clamp(1.1vw, 1.1vw, 10rem);
+  color: #461f02;
+}
+.chant-texte2 {
+  position: absolute;
+  top: 34%;
+  right: 19%;
+  width: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: "Shojumaru", cursive;
+  font-size: clamp(1.1vw, 1.1vw, 10rem);
+  color: #461f02;
+}
+.chant-texte3 {
+  position: absolute;
+  width: 15%;
+  top: 69%;
+  left: 19%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: "Shojumaru", cursive;
+  font-size: clamp(1.1vw, 1.1vw, 10rem);
+  color: #461f02;
+}
+.chant-texte4 {
+  position: absolute;
+  width: 15%;
+  top: 69%;
+  right: 19%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: "Shojumaru", cursive;
+  font-size: clamp(1.1vw, 1.1vw, 10rem);
+  color: #461f02;
+}
+.chant {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 768px) {
-  .background-container,.background-container2, .background-container3{
+  .background-container,
+  .background-container2,
+  .background-container3 {
     width: 65%;
   }
-  .crew-texte,.crew-texte2{
-  font-size: clamp(1.3vw, 4vw, 4vw);
+  .crew-texte,
+  .crew-texte2 {
+    font-size: clamp(1.3vw, 4vw, 4vw);
   }
-  .chant-texte{
-      font-size: clamp(1.3vw, 4vw, 4vw);
-      width: 80%;
-      left: 9%;
-      top: 15%;
-
-
-      }
-  .chant-texte1{
-    
-      font-size: clamp(1.3vw, 2.1vw, 2.1vw);
-      width: 100%;
-      top: 19%;
-      left: 0%;
-      display:flex;
-      flex-wrap: wrap;
+  .chant-texte {
+    font-size: clamp(1.3vw, 4vw, 4vw);
+    width: 80%;
+    left: 9%;
+    top: 15%;
   }
-   .chant-texte2{
-      font-size: clamp(1.3vw, 2.1vw, 2.1vw);
-      width: 70%;
-      top: 15%;
-      left: 13%;
-      display:flex;
-      flex-wrap: wrap;
+  .chant-texte1 {
+    font-size: clamp(1.3vw, 2.1vw, 2.1vw);
+    width: 100%;
+    top: 19%;
+    left: 0%;
+    display: flex;
+    flex-wrap: wrap;
   }
-  .chant-texte3{
-      font-size: clamp(1.3vw, 2.1vw, 2.1vw);
-      width: 80%;
-      top: 15%;
-      left: 13%;
-      display:flex;
-      flex-wrap: wrap;
+  .chant-texte2 {
+    font-size: clamp(1.3vw, 2.1vw, 2.1vw);
+    width: 70%;
+    top: 15%;
+    left: 13%;
+    display: flex;
+    flex-wrap: wrap;
   }
-    .chant-texte4{
-     font-size: clamp(1.3vw, 2.1vw, 2.1vw);
-      width: 80%;
-      top: 15%;
-      left: 13%;
-      display:flex;
-      flex-wrap: wrap;
+  .chant-texte3 {
+    font-size: clamp(1.3vw, 2.1vw, 2.1vw);
+    width: 80%;
+    top: 15%;
+    left: 13%;
+    display: flex;
+    flex-wrap: wrap;
   }
-  .toggle-audio{
-    transform:translateY(-7px);
-    transform:scale(0.8);
+  .chant-texte4 {
+    font-size: clamp(1.3vw, 2.1vw, 2.1vw);
+    width: 80%;
+    top: 15%;
+    left: 13%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .toggle-audio {
+    transform: translateY(-7px);
+    transform: scale(0.8);
     z-index: 1;
-    display:flex;
+    display: flex;
     justify-self: center;
     background: #2d1a06;
     color: #ffd700;
     border: 3px solid #ffd700;
     border-radius: 12px;
-    font-family: 'Shojumaru', cursive;
+    font-family: "Shojumaru", cursive;
     font-size: 1.3rem;
     padding: 12px 32px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: background(0.3s, color 0.3s, transform 0.2s);
   }
-  .toggle-audio:hover{
-    transform:translateY(-7px);
-    transform:scale(0.8);
+  .toggle-audio:hover {
+    transform: translateY(-7px);
+    transform: scale(0.8);
     border-radius: 12px;
-        background: #2d1a06;
+    background: #2d1a06;
     color: #ffd700;
 
-    font-family: 'Shojumaru', cursive;
+    font-family: "Shojumaru", cursive;
   }
-  .chantTaverne{
-    gap:20px;
+  .chantTaverne {
+    gap: 20px;
   }
-  .btnSon{
+  .btnSon {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
-  .btnSon1{
+  .btnSon1 {
     margin-top: 2%;
-    gap:20px;
+    gap: 20px;
   }
-  .chant{
-    display:flex;
+  .chant {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-  .texteChant{
+  .texteChant {
     width: 80%;
     position: relative;
   }
-  .background-chant{
+  .background-chant {
     width: 100%;
   }
-  .poster-arnaud{
-      transform: translateY(0px);
+  .poster-arnaud {
+    transform: translateY(0px);
   }
-  .wanted{
+  .wanted {
     gap: 10px;
   }
-  .pirate1, .pirate2 {
+  .pirate1,
+  .pirate2 {
     opacity: 0;
   }
-  .bulle-rumeur{
+  .bulle-rumeur {
     padding: 30px 50px;
     font-size: 1rem;
-
   }
 }
-
-
-
-
 
 /* RESPONSIVE PHONE */
 @media screen and (max-width: 380px) {
-  .burger{
+  .burger {
     z-index: 3;
   }
-  .crew{
+  .crew {
     margin-top: 21%;
-    
   }
-.poster-jeremie, .wanted-card{
-  width: 80%;
-}
-  .poster-arnaud{
-      transform: translateY(0px);
+  .poster-jeremie,
+  .wanted-card {
+    width: 80%;
   }
-    .wanted-back {
-  z-index: 1;
-  opacity: 1;
-  pointer-events: none;
-}
-.wanted-question{
-font-size: 0;}
-.wanted-title1{
-  font-size: 0;
-}
-.wanted{
+  .poster-arnaud {
+    transform: translateY(0px);
+  }
+  .wanted-back {
+    z-index: 1;
+    opacity: 1;
+    pointer-events: none;
+  }
+  .wanted-question {
+    font-size: 0;
+  }
+  .wanted-title1 {
+    font-size: 0;
+  }
+  .wanted {
     transform: translateY(-70px);
-}
- .pirate1, .pirate2 {
+  }
+  .pirate1,
+  .pirate2 {
     opacity: 0;
   }
-  .bulle-rumeur{
+  .bulle-rumeur {
     padding: 30px 50px;
     font-size: 1rem;
-
-    }
-  .background-container,.background-container2, .background-container3{
+  }
+  .background-container,
+  .background-container2,
+  .background-container3 {
     width: 80%;
   }
 
-  .crew-texte,.crew-texte2{
-  font-size: clamp(1.3vw, 5vw, 5vw);
+  .crew-texte,
+  .crew-texte2 {
+    font-size: clamp(1.3vw, 5vw, 5vw);
   }
-  .chant-texte
-  {
-      font-size: clamp(1.3vw, 5vw, 5vw);
-      width: 80%;
-      left: 9%;
-      top: 15%;
+  .chant-texte {
+    font-size: clamp(1.3vw, 5vw, 5vw);
+    width: 80%;
+    left: 9%;
+    top: 15%;
   }
-  .texteChant{
+  .texteChant {
     width: 140%;
     position: relative;
   }
-  .chant-texte1{
-      font-size: clamp(1.3vw, 3.8vw, 5vw);
-      width: 62%;
-      top: 13.5%;
-      left: 19%;
-      display:flex;
-      flex-wrap: wrap;
-  }
-   .chant-texte2{
-     font-size: clamp(1.3vw, 3.7vw, 5vw);
-      width: 71%;
-      top: 15%;
-      left: 16%;
-      display:flex;
-      flex-wrap: wrap;
-  }
-  .chant-texte3{
+  .chant-texte1 {
     font-size: clamp(1.3vw, 3.8vw, 5vw);
-     width: 77%;
-     top: 13.5%;
-     left: 12%;
-      display:flex;
-      flex-wrap: wrap;
+    width: 62%;
+    top: 13.5%;
+    left: 19%;
+    display: flex;
+    flex-wrap: wrap;
   }
-    .chant-texte4{
+  .chant-texte2 {
     font-size: clamp(1.3vw, 3.7vw, 5vw);
-      width: 59%;
-      top: 15%;
-      left: 21%;
-      display:flex;
-      flex-wrap: wrap;
+    width: 71%;
+    top: 15%;
+    left: 16%;
+    display: flex;
+    flex-wrap: wrap;
   }
-  .toggle-audio{
-    transform:translateY(-7px);
-    transform:scale(0.8);
+  .chant-texte3 {
+    font-size: clamp(1.3vw, 3.8vw, 5vw);
+    width: 77%;
+    top: 13.5%;
+    left: 12%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .chant-texte4 {
+    font-size: clamp(1.3vw, 3.7vw, 5vw);
+    width: 59%;
+    top: 15%;
+    left: 21%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .toggle-audio {
+    transform: translateY(-7px);
+    transform: scale(0.8);
     z-index: 1;
-    display:flex;
+    display: flex;
     background: #2d1a06;
     color: #ffd700;
     border: 3px solid #ffd700;
     border-radius: 12px;
-    font-family: 'Shojumaru', cursive;
+    font-family: "Shojumaru", cursive;
     font-size: 1.3rem;
     padding: 12px 32px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: background(0.3s, color 0.3s, transform 0.2s);
   }
-  .toggle-audio:hover{
-    transform:translateY(-7px);
-    transform:scale(0.8);
+  .toggle-audio:hover {
+    transform: translateY(-7px);
+    transform: scale(0.8);
     border-radius: 12px;
-        background: #2d1a06;
+    background: #2d1a06;
     color: #ffd700;
 
-    font-family: 'Shojumaru', cursive;
+    font-family: "Shojumaru", cursive;
   }
-  .chantTaverne{
-    gap:20px;
+  .chantTaverne {
+    gap: 20px;
   }
-  .btnSon1{
+  .btnSon1 {
     margin-top: 2%;
-    gap:20px;
+    gap: 20px;
   }
-  .chant{
-    display:flex;
+  .chant {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
   }
-  .background-chant{
+  .background-chant {
     width: 100%;
   }
-
- 
-
 }
-
-
-
-
-
-
-
-
-
-
-
-

@@ -172,7 +172,7 @@ footer {
     pointer-events: auto;
   }
   & > div {
-    width: 400px;
+    width: 360px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -356,7 +356,7 @@ footer {
       height: 100%;
       cursor: pointer;
       transition: 0.4s;
-      /* margin-left: 32px; */
+      margin-left: 32px;
     }
 
     .icon-burger {
@@ -522,7 +522,7 @@ footer {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      
+
       p {
         font-size: 60%;
         color: var(--color-yellow);
@@ -541,7 +541,6 @@ footer {
       .avatar {
         order: 1;
         img {
-
         }
       }
     }

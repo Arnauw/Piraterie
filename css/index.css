@@ -226,7 +226,7 @@ main {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* padding-bottom: 40px; */
 }
 
@@ -246,42 +246,62 @@ main {
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   /* margin-bottom: 140px; */
   width: 100%;
-  height: 720px;
-  max-height: 100vh;
+  height: 600px;
 }
 
 .site-header h1 {
-  font-family: "Pirata One", "Impact", fantasy; /* Pirate-style font for main title */
+  /* font-family: "Pirata One", "Impact", fantasy; */
   font-size: 3.5em;
   color: var(--color-yellow);
   margin-bottom: 0.5em;
   font-weight: bold;
-  text-shadow: -1px -1px 0 #000000, /* haut-gauche */ 1px -1px 0 #000000,
-    /* haut-droite */ -1px 1px 0 #000000, /* bas-gauche */ 1px 1px 0 #000000,
-    /* bas-droite */ -1px 0 0 #000000, /* gauche */ 1px 0 0 #000000,
-    /* droite */ 0 -1px 0 #000000, /* haut */ 0 1px 0 #000000; /* bas */
+  text-shadow: -2px -2px 0 #000000, /* haut-gauche */ 2px -2px 0 #000000,
+    /* haut-droite */ -2px 2px 0 #000000, /* bas-gauche */ 2px 2px 0 #000000,
+    /* bas-droite */ -2px 0 0 #000000, /* gauche */ 2px 0 0 #000000,
+    /* droite */ 0 -2px 0 #000000, /* haut */ 0 2px 0 #000000; /* bas */
 }
 
 .site-header p {
-  color: var(--color-brown);
-  font-size: 1.1em;
+  /* color: var(--color-yellow); */
+  color: #000000;
+  font-family: var(--font-shoju);
+  font-size: 1em;
   line-height: 1.6;
   margin-bottom: 1em;
   /* max-width: 800px;
     margin-left: auto;
     margin-right: auto; */
-  text-shadow: -2px -2px 0 var(--color-yellow),
-    /* haut-gauche */ 2px -2px 0 var(--color-yellow),
-    /* haut-droite */ -2px 2px 0 var(--color-yellow),
-    /* bas-gauche */ 2px 2px 0 var(--color-yellow),
-    /* bas-droite */ -2px 0 0 var(--color-yellow),
-    /* gauche */ 2px 0 0 var(--color-yellow),
-    /* droite */ 0 -2px 0 var(--color-yellow),
-    /* haut */ 0 2px 0 var(--color-yellow); /* bas */
+  text-shadow: -1px -1px 0 #ffffff, /* haut-gauche */ 1px -1px 0 #ffffff,
+    /* haut-droite */ -1px 1px 0 #ffffff, /* bas-gauche */ 1px 1px 0 #ffffff,
+    /* bas-droite */ -1px 0 0 #ffffff, /* gauche */ 1px 0 0 #ffffff,
+    /* droite */ 0 -1px 0 #ffffff, /* haut */ 0 1px 0 #ffffff; /* bas */
 }
 
 .site-header p:first-of-type {
   margin-top: 20px;
+}
+
+.site-header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 10% 40px 10%;
+}
+
+.site-header-img-container {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 800px;
+  img {
+    width: 100%;
+    height: 100%;
+    height: 800px;
+  }
+}
+
+.site-header-text {
+  padding: 20px;
 }
 
 .main-content {
@@ -301,7 +321,7 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 22%;
-  height: 600px;
+  height: 660px;
   background-color: rgb(133, 71, 9);
   /* background-color: rgb(97, 54, 12); */
   /* background-color: var(--color-brown); */
@@ -314,8 +334,9 @@ main {
 }
 
 .content-card h2 {
-  font-family: "Pirata One", "Impact", fantasy;
-  font-size: 2.2em;
+  /* font-family: "Pirata One", "Impact", fantasy; */
+  font-family: var(--font-rye);
+  font-size: 1.6em;
   color: var(--color-yellow);
   margin-top: 0;
   margin-bottom: 20px;
@@ -371,6 +392,20 @@ main {
 }
 
 @media (max-width: 768px) {
+  main {
+    .page-wrapper {
+      .main-content {
+        .site-header {
+          height: 680px;
+        }
+      }
+    }
+  }
+  .site-header-container {
+    flex-wrap: wrap;
+    margin: 0px 10% 40px 10%;
+    /* height: 40%; */
+  }
   .site-header h1 {
     font-size: 2.8em;
   }
@@ -429,10 +464,14 @@ main {
     }
   }
 
-  .site-header {
-    height: 1000px;
-    margin-bottom: 100px;
-    margin-top: 0px;
+  main {
+    .page-wrapper {
+      .main-content {
+        .site-header {
+          height: 1060px;
+        }
+      }
+    }
   }
   .site-header h1 {
     font-size: 2.8em;

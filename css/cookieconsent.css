@@ -1448,3 +1448,13 @@ html.disable--interaction.show--consent body {
     transform: translateY(0) !important;
   }
 }
+
+/* Floute tout le site sauf la fenêtre cookie quand la modale cookie est ouverte */
+body.blur-cookie main,
+body.blur-cookie header,
+body.blur-cookie footer {
+  filter: blur(20px);
+  pointer-events: none; /* Empêche d'interagir avec le fond pendant le flou */
+  user-select: none;
+  transition: filter 0.3s;
+}

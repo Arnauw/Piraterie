@@ -232,9 +232,8 @@ main {
 
 .site-header,
 .site-footer-bottom {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -247,26 +246,42 @@ main {
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   /* margin-bottom: 140px; */
   width: 100%;
-  height: 100vh;
+  height: 720px;
   max-height: 100vh;
 }
 
 .site-header h1 {
   font-family: "Pirata One", "Impact", fantasy; /* Pirate-style font for main title */
   font-size: 3.5em;
-  color: #5d4037;
+  color: var(--color-yellow);
   margin-bottom: 0.5em;
   font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: -1px -1px 0 #000000, /* haut-gauche */ 1px -1px 0 #000000,
+    /* haut-droite */ -1px 1px 0 #000000, /* bas-gauche */ 1px 1px 0 #000000,
+    /* bas-droite */ -1px 0 0 #000000, /* gauche */ 1px 0 0 #000000,
+    /* droite */ 0 -1px 0 #000000, /* haut */ 0 1px 0 #000000; /* bas */
 }
 
 .site-header p {
+  color: var(--color-brown);
   font-size: 1.1em;
   line-height: 1.6;
   margin-bottom: 1em;
   /* max-width: 800px;
     margin-left: auto;
     margin-right: auto; */
+  text-shadow: -2px -2px 0 var(--color-yellow),
+    /* haut-gauche */ 2px -2px 0 var(--color-yellow),
+    /* haut-droite */ -2px 2px 0 var(--color-yellow),
+    /* bas-gauche */ 2px 2px 0 var(--color-yellow),
+    /* bas-droite */ -2px 0 0 var(--color-yellow),
+    /* gauche */ 2px 0 0 var(--color-yellow),
+    /* droite */ 0 -2px 0 var(--color-yellow),
+    /* haut */ 0 2px 0 var(--color-yellow); /* bas */
+}
+
+.site-header p:first-of-type {
+  margin-top: 20px;
 }
 
 .main-content {
@@ -275,7 +290,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
   padding-bottom: 40px;
 }
 
@@ -285,19 +300,23 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 35%;
-  height: 660px;
-  background-color: rgba(97, 54, 12, 0.17);
+  width: 22%;
+  height: 600px;
+  background-color: rgb(133, 71, 9);
+  /* background-color: rgb(97, 54, 12); */
+  /* background-color: var(--color-brown); */
   padding: 25px;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  color: var(--color-yellow);
+  border: 3px solid var(--color-yellow);
 }
 
 .content-card h2 {
   font-family: "Pirata One", "Impact", fantasy;
   font-size: 2.2em;
-  color: #5d4037;
+  color: var(--color-yellow);
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: bold;
@@ -343,12 +362,12 @@ main {
   }
 }
 
-.content-card p:last-of-type {
-  margin-bottom: 40px;
-}
-
 .content-card p:first-of-type {
   margin-top: 12px;
+}
+
+.content-card p:last-of-type {
+  margin-bottom: 40px;
 }
 
 @media (max-width: 768px) {
@@ -366,7 +385,7 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 45%;
-    height: 800px;
+    height: 600px;
   }
   .card-image {
     max-height: 30vh;
@@ -432,7 +451,7 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 90%;
-    height: 800px;
+    /* height: 800px; */
   }
   .card-image {
     max-height: 30vh;

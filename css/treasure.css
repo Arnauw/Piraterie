@@ -17,7 +17,10 @@ html {
     top: 70%;
     left: 22%;
     width: 3%;
-    filter: drop-shadow(0 0 0.75rem rgb(220, 100, 20));
+    filter: drop-shadow(0 0 0.75rem rgb(220, 100, 20));   
+}
+.htmlDiv:hover {
+    transform: scale(1.50);
 }
 .cssDiv{
     width: 2.1%;
@@ -26,12 +29,18 @@ html {
     left: 20%;
     filter: drop-shadow(0 0 0.75rem rgb(20, 80, 220));
 }
+.cssDiv:hover {
+    transform: scale(1.50);
+}
 .jsDiv{
     width: 2.5%;
     position: absolute;
     top: 55%;
     left: 30%;
     filter: drop-shadow(0 0 0.75rem rgb(220, 217, 20));
+}
+.jsDiv:hover {
+    transform: scale(1.50);
 }
 .nodeDiv{
     width: 3.5%;
@@ -40,6 +49,8 @@ html {
     left: 32%;
     border-radius: 30%;
     filter: drop-shadow(0 0 0.75rem rgb(192, 255, 153));
+}.nodeDiv:hover {
+    transform: scale(1.50);
 }
 .javaDiv{
     width: 2.5%;
@@ -49,6 +60,9 @@ html {
     border-radius: 10%;
     filter: drop-shadow(0 0 0.75rem rgb(255, 234, 230));
 }
+.javaDiv:hover {
+    transform: scale(1.50);
+}
 .phpDiv{
     width: 3.5%;
     position: absolute;
@@ -56,12 +70,18 @@ html {
     left: 46%;
     filter: drop-shadow(0 0 0.75rem rgb(98, 113, 244));
 }
+.phpDiv:hover {
+    transform: scale(1.50);
+}
 .symDiv{
     width: 3%;
     position: absolute;
     top: 26%;
     left: 48%;
     filter: drop-shadow(0 0 0.75rem rgb(124, 124, 125));
+}
+.symDiv:hover {
+    transform: scale(1.50);
 }
 
 .sqlDiv{
@@ -71,6 +91,9 @@ html {
     left: 57%;
     filter: drop-shadow(0 0 0.75rem rgb(0, 110, 255));
 }
+.sqlDiv:hover {
+    transform: scale(1.50);
+}
 
 .MnDbDiv{
     width: 3.5%;
@@ -78,6 +101,9 @@ html {
     top: 35%;
     left: 63%;
     filter: drop-shadow(0 0 0.75rem rgb(192, 255, 153));
+}
+.MnDbDiv:hover {
+    transform: scale(1.50);
 }
 
 .reactDiv{
@@ -88,6 +114,9 @@ html {
     border-radius: 30%;
     filter: drop-shadow(0 0 0.75rem rgb(53, 194, 241));
 }
+.reactDiv:hover {
+    transform: scale(1.50);
+}
 .certiDiv{
     width: 4.5%;
     position: absolute;
@@ -95,12 +124,18 @@ html {
     left: 56%;
     filter: drop-shadow(0 0 0.75rem rgb(247, 250, 247));
 }
+.certiDiv:hover {
+    transform: scale(1.50);
+}
 .afpaDiv{
     width: 5%;
     position: absolute;
     top: 60%;
     left: 51%;
     filter: drop-shadow(0 0 0.75rem rgb(247, 250, 247));
+}
+.afpaDiv:hover {
+    transform: scale(1.50);
 }
 .navireDiv{
     display: none;
